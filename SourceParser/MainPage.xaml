@@ -16,7 +16,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="Auto"/>
             <ColumnDefinition  Width="*"/>
-            <ColumnDefinition  Width="*"/>
+            <ColumnDefinition  Width="Auto"/>
         </Grid.ColumnDefinitions>
         <RelativePanel>
             <Button x:Name="HamburgerButton" RelativePanel.AlignLeftWithPanel="True"
@@ -71,7 +71,7 @@
             </SplitView.Content>
         </SplitView>
 
-        <RelativePanel Canvas.ZIndex="20" Grid.Column="2">
+        <RelativePanel Canvas.ZIndex="20" Grid.Column="2" Grid.RowSpan="2">
             <Button x:Name="AccountButton" RelativePanel.AlignRightWithPanel="True"
                     FontFamily="Segoe MDL2 Assets" FontSize="36"
                     Background="{Binding ElementName=Acc, Path=Background}"
