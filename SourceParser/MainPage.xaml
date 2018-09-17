@@ -8,7 +8,95 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid x:Name="layoutGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="Auto"/>
+            <ColumnDefinition  Width="*"/>
+            <ColumnDefinition  Width="*"/>
+        </Grid.ColumnDefinitions>
+        <RelativePanel>
+            <Button x:Name="HamburgerButton" RelativePanel.AlignLeftWithPanel="True"
+                    FontFamily="Segoe MDL2 Assets" FontSize="36"
+                    Background="{Binding ElementName=menu, Path=Background}"
+                    Content="&#xE700;" Click="HamburgerButton_Click"
+                    ToolTipService.ToolTip="МЕНЮ" ToolTipService.Placement="Mouse"/>
+        </RelativePanel>
+        <SplitView Name="mySplitView" DisplayMode="CompactOverlay" Grid.Row="1" Grid.Column="0" CompactPaneLength="56" IsPaneOpen="False" OpenPaneLength="270" Grid.ColumnSpan="2">
+            <SplitView.Pane>
+                <ListBox x:Name="menu" SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem Name="home">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" />
+                            <TextBlock FontSize="24" Text="Главная" Margin="10 0 0 0" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="addDocument">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE710;" />
+                            <TextBlock FontSize="24" Text="Новый документ" Margin="10 0 0 0" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="addLink">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xECC8;" />
+                            <TextBlock FontSize="24" Text="Добавить ссылку" Margin="10 0 0 0" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="addNote">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE70B;" />
+                            <TextBlock FontSize="24" Text="Добавить заметку" Margin="10 0 0 0" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="addStyle">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE8D2;" />
+                            <TextBlock FontSize="24" Text="Добавить стиль" Margin="10 0 0 0" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="settings">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE713;" />
+                            <TextBlock FontSize="24" Text="Настройки" Margin="10 0 0 0" />
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame Name="myFrame" />
+            </SplitView.Content>
+        </SplitView>
 
-    </Grid>
+        <RelativePanel Canvas.ZIndex="20" Grid.Column="2">
+            <Button x:Name="AccountButton" RelativePanel.AlignRightWithPanel="True"
+                    FontFamily="Segoe MDL2 Assets" FontSize="36"
+                    Background="{Binding ElementName=Acc, Path=Background}"
+                    Content="&#xE77B;"
+                    ToolTipService.ToolTip="Профиль" ToolTipService.Placement="Mouse"
+                    Click="AccountButton_Click"/>
+
+            <SplitView Name="SplitViewAcc" DisplayMode="Inline" IsPaneOpen="False" OpenPaneLength="220" RelativePanel.Below="AccountButton" RelativePanel.AlignRightWithPanel="True">
+                <SplitView.Pane>
+                    <ListBox x:Name="Acc" SelectionMode="Single">
+                        <ListBoxItem Name="LogIn">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xEA62;" />
+                                <TextBlock FontSize="24" Text="Вход" Margin="10 0 0 0" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Name="LogOut">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE8FA;" />
+                                <TextBlock FontSize="24" Text="Регистрация" Margin="10 0 0 0" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </SplitView.Pane>
+            </SplitView>
+        </RelativePanel>
+        </Grid>
 </Page>

@@ -25,6 +25,34 @@ namespace SourceParser
         public MainPage()
         {
             this.InitializeComponent();
+
+            myFrame.Navigate(typeof(Pages.Home));
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (home.IsSelected)
+            {
+                myFrame.Navigate(typeof(Pages.Home));
+            }
+            else if (addDocument.IsSelected)
+            {
+                myFrame.Navigate(typeof(Pages.NewDocument));
+            }
+            else if (settings.IsSelected)
+            {
+                //myFrame.Navigate(typeof(settings));
+            }
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            mySplitView.IsPaneOpen = !mySplitView.IsPaneOpen;
+        }
+
+        private void AccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            SplitViewAcc.IsPaneOpen = !SplitViewAcc.IsPaneOpen;
         }
     }
 }
