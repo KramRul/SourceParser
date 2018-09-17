@@ -82,6 +82,7 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="TextWrapping" />
       <RootProperty Name="Inlines" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
