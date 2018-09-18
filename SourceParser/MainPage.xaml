@@ -25,7 +25,7 @@
                     Content="&#xE700;" Click="HamburgerButton_Click"
                     ToolTipService.ToolTip="МЕНЮ" ToolTipService.Placement="Mouse"/>
         </RelativePanel>
-        <SplitView Name="mySplitView" DisplayMode="CompactOverlay" Grid.Row="1" Grid.Column="0" CompactPaneLength="56" IsPaneOpen="False" OpenPaneLength="270" Grid.ColumnSpan="2">
+        <SplitView Canvas.ZIndex="20" Name="mySplitView" DisplayMode="CompactOverlay" Grid.Row="1" Grid.Column="0" CompactPaneLength="56" IsPaneOpen="False" OpenPaneLength="270" Grid.ColumnSpan="2">
             <SplitView.Pane>
                 <ListBox x:Name="menu" SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
                     <ListBoxItem Name="home">
@@ -66,11 +66,10 @@
                     </ListBoxItem>
                 </ListBox>
             </SplitView.Pane>
-            <SplitView.Content>
-                <Frame Name="myFrame" />
-            </SplitView.Content>
         </SplitView>
-
+        
+        <Frame Name="myFrame" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+        
         <RelativePanel Canvas.ZIndex="20" Grid.Column="3" Grid.RowSpan="2" Grid.Row="0" Grid.ColumnSpan="2">
             <Button x:Name="AccountButton" RelativePanel.AlignRightWithPanel="True"
                     FontFamily="Segoe MDL2 Assets" FontSize="36"
