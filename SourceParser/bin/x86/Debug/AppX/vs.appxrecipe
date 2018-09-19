@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>58D0C7561D4F6926AE9D4E33D26511594D02351DEB9C44C951B2E714ACA40A86</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>116530647D5E3CD43468B59CC9D912FAAB535E6DDC53DD8ACD6604CC0D49CA2D</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>44f60e04-d65d-452a-abcf-de36f91d13e2_1.0.0.0_x86__6vsv02b85wey6</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>44f60e04-d65d-452a-abcf-de36f91d13e2_6vsv02b85wey6!App</RegisteredUserModeAppID>
     <RegisteredPackageID>44f60e04-d65d-452a-abcf-de36f91d13e2</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-18T14:12:55.037</Modified>
+      <Modified>2018-09-19T15:11:14.443</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\SourceParser.exe">
       <PackagePath>entrypoint\SourceParser.exe</PackagePath>
-      <Modified>2018-09-18T14:12:54.676</Modified>
+      <Modified>2018-09-19T15:11:08.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.7\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -695,6 +695,54 @@
       <PackagePath>netstandard.dll</PackagePath>
       <Modified>2018-07-20T07:48:02.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Core.dll">
+      <PackagePath>Telerik.Core.dll</PackagePath>
+      <Modified>2018-09-12T05:16:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Data.dll">
+      <PackagePath>Telerik.Data.dll</PackagePath>
+      <Modified>2018-09-12T05:09:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Geospatial.UWP.dll">
+      <PackagePath>Telerik.Geospatial.UWP.dll</PackagePath>
+      <Modified>2018-09-12T05:16:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP.dll">
+      <PackagePath>Telerik.UI.Xaml.Chart.UWP.dll</PackagePath>
+      <Modified>2018-09-12T05:10:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP.dll">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP.dll</PackagePath>
+      <Modified>2018-09-12T05:11:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP.dll">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP.dll</PackagePath>
+      <Modified>2018-09-12T05:11:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP.dll">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP.dll</PackagePath>
+      <Modified>2018-09-12T05:12:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP.dll">
+      <PackagePath>Telerik.UI.Xaml.Input.UWP.dll</PackagePath>
+      <Modified>2018-09-12T05:11:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Primitives.UWP.dll">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP.dll</PackagePath>
+      <Modified>2018-09-12T05:17:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP.dll">
+      <PackagePath>Telerik.UI.Xaml.Map.UWP.dll</PackagePath>
+      <Modified>2018-09-12T05:15:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Drawing.dll">
+      <PackagePath>Telerik.UI.Drawing.dll</PackagePath>
+      <Modified>2018-09-12T05:14:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Drawing.winmd">
+      <PackagePath>Telerik.UI.Drawing.winmd</PackagePath>
+      <Modified>2018-09-12T05:14:20.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-09-13T10:28:12.108</Modified>
@@ -735,36 +783,376 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\SourceParser.xr.xml">
       <PackagePath>SourceParser.xr.xml</PackagePath>
-      <Modified>2018-09-18T14:11:01.921</Modified>
+      <Modified>2018-09-19T15:11:08.129</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-09-18T14:12:54.518</Modified>
+      <Modified>2018-09-19T15:11:08.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-09-18T14:12:54.519</Modified>
+      <Modified>2018-09-19T15:11:08.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\Pages\Home.xbf">
       <PackagePath>Pages\Home.xbf</PackagePath>
-      <Modified>2018-09-18T14:12:54.519</Modified>
+      <Modified>2018-09-19T15:11:08.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\Pages\NewDocument.xbf">
       <PackagePath>Pages\NewDocument.xbf</PackagePath>
-      <Modified>2018-09-18T14:12:54.519</Modified>
+      <Modified>2018-09-19T15:11:08.198</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-04-19T19:01:52.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.Core\Properties\default.rd.xml">
+      <PackagePath>Telerik.Core\Properties\default.rd.xml</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Telerik.UI.Xaml.Map.UWP.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.Map.UWP\Telerik.UI.Xaml.Map.UWP.xr.xml</PackagePath>
+      <Modified>2018-09-12T05:15:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Map.UWP\Themes\Generic.xaml</PackagePath>
+      <Modified>2018-09-12T05:15:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
+      <Modified>2018-09-12T05:15:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesHighContrast.xaml">
+      <PackagePath>Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
+      <Modified>2018-09-12T05:15:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
+      <Modified>2018-09-12T05:15:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Telerik.UI.Xaml.Primitives.UWP.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Telerik.UI.Xaml.Primitives.UWP.xr.xml</PackagePath>
+      <Modified>2018-05-11T03:59:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\Generic.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\HubTilePalette.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\HubTilePalette.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\Resources.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\Resources.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\SharedResources.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\SharedResources.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsDark.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsHighContrast.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsHighContrast.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsLight.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesHighContrast.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
+      <Modified>2018-09-12T05:14:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Data\Properties\default.rd.xml">
+      <PackagePath>Telerik.Data\Properties\default.rd.xml</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\CustomDictionary.xml">
+      <PackagePath>Telerik.UI.Xaml.Chart.UWP\CustomDictionary.xml</PackagePath>
+      <Modified>2018-05-11T03:59:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Telerik.UI.Xaml.Chart.UWP.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.Chart.UWP\Telerik.UI.Xaml.Chart.UWP.xr.xml</PackagePath>
+      <Modified>2018-05-11T03:59:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Chart.UWP\Themes\Generic.xaml</PackagePath>
+      <Modified>2018-09-12T05:10:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
+      <Modified>2018-09-12T05:10:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesHighContrast.xaml">
+      <PackagePath>Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
+      <Modified>2018-09-12T05:10:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
+      <Modified>2018-09-12T05:10:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Telerik.UI.Xaml.Controls.Data.UWP.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Telerik.UI.Xaml.Controls.Data.UWP.xr.xml</PackagePath>
+      <Modified>2018-05-11T04:00:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-dark.png">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-dark.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-light.png">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-light.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\DataForm.xaml">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\DataForm.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\Generic.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\Listbox.xaml">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\Listbox.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesHighContrast.xaml">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Telerik.UI.Xaml.Input.UWP.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.Input.UWP\Telerik.UI.Xaml.Input.UWP.xr.xml</PackagePath>
+      <Modified>2018-09-12T05:11:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\Calendar.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\Calendar.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\CommonResources.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\CommonResources.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\Generic.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\Resources.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\Resources.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesHighContrast.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Telerik.UI.Xaml.DataVisualization.UWP.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Telerik.UI.Xaml.DataVisualization.UWP.xr.xml</PackagePath>
+      <Modified>2018-05-11T04:00:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\Generic.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\Resources.xaml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\Resources.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesHighContrast.xaml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
+      <Modified>2018-09-12T05:11:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Telerik.UI.Xaml.Grid.UWP.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Telerik.UI.Xaml.Grid.UWP.xr.xml</PackagePath>
+      <Modified>2018-05-11T04:00:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-240.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-240.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-180.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-180.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-140.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-140.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-240.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-240.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-180.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-180.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-140.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-140.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-240.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-240.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-180.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-180.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-140.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-140.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-240.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-240.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-180.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-180.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-140.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-140.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-240.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-240.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-180.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-180.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-140.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-140.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-240.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-240.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-180.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-180.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-140.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-140.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-240.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-240.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-180.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-180.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-140.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-140.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-240.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-240.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-180.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-180.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-140.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-140.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.png">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.png</PackagePath>
+      <Modified>2018-05-11T03:59:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\Generic.xaml</PackagePath>
+      <Modified>2018-09-12T05:12:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\Resources.xaml">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\Resources.xaml</PackagePath>
+      <Modified>2018-09-12T05:12:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
+      <Modified>2018-09-12T05:12:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesHighContrast.xaml">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
+      <Modified>2018-09-12T05:12:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
+      <Modified>2018-09-12T05:12:24.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-17T18:39:00.040</Modified>
+      <Modified>2018-09-19T15:11:12.008</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\source\repos\SourceParser\SourceParser\bin\x86\Debug\Core\SourceParser.exe">
       <PackagePath>SourceParser.exe</PackagePath>
-      <Modified>2018-09-18T14:12:55.030</Modified>
+      <Modified>2018-09-19T15:11:14.392</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

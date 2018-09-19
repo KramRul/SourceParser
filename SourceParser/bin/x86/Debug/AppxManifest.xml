@@ -32,11 +32,32 @@
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>Telerik.UI.Drawing.dll</Path>
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DMultiPolygon" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DRectangle" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DTextStyle" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DTextBlock" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DPolyline" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DShapeContainer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DShape" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DShapeStyle" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DResource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DSolidColorBrush" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DGeometryShape" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DCanvas" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DBrush" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Telerik.UI.Drawing.D2DLine" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />
     <build:Item Name="VisualStudio" Version="15.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2017" />
-    <build:Item Name="OperatingSystem" Version="10.0.17134.280 (WinBuild.160101.0800)" />
+    <build:Item Name="OperatingSystem" Version="10.0.17134.343 (WinBuild.160101.0800)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.27703.2026" />
     <build:Item Name="ProjectGUID" Value="{C35AD884-5078-42F5-8C9E-95FC801C706F}" />
     <build:Item Name="OptimizingToolset" Value="None" />

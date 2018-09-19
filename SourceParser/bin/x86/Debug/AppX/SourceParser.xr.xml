@@ -2,6 +2,8 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Background" />
+    <RootPropertyPathName Name="Flag" />
+    <RootPropertyPathName Name="Country" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -84,6 +86,8 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Inlines" />
     </RootType>
@@ -92,6 +96,23 @@
       <RootProperty Name="Path" />
     </RootType>
     <RootType FullName="SourceParser.MainPage" />
+    <RootType FullName="Telerik.UI.Xaml.Controls.Grid.RadDataGrid">
+      <RootProperty Name="UserGroupMode" />
+      <RootProperty Name="Columns" />
+    </RootType>
+    <RootType FullName="Telerik.UI.Xaml.Controls.Grid.DataGridTemplateColumn">
+      <RootProperty Name="Header" />
+      <RootProperty Name="CellContentTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+    </RootType>
     <RootType FullName="SourceParser.Pages.Home" />
     <RootType FullName="SourceParser.Pages.NewDocument" />
   </Roots.RootTypes>
