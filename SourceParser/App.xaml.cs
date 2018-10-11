@@ -7,6 +7,8 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -39,6 +41,15 @@ namespace SourceParser
         /// <param name="e">Сведения о запросе и обработке запуска.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            // получаем ссылку на внешний вид приложения
+            Windows.UI.ViewManagement.ApplicationView appView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
+            // минимальный размер 300х250
+            //appView.SetPreferredMinSize(new Size(300, 250));
+            // установка заголовка
+            appView.Title = "Библиографический парсер";
+            // получаем ссылку на TitleBar
+            Windows.UI.ViewManagement.ApplicationViewTitleBar titleBar = appView.TitleBar;
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Не повторяйте инициализацию приложения, если в окне уже имеется содержимое,
@@ -53,10 +64,29 @@ namespace SourceParser
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Загрузить состояние из ранее приостановленного приложения
+                    if (ApplicationData.Current.LocalSettings.Values.ContainsKey("navHistory"))
+                        rootFrame.SetNavigationState(ApplicationData.Current.LocalSettings.Values["navHistory"].ToString());
                 }
 
                 // Размещение фрейма в текущем окне
                 Window.Current.Content = rootFrame;
+
+                // устанавливаем обработчик
+                SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested; ;
+                rootFrame.Navigated += (s, args) =>
+                {
+                    if (rootFrame.CanGoBack) // если можно перейти назад, показываем кнопку
+                    {
+                        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                                                AppViewBackButtonVisibility.Visible;
+                    }
+                    else
+                    {
+                        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                            AppViewBackButtonVisibility.Collapsed;
+                    }
+
+                };
             }
 
             if (e.PrelaunchActivated == false)
@@ -70,6 +100,16 @@ namespace SourceParser
                 }
                 // Обеспечение активности текущего окна
                 Window.Current.Activate();
+            }
+        }
+
+        private void App_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            Frame frame = Window.Current.Content as Frame;
+            if (frame.CanGoBack)
+            {
+                frame.GoBack();
+                e.Handled = true;
             }
         }
 
@@ -94,6 +134,8 @@ namespace SourceParser
         {
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Сохранить состояние приложения и остановить все фоновые операции
+            Frame rootFrame = Window.Current.Content as Frame;
+            ApplicationData.Current.LocalSettings.Values["navHistory"] = rootFrame.GetNavigationState();
             deferral.Complete();
         }
     }
