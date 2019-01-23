@@ -22,10 +22,11 @@ namespace SourceParser
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        static public List<UIElement> childrens;
         public MainPage()
         {
             this.InitializeComponent();
-
+            childrens = new List<UIElement>();
             myFrame.Navigate(typeof(Pages.Home));
         }
 
@@ -42,6 +43,10 @@ namespace SourceParser
             else if (settings.IsSelected)
             {
                 //myFrame.Navigate(typeof(settings));
+            }
+            else if (addStyle.IsSelected)
+            {
+                myFrame.Navigate(typeof(Pages.NewStyle));
             }
         }
 

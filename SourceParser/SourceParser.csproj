@@ -104,6 +104,9 @@
     <Compile Include="Pages\NewDocument.xaml.cs">
       <DependentUpon>NewDocument.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NewStyle.xaml.cs">
+      <DependentUpon>NewStyle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +139,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\NewDocument.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NewStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
