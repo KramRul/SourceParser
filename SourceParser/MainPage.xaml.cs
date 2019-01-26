@@ -1,4 +1,5 @@
 ﻿using SourceParser.Pages;
+using SourceParser.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +27,7 @@ namespace SourceParser
         public MainPage()
         {
             this.InitializeComponent();
-            Navigator.Childrens = new List<UIElement>();
+            DataContext = new ApplicationViewModel();
             myFrame.Navigate(typeof(Pages.Home));
         }
 

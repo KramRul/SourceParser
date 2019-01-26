@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SourceParser.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -60,7 +61,7 @@ namespace SourceParser.Pages
 
             if (result == ContentDialogResult.Primary)
             {
-                Button button = new Button()
+                /*Button button = new Button()
                 {
                     Content = NameOfStyleTextBlock.Text,
                     Width = 160,
@@ -70,7 +71,8 @@ namespace SourceParser.Pages
                     Margin = new Thickness(10)
                 };
                 Navigator.Childrens.Add(button);
-                Styles.Children.Add(button);
+                Styles.Children.Add(button);*/
+                (DataContext as ApplicationViewModel).Buttons.Add(new Models.ButtonMod() { Title = NameOfStyleTextBlock.Text });
             }
             else if (result == ContentDialogResult.Secondary)
             {

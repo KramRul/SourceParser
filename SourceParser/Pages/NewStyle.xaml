@@ -9,13 +9,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <VariableSizedWrapGrid x:Name="Styles" Orientation="Horizontal">
-
         <Button x:Name="ButtonAdd" Click="ButtonAdd_Click" Width="160" Height="160" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10">
-
             <Canvas Width="140" Height="140" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Rectangle Fill="AliceBlue" Width="120" Height="20" Margin="10" RadiusX="5" RadiusY="5" Canvas.ZIndex="1" Canvas.Top="50"/>
                 <Rectangle Fill="AliceBlue" Width="20" Height="120" Margin="10" RadiusX="5" RadiusY="5" Canvas.ZIndex="2" Canvas.Left="50"/>
             </Canvas>
         </Button>
+        <GridView ItemsSource="{Binding Buttons}" SelectionMode="None">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <!--<StackPanel Margin="5">-->
+                    <Button Width="160" Height="160" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Content="{Binding Path=Title}">
+                    </Button>
+                    <!--</StackPanel>-->
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
     </VariableSizedWrapGrid>
 </Page>
