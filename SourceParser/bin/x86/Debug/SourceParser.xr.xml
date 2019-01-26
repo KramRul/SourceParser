@@ -132,13 +132,11 @@
     </RootType>
     <RootType FullName="SourceParser.Pages.Home" />
     <RootType FullName="SourceParser.Pages.NewDocument" />
-    <RootType FullName="Windows.UI.Xaml.Controls.VariableSizedWrapGrid">
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Children" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectionMode" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
