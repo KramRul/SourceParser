@@ -69,7 +69,7 @@ namespace SourceParser.Pages
                     HorizontalAlignment = HorizontalAlignment.Left,
                     Margin = new Thickness(10)
                 };
-                MainPage.childrens.Add(button);
+                Navigator.Childrens.Add(button);
                 Styles.Children.Add(button);
             }
             else if (result == ContentDialogResult.Secondary)
@@ -78,12 +78,15 @@ namespace SourceParser.Pages
             }
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        /*private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            foreach (var item in MainPage.childrens)
+            foreach (var item in Navigator.Childrens)
             {
+                if(!Styles.Children.Contains(item))
                 Styles.Children.Add(item);
+                var newStyle = Window.Current.Content as NewStyle;
+                newStyle.Styles.Children.Add(item);
             }
-        }
+        }*/
     }
 }

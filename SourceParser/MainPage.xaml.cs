@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SourceParser.Pages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,11 +23,10 @@ namespace SourceParser
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        static public List<UIElement> childrens;
         public MainPage()
         {
             this.InitializeComponent();
-            childrens = new List<UIElement>();
+            Navigator.Childrens = new List<UIElement>();
             myFrame.Navigate(typeof(Pages.Home));
         }
 

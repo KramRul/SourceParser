@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-23T14:14:52.181</Modified>
+      <Modified>2019-01-26T13:18:08.929</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\SourceParser.exe">
       <PackagePath>entrypoint\SourceParser.exe</PackagePath>
-      <Modified>2019-01-23T14:14:50.524</Modified>
+      <Modified>2019-01-26T13:18:06.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.data.sqlite.core\2.1.0\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
@@ -887,27 +887,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\SourceParser.xr.xml">
       <PackagePath>SourceParser.xr.xml</PackagePath>
-      <Modified>2019-01-23T14:14:50.010</Modified>
+      <Modified>2019-01-26T12:01:56.983</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-01-23T14:14:50.047</Modified>
+      <Modified>2019-01-26T13:18:06.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-01-23T14:14:50.048</Modified>
+      <Modified>2019-01-26T13:18:06.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\Home.xbf">
       <PackagePath>Pages\Home.xbf</PackagePath>
-      <Modified>2019-01-23T14:14:50.048</Modified>
+      <Modified>2019-01-26T13:18:06.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewDocument.xbf">
       <PackagePath>Pages\NewDocument.xbf</PackagePath>
-      <Modified>2019-01-23T14:14:50.049</Modified>
+      <Modified>2019-01-26T13:18:06.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewStyle.xbf">
       <PackagePath>Pages\NewStyle.xbf</PackagePath>
-      <Modified>2019-01-23T14:14:50.049</Modified>
+      <Modified>2019-01-26T13:18:06.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1256,11 +1256,11 @@
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-23T10:07:56.995</Modified>
+      <Modified>2019-01-26T10:53:02.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Core\SourceParser.exe">
       <PackagePath>SourceParser.exe</PackagePath>
-      <Modified>2019-01-23T14:14:52.168</Modified>
+      <Modified>2019-01-26T13:18:08.910</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
