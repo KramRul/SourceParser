@@ -110,6 +110,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ApplicationViewModel.cs" />
+    <Compile Include="ViewModel\EditDialogService.cs" />
+    <Compile Include="ViewModel\IDialogService.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

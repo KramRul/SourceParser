@@ -13,7 +13,34 @@ namespace SourceParser.ViewModel
     public class ApplicationViewModel : INotifyPropertyChanged
     {
         private ButtonMod selectedButton;
+
+        IDialogService dialogService;
         public ObservableCollection<ButtonMod> Buttons { get; set; }
+
+        private RelayCommand editCommand;
+        public RelayCommand EditCommand
+        {
+            get
+            {
+                return editCommand ??
+                  (editCommand = new RelayCommand(obj =>
+                  {
+                      try
+                      {
+                          dialogService.EditFileDialog();
+                          /*if (dialogService.SaveFileDialog())
+                          {
+                              dialogService.ShowMessage("Файл сохранен");
+                          }*/
+                      }
+                      catch (Exception ex)
+                      {
+                          dialogService.ShowMessage(ex.Message);
+                      }
+                  }));
+            }
+        }
+
         public ButtonMod SelectedButton
         {
             get { return selectedButton; }
@@ -24,8 +51,10 @@ namespace SourceParser.ViewModel
             }
         }
 
-        public ApplicationViewModel()
+        public ApplicationViewModel(IDialogService dialogService)
         {
+            this.dialogService = dialogService;
+
             Buttons = new ObservableCollection<ButtonMod>
             {
                 new ButtonMod { Title="iPhone 7"},
