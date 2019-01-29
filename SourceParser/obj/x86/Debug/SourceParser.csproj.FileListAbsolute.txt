@@ -763,3 +763,7 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewStyle.g.cs
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewStyle.xaml
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewStyle.xbf
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.Xaml.Interactions.dll
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Microsoft.Xaml.Interactions.pri.xml
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
