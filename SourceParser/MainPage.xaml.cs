@@ -27,7 +27,7 @@ namespace SourceParser
         public MainPage()
         {
             this.InitializeComponent();
-            this.DataContext = new ApplicationViewModel(new EditDialogService());
+            DataContext = new ApplicationViewModel();
             myFrame.Navigate(typeof(Pages.Home));
         }
 

@@ -609,7 +609,6 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Teleri
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Telerik.UI.Drawing.pdb
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Telerik.UI.Drawing.xml
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Telerik.UI.Drawing.pri
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\SourceParser.csprojAssemblyReference.cache
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\App.g.i.cs
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\App.g.cs
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\MainPage.g.i.cs

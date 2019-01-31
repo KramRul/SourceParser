@@ -5,11 +5,14 @@
     xmlns:local="using:SourceParser.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:SourceParser.ViewModel"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
 xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <!--<Page.DataContext>
+        <vm:ApplicationViewModel/>
+    </Page.DataContext>-->
     <Grid x:Name="Styles">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -25,22 +28,22 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <Rectangle Fill="AliceBlue" Width="20" Height="120" Margin="10" RadiusX="5" RadiusY="5" Canvas.ZIndex="2" Canvas.Left="50"/>
             </Canvas>
         </Button>
-        <GridView x:Name="GridOfButtons" ItemsSource="{Binding Buttons}" SelectedItem="{Binding SelectedButton}" SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="0">
+        <GridView x:Name="GridOfButtons" ItemsSource="{Binding Buttons}" SelectedItem="{Binding SelectedButton, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="0">
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <!--<StackPanel Margin="5">-->
-                    <Button Width="160" Height="160" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
-                            Content="{Binding Path=Title}">
+                    <StackPanel Margin="10" Background="LightGray">
+                        <TextBlock Width="140" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
+                            Text="{Binding Path=Title}">
                         <!--CommandParameter="{Binding SelectedButton}"-->
-                    </Button>
-                    <!--</StackPanel>-->
+                    </TextBlock>
+                    </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <StackPanel Grid.Column="2" DataContext="{Binding SelectedButton}">
+        <StackPanel Grid.Column="2" Margin="10">
             <TextBlock Text="Выбранный элемент"  />
             <TextBlock Text="Модель" />
-            <TextBox Text="{Binding Path=Title, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Text="{Binding Path=SelectedButton.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <!--<TextBlock Text="Производитель" />
             <TextBox Text="{Binding Company, UpdateSourceTrigger=PropertyChanged}" />
             <TextBlock Text="Цена" />

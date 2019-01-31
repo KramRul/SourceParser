@@ -51,9 +51,9 @@ namespace SourceParser.ViewModel
             }
         }
 
-        public ApplicationViewModel(IDialogService dialogService)
+        public ApplicationViewModel(/*IDialogService dialogService*/)
         {
-            this.dialogService = dialogService;
+            //this.dialogService = dialogService;
 
             Buttons = new ObservableCollection<ButtonMod>
             {
