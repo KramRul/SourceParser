@@ -17,29 +17,29 @@ namespace SourceParser.ViewModel
         IDialogService dialogService;
         public ObservableCollection<ButtonMod> Buttons { get; set; }
 
-        private RelayCommand editCommand;
-        public RelayCommand EditCommand
-        {
-            get
-            {
-                return editCommand ??
-                  (editCommand = new RelayCommand(obj =>
-                  {
-                      try
-                      {
-                          dialogService.EditFileDialog();
-                          /*if (dialogService.SaveFileDialog())
-                          {
-                              dialogService.ShowMessage("Файл сохранен");
-                          }*/
-                      }
-                      catch (Exception ex)
-                      {
-                          dialogService.ShowMessage(ex.Message);
-                      }
-                  }));
-            }
-        }
+        //private RelayCommand editCommand;
+        //public RelayCommand EditCommand
+        //{
+        //    get
+        //    {
+        //        return editCommand ??
+        //          (editCommand = new RelayCommand(obj =>
+        //          {
+        //              try
+        //              {
+        //                  dialogService.EditFileDialog();
+        //                  /*if (dialogService.SaveFileDialog())
+        //                  {
+        //                      dialogService.ShowMessage("Файл сохранен");
+        //                  }*/
+        //              }
+        //              catch (Exception ex)
+        //              {
+        //                  dialogService.ShowMessage(ex.Message);
+        //              }
+        //          }));
+        //    }
+        //}
 
         public ButtonMod SelectedButton
         {

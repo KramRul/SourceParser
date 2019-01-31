@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Data;
 
 namespace SourceParser.ViewModel
 {
@@ -32,6 +33,12 @@ namespace SourceParser.ViewModel
             RelativePanel.SetAlignRightWithPanel(NameOfStyleTextBlock, true);
             RelativePanel.SetRightOf(NameOfStyleTextBlock, NameOfStyle);
             stackPanel.Children.Add(relativePanel);
+
+            /*Binding binding = new Binding();
+
+            binding.ElementName = "NameOfStyleTextBlock"; // элемент-источник
+            binding.Path = new PropertyPath("Text"); // свойство элемента-источника
+            stackPanel.SetBinding(TextBlock.TextProperty, binding); // установка при*/
 
             ContentDialog EditFileDialog = new ContentDialog()
             {

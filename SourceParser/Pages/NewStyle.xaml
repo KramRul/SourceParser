@@ -17,6 +17,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button x:Name="ButtonAdd" Grid.Column="0" Grid.Row="0" Click="ButtonAdd_Click" Width="160" Height="160" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10">
             <Canvas Width="140" Height="140" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -24,18 +25,26 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <Rectangle Fill="AliceBlue" Width="20" Height="120" Margin="10" RadiusX="5" RadiusY="5" Canvas.ZIndex="2" Canvas.Left="50"/>
             </Canvas>
         </Button>
-        <GridView ItemsSource="{Binding Buttons}" SelectionMode="None" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="0">
+        <GridView x:Name="GridOfButtons" ItemsSource="{Binding Buttons}" SelectedItem="{Binding SelectedButton}" SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="0">
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <!--<StackPanel Margin="5">-->
                     <Button Width="160" Height="160" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
-                            Content="{Binding Path=Title}" 
-                            Command="{Binding Path=EditCommand, Source=DataContext }" 
-                            CommandParameter="{Binding SelectedButton}">
+                            Content="{Binding Path=Title}">
+                        <!--CommandParameter="{Binding SelectedButton}"-->
                     </Button>
                     <!--</StackPanel>-->
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
+        <StackPanel Grid.Column="2" DataContext="{Binding SelectedButton}">
+            <TextBlock Text="Выбранный элемент"  />
+            <TextBlock Text="Модель" />
+            <TextBox Text="{Binding Path=Title, UpdateSourceTrigger=PropertyChanged}" />
+            <!--<TextBlock Text="Производитель" />
+            <TextBox Text="{Binding Company, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Цена" />
+            <TextBox Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}" />-->
+        </StackPanel>
     </Grid>
 </Page>
