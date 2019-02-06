@@ -12,10 +12,14 @@ namespace SourceParser.ViewModel
 {
     public class ApplicationViewModel : INotifyPropertyChanged
     {
-        private ButtonMod selectedButton;
+        private StyleMod selectedStyle;
+
+        private DocumentMod selectedDocument;
 
         IDialogService dialogService;
-        public ObservableCollection<ButtonMod> Buttons { get; set; }
+        public ObservableCollection<StyleMod> Styles { get; set; }
+
+        public ObservableCollection<DocumentMod> Documents { get; set; }
 
         //private RelayCommand editCommand;
         //public RelayCommand EditCommand
@@ -40,14 +44,23 @@ namespace SourceParser.ViewModel
         //          }));
         //    }
         //}
-
-        public ButtonMod SelectedButton
+        public DocumentMod SelectedDocument
         {
-            get { return selectedButton; }
+            get { return selectedDocument; }
             set
             {
-                selectedButton = value;
-                OnPropertyChanged("SelectedButton");
+                selectedDocument = value;
+                OnPropertyChanged("SelectedDocument");
+            }
+        }
+
+        public StyleMod SelectedStyle
+        {
+            get { return selectedStyle; }
+            set
+            {
+                selectedStyle = value;
+                OnPropertyChanged("SelectedStyle");
             }
         }
 
@@ -55,12 +68,18 @@ namespace SourceParser.ViewModel
         {
             //this.dialogService = dialogService;
 
-            Buttons = new ObservableCollection<ButtonMod>
+            Styles = new ObservableCollection<StyleMod>
             {
-                new ButtonMod { Title="iPhone 7"},
-                new ButtonMod {Title="Galaxy S7 Edge"},
-                new ButtonMod {Title="Elite x3"},
-                new ButtonMod {Title="Mi5S"}
+                new StyleMod {Title="Style 1"},
+                new StyleMod {Title="Style 2"},
+                new StyleMod {Title="Style 3"},
+                new StyleMod {Title="Style 4"}
+            };
+
+            Documents = new ObservableCollection<DocumentMod>
+            {
+                new DocumentMod { Title="Document 1", Edition="1", Language="1"},
+                new DocumentMod { Title="Document 2", Edition="2", Language="2"}
             };
         }
 

@@ -28,7 +28,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <Rectangle Fill="AliceBlue" Width="20" Height="120" Margin="10" RadiusX="5" RadiusY="5" Canvas.ZIndex="2" Canvas.Left="50"/>
             </Canvas>
         </Button>
-        <GridView x:Name="GridOfButtons" ItemsSource="{Binding Buttons}" SelectedItem="{Binding SelectedButton, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="0">
+        <GridView x:Name="GridOfButtons" ItemsSource="{Binding Styles}" SelectedItem="{Binding SelectedStyle, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="0">
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="10" Background="LightGray">
@@ -42,8 +42,8 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
         </GridView>
         <StackPanel Grid.Column="2" Margin="10">
             <TextBlock Text="Выбранный элемент"  />
-            <TextBlock Text="Модель" />
-            <TextBox Text="{Binding Path=SelectedButton.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Название стиля" />
+            <TextBox Text="{Binding Path=SelectedStyle.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <!--<TextBlock Text="Производитель" />
             <TextBox Text="{Binding Company, UpdateSourceTrigger=PropertyChanged}" />
             <TextBlock Text="Цена" />

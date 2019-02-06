@@ -4,9 +4,18 @@
     <RootPropertyPathName Name="Background" />
     <RootPropertyPathName Name="Flag" />
     <RootPropertyPathName Name="Country" />
-    <RootPropertyPathName Name="SelectedButton" />
+    <RootPropertyPathName Name="SelectedDocument" />
+    <RootPropertyPathName Name="AdditionalInf" />
+    <RootPropertyPathName Name="Volume" />
+    <RootPropertyPathName Name="Pages" />
+    <RootPropertyPathName Name="Language" />
+    <RootPropertyPathName Name="URLAdress" />
+    <RootPropertyPathName Name="Edition" />
+    <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="Title" />
-    <RootPropertyPathName Name="Buttons" />
+    <RootPropertyPathName Name="Documents" />
+    <RootPropertyPathName Name="SelectedStyle" />
+    <RootPropertyPathName Name="Styles" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -108,10 +117,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Inlines" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Inlines" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="ElementName" />
@@ -138,7 +147,6 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="SourceParser.Pages.Home" />
-    <RootType FullName="SourceParser.Pages.NewDocument" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedItem" />
@@ -158,6 +166,8 @@
       <RootProperty Name="RadiusX" />
       <RootProperty Name="RadiusY" />
     </RootType>
+    <RootType FullName="SourceParser.Pages.NewDocument" />
+    <RootType FullName="SourceParser.Pages.NewLink" />
     <RootType FullName="SourceParser.Pages.NewStyle" />
   </Roots.RootTypes>
 </Roots>

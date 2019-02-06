@@ -11,5 +11,7 @@ App.xbf
 MainPage.xbf
 Pages\Home.xbf
 Pages\NewDocument.xbf
+Pages\NewLink.xbf
+Pages\NewStyle.xbf
 SourceParser.xr.xml
 Properties\Default.rd.xml

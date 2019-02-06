@@ -98,12 +98,16 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\ButtonMod.cs" />
+    <Compile Include="Models\DocumentMod.cs" />
+    <Compile Include="Models\StyleMod.cs" />
     <Compile Include="Pages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NewDocument.xaml.cs">
       <DependentUpon>NewDocument.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewLink.xaml.cs">
+      <DependentUpon>NewLink.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NewStyle.xaml.cs">
       <DependentUpon>NewStyle.xaml</DependentUpon>
@@ -144,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\NewDocument.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NewLink.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

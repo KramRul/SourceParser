@@ -72,7 +72,7 @@ namespace SourceParser.Pages
                 };
                 Navigator.Childrens.Add(button);
                 Styles.Children.Add(button);*/
-                (DataContext as ApplicationViewModel).Buttons.Add(new Models.ButtonMod() { Title = NameOfStyleTextBlock.Text });
+                (DataContext as ApplicationViewModel).Styles.Add(new Models.StyleMod() { Title = NameOfStyleTextBlock.Text });
             }
             else if (result == ContentDialogResult.Secondary)
             {

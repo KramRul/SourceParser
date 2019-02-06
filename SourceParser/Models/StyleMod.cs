@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SourceParser.Models
 {
-    public class ButtonMod : INotifyPropertyChanged
+    public class StyleMod : INotifyPropertyChanged
     {
         private string title;
         public string Title
