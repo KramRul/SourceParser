@@ -95,6 +95,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Entities\Author.cs" />
+    <Compile Include="DAL\Entities\BaseEntity.cs" />
+    <Compile Include="DAL\Entities\Co-Author.cs" />
+    <Compile Include="DAL\Entities\Document.cs" />
+    <Compile Include="DAL\Entities\Editor.cs" />
+    <Compile Include="DAL\Entities\Note.cs" />
+    <Compile Include="DAL\Entities\Publisher.cs" />
+    <Compile Include="DAL\Entities\Reference.cs" />
+    <Compile Include="DAL\Entities\Style.cs" />
+    <Compile Include="DAL\Entities\Translator.cs" />
+    <Compile Include="DAL\Enums\DocumentType.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -176,6 +187,11 @@
     <PackageReference Include="Telerik.UI.for.UniversalWindowsPlatform">
       <Version>1.0.1.1</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\Interfaces\" />
+    <Folder Include="DAL\Repositories\" />
+    <Folder Include="DAL\UnitOfWorks\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
