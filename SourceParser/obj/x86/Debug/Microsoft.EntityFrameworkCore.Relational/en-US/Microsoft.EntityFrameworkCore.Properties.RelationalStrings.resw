@@ -198,6 +198,9 @@
   <data name="ConflictingOriginalRowValues" xml:space="preserve">
     <value>An instance of entity type '{firstEntityType}' and an instance of entity type '{secondEntityType}' are mapped to the same row, but have different original property values for the properties {firstProperties} and {secondProperties} mapped to {columns}. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting values.</value>
   </data>
+  <data name="CaseWhenClauseResultTypeUnexpected" xml:space="preserve">
+    <value>The result type of '{whenResultType}' in a when clause is invalid. The expected type is '{resultType}'.</value>
+  </data>
   <data name="DiscriminatorEntityTypeNotDerived" xml:space="preserve">
     <value>Cannot configure the discriminator value for entity type '{entityType}' because it doesn't derive from '{rootEntityType}'.</value>
   </data>
@@ -211,7 +214,10 @@
     <value>Reverting migration '{migration}'.</value>
   </data>
   <data name="BadSequenceType" xml:space="preserve">
-    <value>Invalid type for sequence. Valid types are 'Int64' (the default), 'Int32', 'Int16', and 'Byte'.</value>
+    <value>Invalid type for sequence. Valid types are 'Int64' (the default), 'Int32', 'Int16', 'Byte' and 'Decimal'.</value>
+  </data>
+  <data name="SqlFunctionArgumentsAndMappingsMismatch" xml:space="preserve">
+    <value>The number of argument type mappings does not match the number of arguments.</value>
   </data>
   <data name="LogRelationalLoggerBeginningTransaction" xml:space="preserve">
     <value>Beginning transaction with isolation level '{isolationLevel}'.</value>
@@ -237,6 +243,9 @@
   <data name="InvalidCommandTimeout" xml:space="preserve">
     <value>The specified CommandTimeout value is not valid. It must be a positive number.</value>
   </data>
+  <data name="SqlFunctionNullArgumentMapping" xml:space="preserve">
+    <value>One of the specified argument type mappings was null.</value>
+  </data>
   <data name="LogRelationalLoggerTransactionError" xml:space="preserve">
     <value>An error occurred using a transaction.</value>
   </data>
@@ -246,8 +255,11 @@
   <data name="DiscriminatorValueIncompatible" xml:space="preserve">
     <value>Cannot set discriminator value '{value}' for discriminator property '{discriminator}' because it is not assignable to property of type '{discriminatorType}'.</value>
   </data>
+  <data name="RelationalCloneNotImplemented" xml:space="preserve">
+    <value>The '{mapping}' does not support 2.2 style type mapping. The database provider needs to be updated to support the full set of mapping customization.</value>
+  </data>
   <data name="DerivedQueryTypeView" xml:space="preserve">
-    <value>The query type '{queryType}' cannot be mapped to a view bacause it is derived from '{baseType}'. Only base query types can be mapped to a view.</value>
+    <value>The query type '{queryType}' cannot be mapped to a view because it is derived from '{baseType}'. Only base query types can be mapped to a view.</value>
   </data>
   <data name="SharedRowEntryCountMismatchSensitive" xml:space="preserve">
     <value>The entity of type '{entityType}' is sharing the table '{tableName}' with entities of type '{missingEntityType}', but there is no entity of this type with the same key value '{keyValue}' that has been marked as '{state}'.</value>
@@ -269,6 +281,9 @@
   </data>
   <data name="DuplicateColumnNameDataTypeMismatch" xml:space="preserve">
     <value>'{entityType1}.{property1}' and '{entityType2}.{property2}' are both mapped to column '{columnName}' in '{table}' but are configured to use different data types ('{dataType1}' and '{dataType2}').</value>
+  </data>
+  <data name="CaseElseResultTypeUnexpected" xml:space="preserve">
+    <value>The result type of '{elseResultType}' in the else clause is invalid. The expected type is '{resultType}'.</value>
   </data>
   <data name="LogRelationalLoggerExecutingCommand" xml:space="preserve">
     <value>Executing DbCommand [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}</value>
@@ -387,6 +402,9 @@
   <data name="LogRelationalLoggerClosingConnection" xml:space="preserve">
     <value>Closing connection to database '{database}' on server '{server}'.</value>
   </data>
+  <data name="CaseWhenClauseTestTypeUnexpected" xml:space="preserve">
+    <value>The operand type of '{whenOperandType}' in a when clause is invalid. The expected type is '{expectedWhenOperandType}'.</value>
+  </data>
   <data name="LogBoolWithDefaultWarning" xml:space="preserve">
     <value>The 'bool' property '{property}' on entity type '{entityType}' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'.</value>
   </data>
@@ -431,6 +449,9 @@
   </data>
   <data name="DuplicateForeignKeyPrincipalColumnMismatch" xml:space="preserve">
     <value>The foreign keys {index1} on '{entityType1}' and {index2} on '{entityType2}' are both mapped to '{table}.{foreignKeyName}' but referencing different principal columns ({principalColumnNames1} and {principalColumnNames2}).</value>
+  </data>
+  <data name="SqlFunctionUnexpectedInstanceMapping" xml:space="preserve">
+    <value>An instance type mapping was specified without an instance expression.</value>
   </data>
   <data name="NoDiscriminatorProperty" xml:space="preserve">
     <value>The entity type '{entityType}' is part of a hierarchy, but does not have a discriminator property configured.</value>

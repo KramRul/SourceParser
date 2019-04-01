@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\ApplicationContext.cs" />
     <Compile Include="DAL\Entities\Author.cs" />
     <Compile Include="DAL\Entities\BaseEntity.cs" />
     <Compile Include="DAL\Entities\Co-Author.cs" />
@@ -106,6 +107,28 @@
     <Compile Include="DAL\Entities\Style.cs" />
     <Compile Include="DAL\Entities\Translator.cs" />
     <Compile Include="DAL\Enums\DocumentType.cs" />
+    <Compile Include="DAL\Interfaces\IAuthorRepository.cs" />
+    <Compile Include="DAL\Interfaces\IBaseRepository.cs" />
+    <Compile Include="DAL\Interfaces\ICo_AuthorRepository.cs" />
+    <Compile Include="DAL\Interfaces\IDocumentRepository.cs" />
+    <Compile Include="DAL\Interfaces\IEditorRepository.cs" />
+    <Compile Include="DAL\Interfaces\INoteRepository.cs" />
+    <Compile Include="DAL\Interfaces\IPublisherRepository.cs" />
+    <Compile Include="DAL\Interfaces\IReferenceRepository.cs" />
+    <Compile Include="DAL\Interfaces\IStyleRepository.cs" />
+    <Compile Include="DAL\Interfaces\ITranslatorRepository.cs" />
+    <Compile Include="DAL\Repositories\AuthorRepository.cs" />
+    <Compile Include="DAL\Repositories\BaseRepository.cs" />
+    <Compile Include="DAL\Repositories\Co_AuthorRepository.cs" />
+    <Compile Include="DAL\Repositories\DocumentRepository.cs" />
+    <Compile Include="DAL\Repositories\EditorRepository.cs" />
+    <Compile Include="DAL\Repositories\NoteRepository.cs" />
+    <Compile Include="DAL\Repositories\PublisherRepository.cs" />
+    <Compile Include="DAL\Repositories\ReferenceRepository.cs" />
+    <Compile Include="DAL\Repositories\StyleRepository.cs" />
+    <Compile Include="DAL\Repositories\TranslatorRepository.cs" />
+    <Compile Include="DAL\UnitOfWorks\Interfaces\IBaseUnitOfWork.cs" />
+    <Compile Include="DAL\UnitOfWorks\UnitOfWork.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -173,13 +196,15 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
-      <Version>2.1.3</Version>
+      <Version>2.2.3</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
-      <Version>2.1.3</Version>
+      <Version>2.2.3</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.1.7</Version>
+      <Version>6.2.8</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
       <Version>2.0.0</Version>
@@ -189,9 +214,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\Interfaces\" />
-    <Folder Include="DAL\Repositories\" />
-    <Folder Include="DAL\UnitOfWorks\" />
+    <Folder Include="DAL\Entities\NewFolder1\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

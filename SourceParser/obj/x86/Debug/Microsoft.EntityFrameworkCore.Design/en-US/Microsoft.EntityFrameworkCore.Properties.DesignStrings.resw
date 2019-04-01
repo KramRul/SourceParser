@@ -124,7 +124,7 @@
     <value>Unable to identify the primary key for table '{tableName}'.</value>
   </data>
   <data name="NoParameterlessConstructor" xml:space="preserve">
-    <value>Unable to create an object of type '{contextType}'. Add an implementation of 'IDesignTimeDbContextFactory&lt;{contextType}&gt;' to the project, or see https://go.microsoft.com/fwlink/?linkid=851728 for additional patterns supported at design time.</value>
+    <value>Unable to create an object of type '{contextType}'. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728</value>
   </data>
   <data name="ReusingSnapshotName" xml:space="preserve">
     <value>Reusing model snapshot name '{name}'.</value>
@@ -199,6 +199,9 @@ Change your target project to the migrations project by using the Package Manage
   </data>
   <data name="UseContext" xml:space="preserve">
     <value>Using context '{name}'.</value>
+  </data>
+  <data name="LiteralExpressionNotSupported" xml:space="preserve">
+    <value>The literal expression '{expression}' for '{type}' cannot be parsed. Only simple constructor calls and factory methods are supported.</value>
   </data>
   <data name="UsingBuildWebHost" xml:space="preserve">
     <value>Using application service provider from IWebHost accessor on '{programClass}'.</value>
