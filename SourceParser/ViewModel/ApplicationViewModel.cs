@@ -1,4 +1,7 @@
-﻿using SourceParser.Models;
+﻿using SourceParser.BLL.Services;
+using SourceParser.BLL.Services.Interfaces;
+using SourceParser.DAL.UnitOfWorks;
+using SourceParser.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,62 +15,59 @@ namespace SourceParser.ViewModel
 {
     public class ApplicationViewModel : INotifyPropertyChanged
     {
-        private StyleMod selectedStyle;
+        private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork(new DAL.ApplicationContext()));
 
-        private DocumentMod selectedDocument;
+        private StyleMod _selectedStyle;
+        private DocumentMod _selectedDocument;
+        private ObservableCollection<StyleMod> _styles = new ObservableCollection<StyleMod>();
+        private ObservableCollection<DocumentMod> _documents = new ObservableCollection<DocumentMod>();
 
-        IDialogService dialogService;
-        public ObservableCollection<StyleMod> Styles { get; set; }
-
-        public ObservableCollection<DocumentMod> Documents { get; set; }
-
-        //private RelayCommand editCommand;
-        //public RelayCommand EditCommand
-        //{
-        //    get
-        //    {
-        //        return editCommand ??
-        //          (editCommand = new RelayCommand(obj =>
-        //          {
-        //              try
-        //              {
-        //                  dialogService.EditFileDialog();
-        //                  /*if (dialogService.SaveFileDialog())
-        //                  {
-        //                      dialogService.ShowMessage("Файл сохранен");
-        //                  }*/
-        //              }
-        //              catch (Exception ex)
-        //              {
-        //                  dialogService.ShowMessage(ex.Message);
-        //              }
-        //          }));
-        //    }
-        //}
-        public DocumentMod SelectedDocument
+        public ObservableCollection<StyleMod> Styles
         {
-            get { return selectedDocument; }
+            get => _styles;          
             set
             {
-                selectedDocument = value;
+                _styles = value;
+                OnPropertyChanged();
+            }
+        }
+        public ObservableCollection<DocumentMod> Documents
+        {
+            get => _documents;
+            set
+            {
+                _documents = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public DocumentMod SelectedDocument
+        {
+            get { return _selectedDocument; }
+            set
+            {
+                _selectedDocument = value;
                 OnPropertyChanged("SelectedDocument");
             }
         }
 
         public StyleMod SelectedStyle
         {
-            get { return selectedStyle; }
+            get { return _selectedStyle; }
             set
             {
-                selectedStyle = value;
+                _selectedStyle = value;
                 OnPropertyChanged("SelectedStyle");
             }
         }
 
-        public ApplicationViewModel(/*IDialogService dialogService*/)
+        public ApplicationViewModel()
         {
-            //this.dialogService = dialogService;
+            Initialize();
+        }
 
+        public async Task Initialize()
+        {
             Styles = new ObservableCollection<StyleMod>
             {
                 new StyleMod {Title="Style 1"},
@@ -76,18 +76,13 @@ namespace SourceParser.ViewModel
                 new StyleMod {Title="Style 4"}
             };
 
-            Documents = new ObservableCollection<DocumentMod>
-            {
-                new DocumentMod { Title="Document 1", Edition="1", Language="1"},
-                new DocumentMod { Title="Document 2", Edition="2", Language="2"}
-            };
+            Documents = await _documentService.GetAllDocuments();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
+        protected virtual void OnPropertyChanged([CallerMemberName]string prop = null)
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
     }
 }

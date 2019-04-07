@@ -10,27 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <telerikGrid:RadDataGrid x:ConnectionId='2' x:Name="DataGrid" UserGroupMode="Disabled">
-            <telerikGrid:RadDataGrid.Columns>
-                <telerikGrid:DataGridTemplateColumn Header="Country">
-                    <telerikGrid:DataGridTemplateColumn.CellContentTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Country}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </DataTemplate>
-                    </telerikGrid:DataGridTemplateColumn.CellContentTemplate>
-                </telerikGrid:DataGridTemplateColumn>
-
-                <telerikGrid:DataGridTemplateColumn Header="Flag">
-                    <telerikGrid:DataGridTemplateColumn.CellContentTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <Image Source="{Binding Flag}" Stretch="UniformToFill" Width="100" Height="100" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </telerikGrid:DataGridTemplateColumn.CellContentTemplate>
-                </telerikGrid:DataGridTemplateColumn>
-            </telerikGrid:RadDataGrid.Columns>
-        </telerikGrid:RadDataGrid>
+        
     </Grid>
 </Page>
 

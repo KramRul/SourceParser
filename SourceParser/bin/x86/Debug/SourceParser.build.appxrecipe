@@ -193,6 +193,9 @@
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\DocumentsTable.xbf">
+      <PackagePath>Pages\DocumentsTable.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\Home.xbf">
       <PackagePath>Pages\Home.xbf</PackagePath>
     </AppxPackagedFile>

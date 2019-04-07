@@ -213,7 +213,7 @@ namespace SourceParser.SourceParser_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[131];
+            _typeNameTable = new string[132];
             _typeNameTable[0] = "SourceParser.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -295,58 +295,59 @@ namespace SourceParser.SourceParser_XamlTypeInfo
             _typeNameTable[78] = "System.Collections.ObjectModel.ObservableCollection`1<Object>";
             _typeNameTable[79] = "System.Collections.ObjectModel.Collection`1<Object>";
             _typeNameTable[80] = "Telerik.UI.Xaml.Controls.Grid.DataGridTemplateColumn";
-            _typeNameTable[81] = "SourceParser.Pages.Home";
-            _typeNameTable[82] = "SourceParser.Pages.NewDocument";
-            _typeNameTable[83] = "SourceParser.Pages.NewLink";
-            _typeNameTable[84] = "SourceParser.Pages.NewStyle";
-            _typeNameTable[85] = "Telerik.UI.Drawing.D2DResource";
-            _typeNameTable[86] = "Telerik.UI.Drawing.D2DBrush";
-            _typeNameTable[87] = "Telerik.UI.Drawing.D2DTextStyle";
-            _typeNameTable[88] = "Telerik.UI.Drawing.FontWeightName";
-            _typeNameTable[89] = "Windows.UI.Xaml.TextAlignment";
-            _typeNameTable[90] = "Windows.UI.Text.FontStyle";
-            _typeNameTable[91] = "Telerik.UI.Drawing.D2DShapeStyle";
-            _typeNameTable[92] = "Telerik.UI.Drawing.D2DSolidColorBrush";
-            _typeNameTable[93] = "Windows.UI.Color";
-            _typeNameTable[94] = "Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelDefinition";
-            _typeNameTable[95] = "Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelLocation";
-            _typeNameTable[96] = "Windows.UI.Xaml.HorizontalAlignment";
-            _typeNameTable[97] = "Windows.UI.Xaml.VerticalAlignment";
-            _typeNameTable[98] = "Telerik.UI.Xaml.Controls.Chart.ChartPalette";
-            _typeNameTable[99] = "Telerik.UI.Xaml.Controls.Chart.PaletteEntryCollection";
-            _typeNameTable[100] = "System.Collections.Generic.List`1<Windows.UI.Xaml.Media.Brush>";
-            _typeNameTable[101] = "Telerik.UI.Xaml.Controls.Data.HexView.AngledHexLayoutDefinition";
-            _typeNameTable[102] = "Telerik.UI.Xaml.Controls.Data.HexView.HexLayoutDefinitionBase";
-            _typeNameTable[103] = "Windows.UI.Xaml.Controls.Orientation";
-            _typeNameTable[104] = "Telerik.UI.Xaml.Controls.Data.HexView.FlatLooseHexLayoutDefinition";
-            _typeNameTable[105] = "Telerik.UI.Xaml.Controls.Data.HexView.FlatTightHexLayoutDefinition";
-            _typeNameTable[106] = "Telerik.UI.Xaml.Controls.Input.HighlightStyle";
-            _typeNameTable[107] = "Windows.UI.Xaml.Media.FontFamily";
-            _typeNameTable[108] = "Telerik.UI.Xaml.Controls.Input.FontWeightName";
-            _typeNameTable[109] = "Telerik.UI.Xaml.Controls.Input.CalendarCellStyle";
-            _typeNameTable[110] = "Telerik.UI.Xaml.Controls.Input.Calendar.CalendarTimeRulerItemStyleSelector";
-            _typeNameTable[111] = "Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu";
-            _typeNameTable[112] = "System.Collections.ObjectModel.ObservableCollection`1<Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>";
-            _typeNameTable[113] = "System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>";
-            _typeNameTable[114] = "Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem";
-            _typeNameTable[115] = "System.Windows.Input.ICommand";
-            _typeNameTable[116] = "Telerik.UI.Xaml.Controls.Primitives.Menu.CommandService";
-            _typeNameTable[117] = "Telerik.UI.Xaml.Controls.Primitives.CommandServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
-            _typeNameTable[118] = "Telerik.UI.Xaml.Controls.Primitives.ServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
-            _typeNameTable[119] = "Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
-            _typeNameTable[120] = "Telerik.UI.Xaml.Controls.Primitives.CommandCollection`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
-            _typeNameTable[121] = "Telerik.UI.Xaml.Controls.Primitives.AttachableObjectCollection`2<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu, Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>";
-            _typeNameTable[122] = "System.Collections.ObjectModel.ObservableCollection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>";
-            _typeNameTable[123] = "System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>";
-            _typeNameTable[124] = "Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
-            _typeNameTable[125] = "Windows.UI.Xaml.FrameworkElement";
-            _typeNameTable[126] = "Telerik.UI.Xaml.Controls.Primitives.RadialMenuTriggerBehavior";
-            _typeNameTable[127] = "Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Windows.UI.Xaml.FrameworkElement>";
-            _typeNameTable[128] = "Telerik.UI.Xaml.Controls.Primitives.RadialMenuAttachTriggers";
-            _typeNameTable[129] = "Telerik.UI.Xaml.Controls.Primitives.BusyIndicator.BusyIndicatorAnimationAdapter";
-            _typeNameTable[130] = "Windows.UI.Xaml.Media.Animation.Storyboard";
+            _typeNameTable[81] = "SourceParser.Pages.DocumentsTable";
+            _typeNameTable[82] = "SourceParser.Pages.Home";
+            _typeNameTable[83] = "SourceParser.Pages.NewDocument";
+            _typeNameTable[84] = "SourceParser.Pages.NewLink";
+            _typeNameTable[85] = "SourceParser.Pages.NewStyle";
+            _typeNameTable[86] = "Telerik.UI.Drawing.D2DResource";
+            _typeNameTable[87] = "Telerik.UI.Drawing.D2DBrush";
+            _typeNameTable[88] = "Telerik.UI.Drawing.D2DTextStyle";
+            _typeNameTable[89] = "Telerik.UI.Drawing.FontWeightName";
+            _typeNameTable[90] = "Windows.UI.Xaml.TextAlignment";
+            _typeNameTable[91] = "Windows.UI.Text.FontStyle";
+            _typeNameTable[92] = "Telerik.UI.Drawing.D2DShapeStyle";
+            _typeNameTable[93] = "Telerik.UI.Drawing.D2DSolidColorBrush";
+            _typeNameTable[94] = "Windows.UI.Color";
+            _typeNameTable[95] = "Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelDefinition";
+            _typeNameTable[96] = "Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelLocation";
+            _typeNameTable[97] = "Windows.UI.Xaml.HorizontalAlignment";
+            _typeNameTable[98] = "Windows.UI.Xaml.VerticalAlignment";
+            _typeNameTable[99] = "Telerik.UI.Xaml.Controls.Chart.ChartPalette";
+            _typeNameTable[100] = "Telerik.UI.Xaml.Controls.Chart.PaletteEntryCollection";
+            _typeNameTable[101] = "System.Collections.Generic.List`1<Windows.UI.Xaml.Media.Brush>";
+            _typeNameTable[102] = "Telerik.UI.Xaml.Controls.Data.HexView.AngledHexLayoutDefinition";
+            _typeNameTable[103] = "Telerik.UI.Xaml.Controls.Data.HexView.HexLayoutDefinitionBase";
+            _typeNameTable[104] = "Windows.UI.Xaml.Controls.Orientation";
+            _typeNameTable[105] = "Telerik.UI.Xaml.Controls.Data.HexView.FlatLooseHexLayoutDefinition";
+            _typeNameTable[106] = "Telerik.UI.Xaml.Controls.Data.HexView.FlatTightHexLayoutDefinition";
+            _typeNameTable[107] = "Telerik.UI.Xaml.Controls.Input.HighlightStyle";
+            _typeNameTable[108] = "Windows.UI.Xaml.Media.FontFamily";
+            _typeNameTable[109] = "Telerik.UI.Xaml.Controls.Input.FontWeightName";
+            _typeNameTable[110] = "Telerik.UI.Xaml.Controls.Input.CalendarCellStyle";
+            _typeNameTable[111] = "Telerik.UI.Xaml.Controls.Input.Calendar.CalendarTimeRulerItemStyleSelector";
+            _typeNameTable[112] = "Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu";
+            _typeNameTable[113] = "System.Collections.ObjectModel.ObservableCollection`1<Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>";
+            _typeNameTable[114] = "System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>";
+            _typeNameTable[115] = "Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem";
+            _typeNameTable[116] = "System.Windows.Input.ICommand";
+            _typeNameTable[117] = "Telerik.UI.Xaml.Controls.Primitives.Menu.CommandService";
+            _typeNameTable[118] = "Telerik.UI.Xaml.Controls.Primitives.CommandServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
+            _typeNameTable[119] = "Telerik.UI.Xaml.Controls.Primitives.ServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
+            _typeNameTable[120] = "Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
+            _typeNameTable[121] = "Telerik.UI.Xaml.Controls.Primitives.CommandCollection`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
+            _typeNameTable[122] = "Telerik.UI.Xaml.Controls.Primitives.AttachableObjectCollection`2<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu, Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>";
+            _typeNameTable[123] = "System.Collections.ObjectModel.ObservableCollection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>";
+            _typeNameTable[124] = "System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>";
+            _typeNameTable[125] = "Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>";
+            _typeNameTable[126] = "Windows.UI.Xaml.FrameworkElement";
+            _typeNameTable[127] = "Telerik.UI.Xaml.Controls.Primitives.RadialMenuTriggerBehavior";
+            _typeNameTable[128] = "Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Windows.UI.Xaml.FrameworkElement>";
+            _typeNameTable[129] = "Telerik.UI.Xaml.Controls.Primitives.RadialMenuAttachTriggers";
+            _typeNameTable[130] = "Telerik.UI.Xaml.Controls.Primitives.BusyIndicator.BusyIndicatorAnimationAdapter";
+            _typeNameTable[131] = "Windows.UI.Xaml.Media.Animation.Storyboard";
 
-            _typeTable = new global::System.Type[131];
+            _typeTable = new global::System.Type[132];
             _typeTable[0] = typeof(global::SourceParser.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -428,56 +429,57 @@ namespace SourceParser.SourceParser_XamlTypeInfo
             _typeTable[78] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.Object>);
             _typeTable[79] = typeof(global::System.Collections.ObjectModel.Collection<global::System.Object>);
             _typeTable[80] = typeof(global::Telerik.UI.Xaml.Controls.Grid.DataGridTemplateColumn);
-            _typeTable[81] = typeof(global::SourceParser.Pages.Home);
-            _typeTable[82] = typeof(global::SourceParser.Pages.NewDocument);
-            _typeTable[83] = typeof(global::SourceParser.Pages.NewLink);
-            _typeTable[84] = typeof(global::SourceParser.Pages.NewStyle);
-            _typeTable[85] = typeof(global::Telerik.UI.Drawing.D2DResource);
-            _typeTable[86] = typeof(global::Telerik.UI.Drawing.D2DBrush);
-            _typeTable[87] = typeof(global::Telerik.UI.Drawing.D2DTextStyle);
-            _typeTable[88] = typeof(global::Telerik.UI.Drawing.FontWeightName);
-            _typeTable[89] = typeof(global::Windows.UI.Xaml.TextAlignment);
-            _typeTable[90] = typeof(global::Windows.UI.Text.FontStyle);
-            _typeTable[91] = typeof(global::Telerik.UI.Drawing.D2DShapeStyle);
-            _typeTable[92] = typeof(global::Telerik.UI.Drawing.D2DSolidColorBrush);
-            _typeTable[93] = typeof(global::Windows.UI.Color);
-            _typeTable[94] = typeof(global::Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelDefinition);
-            _typeTable[95] = typeof(global::Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelLocation);
-            _typeTable[96] = typeof(global::Windows.UI.Xaml.HorizontalAlignment);
-            _typeTable[97] = typeof(global::Windows.UI.Xaml.VerticalAlignment);
-            _typeTable[98] = typeof(global::Telerik.UI.Xaml.Controls.Chart.ChartPalette);
-            _typeTable[99] = typeof(global::Telerik.UI.Xaml.Controls.Chart.PaletteEntryCollection);
-            _typeTable[100] = typeof(global::System.Collections.Generic.List<global::Windows.UI.Xaml.Media.Brush>);
-            _typeTable[101] = typeof(global::Telerik.UI.Xaml.Controls.Data.HexView.AngledHexLayoutDefinition);
-            _typeTable[102] = typeof(global::Telerik.UI.Xaml.Controls.Data.HexView.HexLayoutDefinitionBase);
-            _typeTable[103] = typeof(global::Windows.UI.Xaml.Controls.Orientation);
-            _typeTable[104] = typeof(global::Telerik.UI.Xaml.Controls.Data.HexView.FlatLooseHexLayoutDefinition);
-            _typeTable[105] = typeof(global::Telerik.UI.Xaml.Controls.Data.HexView.FlatTightHexLayoutDefinition);
-            _typeTable[106] = typeof(global::Telerik.UI.Xaml.Controls.Input.HighlightStyle);
-            _typeTable[107] = typeof(global::Windows.UI.Xaml.Media.FontFamily);
-            _typeTable[108] = typeof(global::Telerik.UI.Xaml.Controls.Input.FontWeightName);
-            _typeTable[109] = typeof(global::Telerik.UI.Xaml.Controls.Input.CalendarCellStyle);
-            _typeTable[110] = typeof(global::Telerik.UI.Xaml.Controls.Input.Calendar.CalendarTimeRulerItemStyleSelector);
-            _typeTable[111] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu);
-            _typeTable[112] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>);
-            _typeTable[113] = typeof(global::System.Collections.ObjectModel.Collection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>);
-            _typeTable[114] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem);
-            _typeTable[115] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[116] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.Menu.CommandService);
-            _typeTable[117] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.CommandServiceBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
-            _typeTable[118] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.ServiceBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
-            _typeTable[119] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.AttachableObject<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
-            _typeTable[120] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.CommandCollection<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
-            _typeTable[121] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.AttachableObjectCollection<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu, global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>);
-            _typeTable[122] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>);
-            _typeTable[123] = typeof(global::System.Collections.ObjectModel.Collection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>);
-            _typeTable[124] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
-            _typeTable[125] = typeof(global::Windows.UI.Xaml.FrameworkElement);
-            _typeTable[126] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuTriggerBehavior);
-            _typeTable[127] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.AttachableObject<global::Windows.UI.Xaml.FrameworkElement>);
-            _typeTable[128] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuAttachTriggers);
-            _typeTable[129] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.BusyIndicator.BusyIndicatorAnimationAdapter);
-            _typeTable[130] = typeof(global::Windows.UI.Xaml.Media.Animation.Storyboard);
+            _typeTable[81] = typeof(global::SourceParser.Pages.DocumentsTable);
+            _typeTable[82] = typeof(global::SourceParser.Pages.Home);
+            _typeTable[83] = typeof(global::SourceParser.Pages.NewDocument);
+            _typeTable[84] = typeof(global::SourceParser.Pages.NewLink);
+            _typeTable[85] = typeof(global::SourceParser.Pages.NewStyle);
+            _typeTable[86] = typeof(global::Telerik.UI.Drawing.D2DResource);
+            _typeTable[87] = typeof(global::Telerik.UI.Drawing.D2DBrush);
+            _typeTable[88] = typeof(global::Telerik.UI.Drawing.D2DTextStyle);
+            _typeTable[89] = typeof(global::Telerik.UI.Drawing.FontWeightName);
+            _typeTable[90] = typeof(global::Windows.UI.Xaml.TextAlignment);
+            _typeTable[91] = typeof(global::Windows.UI.Text.FontStyle);
+            _typeTable[92] = typeof(global::Telerik.UI.Drawing.D2DShapeStyle);
+            _typeTable[93] = typeof(global::Telerik.UI.Drawing.D2DSolidColorBrush);
+            _typeTable[94] = typeof(global::Windows.UI.Color);
+            _typeTable[95] = typeof(global::Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelDefinition);
+            _typeTable[96] = typeof(global::Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelLocation);
+            _typeTable[97] = typeof(global::Windows.UI.Xaml.HorizontalAlignment);
+            _typeTable[98] = typeof(global::Windows.UI.Xaml.VerticalAlignment);
+            _typeTable[99] = typeof(global::Telerik.UI.Xaml.Controls.Chart.ChartPalette);
+            _typeTable[100] = typeof(global::Telerik.UI.Xaml.Controls.Chart.PaletteEntryCollection);
+            _typeTable[101] = typeof(global::System.Collections.Generic.List<global::Windows.UI.Xaml.Media.Brush>);
+            _typeTable[102] = typeof(global::Telerik.UI.Xaml.Controls.Data.HexView.AngledHexLayoutDefinition);
+            _typeTable[103] = typeof(global::Telerik.UI.Xaml.Controls.Data.HexView.HexLayoutDefinitionBase);
+            _typeTable[104] = typeof(global::Windows.UI.Xaml.Controls.Orientation);
+            _typeTable[105] = typeof(global::Telerik.UI.Xaml.Controls.Data.HexView.FlatLooseHexLayoutDefinition);
+            _typeTable[106] = typeof(global::Telerik.UI.Xaml.Controls.Data.HexView.FlatTightHexLayoutDefinition);
+            _typeTable[107] = typeof(global::Telerik.UI.Xaml.Controls.Input.HighlightStyle);
+            _typeTable[108] = typeof(global::Windows.UI.Xaml.Media.FontFamily);
+            _typeTable[109] = typeof(global::Telerik.UI.Xaml.Controls.Input.FontWeightName);
+            _typeTable[110] = typeof(global::Telerik.UI.Xaml.Controls.Input.CalendarCellStyle);
+            _typeTable[111] = typeof(global::Telerik.UI.Xaml.Controls.Input.Calendar.CalendarTimeRulerItemStyleSelector);
+            _typeTable[112] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu);
+            _typeTable[113] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>);
+            _typeTable[114] = typeof(global::System.Collections.ObjectModel.Collection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>);
+            _typeTable[115] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem);
+            _typeTable[116] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[117] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.Menu.CommandService);
+            _typeTable[118] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.CommandServiceBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
+            _typeTable[119] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.ServiceBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
+            _typeTable[120] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.AttachableObject<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
+            _typeTable[121] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.CommandCollection<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
+            _typeTable[122] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.AttachableObjectCollection<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu, global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>);
+            _typeTable[123] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>);
+            _typeTable[124] = typeof(global::System.Collections.ObjectModel.Collection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>);
+            _typeTable[125] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>);
+            _typeTable[126] = typeof(global::Windows.UI.Xaml.FrameworkElement);
+            _typeTable[127] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuTriggerBehavior);
+            _typeTable[128] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.AttachableObject<global::Windows.UI.Xaml.FrameworkElement>);
+            _typeTable[129] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuAttachTriggers);
+            _typeTable[130] = typeof(global::Telerik.UI.Xaml.Controls.Primitives.BusyIndicator.BusyIndicatorAnimationAdapter);
+            _typeTable[131] = typeof(global::Windows.UI.Xaml.Media.Animation.Storyboard);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -531,31 +533,32 @@ namespace SourceParser.SourceParser_XamlTypeInfo
         private object Activate_78_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::System.Object>(); }
         private object Activate_79_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.Object>(); }
         private object Activate_80_DataGridTemplateColumn() { return new global::Telerik.UI.Xaml.Controls.Grid.DataGridTemplateColumn(); }
-        private object Activate_81_Home() { return new global::SourceParser.Pages.Home(); }
-        private object Activate_82_NewDocument() { return new global::SourceParser.Pages.NewDocument(); }
-        private object Activate_83_NewLink() { return new global::SourceParser.Pages.NewLink(); }
-        private object Activate_84_NewStyle() { return new global::SourceParser.Pages.NewStyle(); }
-        private object Activate_87_D2DTextStyle() { return new global::Telerik.UI.Drawing.D2DTextStyle(); }
-        private object Activate_91_D2DShapeStyle() { return new global::Telerik.UI.Drawing.D2DShapeStyle(); }
-        private object Activate_92_D2DSolidColorBrush() { return new global::Telerik.UI.Drawing.D2DSolidColorBrush(); }
-        private object Activate_94_ChartAnnotationLabelDefinition() { return new global::Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelDefinition(); }
-        private object Activate_98_ChartPalette() { return new global::Telerik.UI.Xaml.Controls.Chart.ChartPalette(); }
-        private object Activate_99_PaletteEntryCollection() { return new global::Telerik.UI.Xaml.Controls.Chart.PaletteEntryCollection(); }
-        private object Activate_100_List() { return new global::System.Collections.Generic.List<global::Windows.UI.Xaml.Media.Brush>(); }
-        private object Activate_101_AngledHexLayoutDefinition() { return new global::Telerik.UI.Xaml.Controls.Data.HexView.AngledHexLayoutDefinition(); }
-        private object Activate_104_FlatLooseHexLayoutDefinition() { return new global::Telerik.UI.Xaml.Controls.Data.HexView.FlatLooseHexLayoutDefinition(); }
-        private object Activate_105_FlatTightHexLayoutDefinition() { return new global::Telerik.UI.Xaml.Controls.Data.HexView.FlatTightHexLayoutDefinition(); }
-        private object Activate_106_HighlightStyle() { return new global::Telerik.UI.Xaml.Controls.Input.HighlightStyle(); }
-        private object Activate_109_CalendarCellStyle() { return new global::Telerik.UI.Xaml.Controls.Input.CalendarCellStyle(); }
-        private object Activate_110_CalendarTimeRulerItemStyleSelector() { return new global::Telerik.UI.Xaml.Controls.Input.Calendar.CalendarTimeRulerItemStyleSelector(); }
-        private object Activate_111_RadRadialMenu() { return new global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu(); }
-        private object Activate_112_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>(); }
-        private object Activate_113_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>(); }
-        private object Activate_114_RadialMenuItem() { return new global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem(); }
-        private object Activate_122_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>(); }
-        private object Activate_123_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>(); }
-        private object Activate_126_RadialMenuTriggerBehavior() { return new global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuTriggerBehavior(); }
-        private object Activate_129_BusyIndicatorAnimationAdapter() { return new global::Telerik.UI.Xaml.Controls.Primitives.BusyIndicator.BusyIndicatorAnimationAdapter(); }
+        private object Activate_81_DocumentsTable() { return new global::SourceParser.Pages.DocumentsTable(); }
+        private object Activate_82_Home() { return new global::SourceParser.Pages.Home(); }
+        private object Activate_83_NewDocument() { return new global::SourceParser.Pages.NewDocument(); }
+        private object Activate_84_NewLink() { return new global::SourceParser.Pages.NewLink(); }
+        private object Activate_85_NewStyle() { return new global::SourceParser.Pages.NewStyle(); }
+        private object Activate_88_D2DTextStyle() { return new global::Telerik.UI.Drawing.D2DTextStyle(); }
+        private object Activate_92_D2DShapeStyle() { return new global::Telerik.UI.Drawing.D2DShapeStyle(); }
+        private object Activate_93_D2DSolidColorBrush() { return new global::Telerik.UI.Drawing.D2DSolidColorBrush(); }
+        private object Activate_95_ChartAnnotationLabelDefinition() { return new global::Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelDefinition(); }
+        private object Activate_99_ChartPalette() { return new global::Telerik.UI.Xaml.Controls.Chart.ChartPalette(); }
+        private object Activate_100_PaletteEntryCollection() { return new global::Telerik.UI.Xaml.Controls.Chart.PaletteEntryCollection(); }
+        private object Activate_101_List() { return new global::System.Collections.Generic.List<global::Windows.UI.Xaml.Media.Brush>(); }
+        private object Activate_102_AngledHexLayoutDefinition() { return new global::Telerik.UI.Xaml.Controls.Data.HexView.AngledHexLayoutDefinition(); }
+        private object Activate_105_FlatLooseHexLayoutDefinition() { return new global::Telerik.UI.Xaml.Controls.Data.HexView.FlatLooseHexLayoutDefinition(); }
+        private object Activate_106_FlatTightHexLayoutDefinition() { return new global::Telerik.UI.Xaml.Controls.Data.HexView.FlatTightHexLayoutDefinition(); }
+        private object Activate_107_HighlightStyle() { return new global::Telerik.UI.Xaml.Controls.Input.HighlightStyle(); }
+        private object Activate_110_CalendarCellStyle() { return new global::Telerik.UI.Xaml.Controls.Input.CalendarCellStyle(); }
+        private object Activate_111_CalendarTimeRulerItemStyleSelector() { return new global::Telerik.UI.Xaml.Controls.Input.Calendar.CalendarTimeRulerItemStyleSelector(); }
+        private object Activate_112_RadRadialMenu() { return new global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu(); }
+        private object Activate_113_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>(); }
+        private object Activate_114_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>(); }
+        private object Activate_115_RadialMenuItem() { return new global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem(); }
+        private object Activate_123_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>(); }
+        private object Activate_124_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>(); }
+        private object Activate_127_RadialMenuTriggerBehavior() { return new global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuTriggerBehavior(); }
+        private object Activate_130_BusyIndicatorAnimationAdapter() { return new global::Telerik.UI.Xaml.Controls.Primitives.BusyIndicator.BusyIndicatorAnimationAdapter(); }
         private void VectorAdd_10_DataGridColumnCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Telerik.UI.Xaml.Controls.Grid.DataGridColumn>)instance;
@@ -706,43 +709,43 @@ namespace SourceParser.SourceParser_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_100_List(object instance, object item)
+        private void VectorAdd_101_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.Media.Brush>)instance;
             var newItem = (global::Windows.UI.Xaml.Media.Brush)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_112_ObservableCollection(object instance, object item)
+        private void VectorAdd_113_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>)instance;
             var newItem = (global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_113_Collection(object instance, object item)
+        private void VectorAdd_114_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>)instance;
             var newItem = (global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_120_CommandCollection(object instance, object item)
+        private void VectorAdd_121_CommandCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>)instance;
             var newItem = (global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_121_AttachableObjectCollection(object instance, object item)
+        private void VectorAdd_122_AttachableObjectCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>)instance;
             var newItem = (global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_122_ObservableCollection(object instance, object item)
+        private void VectorAdd_123_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>)instance;
             var newItem = (global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_123_Collection(object instance, object item)
+        private void VectorAdd_124_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>)instance;
             var newItem = (global::Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase<global::Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>)item;
@@ -1329,49 +1332,56 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 81:   //  SourceParser.Pages.Home
+            case 81:   //  SourceParser.Pages.DocumentsTable
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_81_Home;
+                userType.Activator = Activate_81_DocumentsTable;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 82:   //  SourceParser.Pages.NewDocument
+            case 82:   //  SourceParser.Pages.Home
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_82_NewDocument;
+                userType.Activator = Activate_82_Home;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 83:   //  SourceParser.Pages.NewLink
+            case 83:   //  SourceParser.Pages.NewDocument
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_83_NewLink;
+                userType.Activator = Activate_83_NewDocument;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 84:   //  SourceParser.Pages.NewStyle
+            case 84:   //  SourceParser.Pages.NewLink
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_84_NewStyle;
+                userType.Activator = Activate_84_NewLink;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 85:   //  Telerik.UI.Drawing.D2DResource
+            case 85:   //  SourceParser.Pages.NewStyle
+                userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_85_NewStyle;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 86:   //  Telerik.UI.Drawing.D2DResource
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 86:   //  Telerik.UI.Drawing.D2DBrush
+            case 87:   //  Telerik.UI.Drawing.D2DBrush
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Drawing.D2DResource"));
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 87:   //  Telerik.UI.Drawing.D2DTextStyle
+            case 88:   //  Telerik.UI.Drawing.D2DTextStyle
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_87_D2DTextStyle;
+                userType.Activator = Activate_88_D2DTextStyle;
                 userType.AddMemberName("Foreground");
                 userType.AddMemberName("FontWeight");
                 userType.AddMemberName("FontSize");
@@ -1383,7 +1393,7 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 88:   //  Telerik.UI.Drawing.FontWeightName
+            case 89:   //  Telerik.UI.Drawing.FontWeightName
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Black", global::Telerik.UI.Drawing.FontWeightName.Black);
                 userType.AddEnumValue("Bold", global::Telerik.UI.Drawing.FontWeightName.Bold);
@@ -1399,11 +1409,11 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 89:   //  Windows.UI.Xaml.TextAlignment
+            case 90:   //  Windows.UI.Xaml.TextAlignment
                 xamlType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 90:   //  Windows.UI.Text.FontStyle
+            case 91:   //  Windows.UI.Text.FontStyle
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStyle.Normal);
                 userType.AddEnumValue("Oblique", global::Windows.UI.Text.FontStyle.Oblique);
@@ -1411,9 +1421,9 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 91:   //  Telerik.UI.Drawing.D2DShapeStyle
+            case 92:   //  Telerik.UI.Drawing.D2DShapeStyle
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_91_D2DShapeStyle;
+                userType.Activator = Activate_92_D2DShapeStyle;
                 userType.AddMemberName("StrokeThickness");
                 userType.AddMemberName("Stroke");
                 userType.AddMemberName("Foreground");
@@ -1422,23 +1432,23 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 92:   //  Telerik.UI.Drawing.D2DSolidColorBrush
+            case 93:   //  Telerik.UI.Drawing.D2DSolidColorBrush
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Drawing.D2DBrush"));
-                userType.Activator = Activate_92_D2DSolidColorBrush;
+                userType.Activator = Activate_93_D2DSolidColorBrush;
                 userType.AddMemberName("Color");
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 93:   //  Windows.UI.Color
+            case 94:   //  Windows.UI.Color
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 94:   //  Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelDefinition
+            case 95:   //  Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelDefinition
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_94_ChartAnnotationLabelDefinition;
+                userType.Activator = Activate_95_ChartAnnotationLabelDefinition;
                 userType.AddMemberName("Format");
                 userType.AddMemberName("Template");
                 userType.AddMemberName("DefaultVisualStyle");
@@ -1451,7 +1461,7 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 95:   //  Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelLocation
+            case 96:   //  Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelLocation
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Left", global::Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelLocation.Left);
                 userType.AddEnumValue("Top", global::Telerik.UI.Xaml.Controls.Chart.ChartAnnotationLabelLocation.Top);
@@ -1461,17 +1471,17 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 96:   //  Windows.UI.Xaml.HorizontalAlignment
+            case 97:   //  Windows.UI.Xaml.HorizontalAlignment
                 xamlType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 97:   //  Windows.UI.Xaml.VerticalAlignment
+            case 98:   //  Windows.UI.Xaml.VerticalAlignment
                 xamlType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 98:   //  Telerik.UI.Xaml.Controls.Chart.ChartPalette
+            case 99:   //  Telerik.UI.Xaml.Controls.Chart.ChartPalette
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_98_ChartPalette;
+                userType.Activator = Activate_99_ChartPalette;
                 userType.AddMemberName("Name");
                 userType.AddMemberName("FillEntries");
                 userType.AddMemberName("SpecialFillEntries");
@@ -1481,29 +1491,29 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 99:   //  Telerik.UI.Xaml.Controls.Chart.PaletteEntryCollection
+            case 100:   //  Telerik.UI.Xaml.Controls.Chart.PaletteEntryCollection
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_99_PaletteEntryCollection;
+                userType.Activator = Activate_100_PaletteEntryCollection;
                 userType.SetContentPropertyName("Telerik.UI.Xaml.Controls.Chart.PaletteEntryCollection.Brushes");
                 userType.AddMemberName("Brushes");
                 xamlType = userType;
                 break;
 
-            case 100:   //  System.Collections.Generic.List`1<Windows.UI.Xaml.Media.Brush>
+            case 101:   //  System.Collections.Generic.List`1<Windows.UI.Xaml.Media.Brush>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_100_List;
+                userType.CollectionAdd = VectorAdd_101_List;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 101:   //  Telerik.UI.Xaml.Controls.Data.HexView.AngledHexLayoutDefinition
+            case 102:   //  Telerik.UI.Xaml.Controls.Data.HexView.AngledHexLayoutDefinition
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Data.HexView.HexLayoutDefinitionBase"));
-                userType.Activator = Activate_101_AngledHexLayoutDefinition;
+                userType.Activator = Activate_102_AngledHexLayoutDefinition;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 102:   //  Telerik.UI.Xaml.Controls.Data.HexView.HexLayoutDefinitionBase
+            case 103:   //  Telerik.UI.Xaml.Controls.Data.HexView.HexLayoutDefinitionBase
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("Orientation");
                 userType.AddMemberName("ItemLength");
@@ -1512,27 +1522,27 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 103:   //  Windows.UI.Xaml.Controls.Orientation
+            case 104:   //  Windows.UI.Xaml.Controls.Orientation
                 xamlType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 104:   //  Telerik.UI.Xaml.Controls.Data.HexView.FlatLooseHexLayoutDefinition
+            case 105:   //  Telerik.UI.Xaml.Controls.Data.HexView.FlatLooseHexLayoutDefinition
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Data.HexView.HexLayoutDefinitionBase"));
-                userType.Activator = Activate_104_FlatLooseHexLayoutDefinition;
+                userType.Activator = Activate_105_FlatLooseHexLayoutDefinition;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 105:   //  Telerik.UI.Xaml.Controls.Data.HexView.FlatTightHexLayoutDefinition
+            case 106:   //  Telerik.UI.Xaml.Controls.Data.HexView.FlatTightHexLayoutDefinition
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Data.HexView.HexLayoutDefinitionBase"));
-                userType.Activator = Activate_105_FlatTightHexLayoutDefinition;
+                userType.Activator = Activate_106_FlatTightHexLayoutDefinition;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 106:   //  Telerik.UI.Xaml.Controls.Input.HighlightStyle
+            case 107:   //  Telerik.UI.Xaml.Controls.Input.HighlightStyle
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_106_HighlightStyle;
+                userType.Activator = Activate_107_HighlightStyle;
                 userType.AddMemberName("FontFamily");
                 userType.AddMemberName("FontWeight");
                 userType.AddMemberName("FontStyle");
@@ -1542,11 +1552,11 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 107:   //  Windows.UI.Xaml.Media.FontFamily
+            case 108:   //  Windows.UI.Xaml.Media.FontFamily
                 xamlType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 108:   //  Telerik.UI.Xaml.Controls.Input.FontWeightName
+            case 109:   //  Telerik.UI.Xaml.Controls.Input.FontWeightName
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Black", global::Telerik.UI.Xaml.Controls.Input.FontWeightName.Black);
                 userType.AddEnumValue("Bold", global::Telerik.UI.Xaml.Controls.Input.FontWeightName.Bold);
@@ -1562,18 +1572,18 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 109:   //  Telerik.UI.Xaml.Controls.Input.CalendarCellStyle
+            case 110:   //  Telerik.UI.Xaml.Controls.Input.CalendarCellStyle
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_109_CalendarCellStyle;
+                userType.Activator = Activate_110_CalendarCellStyle;
                 userType.AddMemberName("ContentStyle");
                 userType.AddMemberName("DecorationStyle");
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 110:   //  Telerik.UI.Xaml.Controls.Input.Calendar.CalendarTimeRulerItemStyleSelector
+            case 111:   //  Telerik.UI.Xaml.Controls.Input.Calendar.CalendarTimeRulerItemStyleSelector
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.StyleSelector"));
-                userType.Activator = Activate_110_CalendarTimeRulerItemStyleSelector;
+                userType.Activator = Activate_111_CalendarTimeRulerItemStyleSelector;
                 userType.AddMemberName("VerticalLineStyle");
                 userType.AddMemberName("HorizontalLineStyle");
                 userType.AddMemberName("TimeLabelStyle");
@@ -1581,9 +1591,9 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 111:   //  Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu
+            case 112:   //  Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.RadControl"));
-                userType.Activator = Activate_111_RadRadialMenu;
+                userType.Activator = Activate_112_RadRadialMenu;
                 userType.SetContentPropertyName("Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("ShowToolTip");
@@ -1601,23 +1611,23 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 112:   //  System.Collections.ObjectModel.ObservableCollection`1<Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>
+            case 113:   //  System.Collections.ObjectModel.ObservableCollection`1<Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>"));
-                userType.CollectionAdd = VectorAdd_112_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_113_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 113:   //  System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>
+            case 114:   //  System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_113_Collection;
-                userType.CollectionAdd = VectorAdd_113_Collection;
+                userType.Activator = Activate_114_Collection;
+                userType.CollectionAdd = VectorAdd_114_Collection;
                 xamlType = userType;
                 break;
 
-            case 114:   //  Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem
+            case 115:   //  Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Primitives.RadDependencyObject"));
-                userType.Activator = Activate_114_RadialMenuItem;
+                userType.Activator = Activate_115_RadialMenuItem;
                 userType.SetContentPropertyName("Telerik.UI.Xaml.Controls.Primitives.RadialMenuItem.ChildItems");
                 userType.AddMemberName("ChildItems");
                 userType.AddMemberName("ToolTipContent");
@@ -1635,85 +1645,85 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 115:   //  System.Windows.Input.ICommand
+            case 116:   //  System.Windows.Input.ICommand
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 116:   //  Telerik.UI.Xaml.Controls.Primitives.Menu.CommandService
+            case 117:   //  Telerik.UI.Xaml.Controls.Primitives.Menu.CommandService
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Primitives.CommandServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 117:   //  Telerik.UI.Xaml.Controls.Primitives.CommandServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
+            case 118:   //  Telerik.UI.Xaml.Controls.Primitives.CommandServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Primitives.ServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>"));
                 xamlType = userType;
                 break;
 
-            case 118:   //  Telerik.UI.Xaml.Controls.Primitives.ServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
+            case 119:   //  Telerik.UI.Xaml.Controls.Primitives.ServiceBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>"));
                 xamlType = userType;
                 break;
 
-            case 119:   //  Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
+            case 120:   //  Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Primitives.RadDependencyObject"));
                 userType.AddMemberName("Owner");
                 xamlType = userType;
                 break;
 
-            case 120:   //  Telerik.UI.Xaml.Controls.Primitives.CommandCollection`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
+            case 121:   //  Telerik.UI.Xaml.Controls.Primitives.CommandCollection`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Primitives.AttachableObjectCollection`2<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu, Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>"));
-                userType.CollectionAdd = VectorAdd_120_CommandCollection;
+                userType.CollectionAdd = VectorAdd_121_CommandCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 121:   //  Telerik.UI.Xaml.Controls.Primitives.AttachableObjectCollection`2<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu, Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>
+            case 122:   //  Telerik.UI.Xaml.Controls.Primitives.AttachableObjectCollection`2<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu, Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>"));
-                userType.CollectionAdd = VectorAdd_121_AttachableObjectCollection;
+                userType.CollectionAdd = VectorAdd_122_AttachableObjectCollection;
                 xamlType = userType;
                 break;
 
-            case 122:   //  System.Collections.ObjectModel.ObservableCollection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>
+            case 123:   //  System.Collections.ObjectModel.ObservableCollection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>"));
-                userType.Activator = Activate_122_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_122_ObservableCollection;
+                userType.Activator = Activate_123_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_123_ObservableCollection;
                 xamlType = userType;
                 break;
 
-            case 123:   //  System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>
+            case 124:   //  System.Collections.ObjectModel.Collection`1<Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_123_Collection;
-                userType.CollectionAdd = VectorAdd_123_Collection;
+                userType.Activator = Activate_124_Collection;
+                userType.CollectionAdd = VectorAdd_124_Collection;
                 xamlType = userType;
                 break;
 
-            case 124:   //  Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
+            case 125:   //  Telerik.UI.Xaml.Controls.Primitives.ControlCommandBase`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Telerik.UI.Xaml.Controls.Primitives.RadRadialMenu>"));
                 xamlType = userType;
                 break;
 
-            case 125:   //  Windows.UI.Xaml.FrameworkElement
+            case 126:   //  Windows.UI.Xaml.FrameworkElement
                 xamlType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 126:   //  Telerik.UI.Xaml.Controls.Primitives.RadialMenuTriggerBehavior
+            case 127:   //  Telerik.UI.Xaml.Controls.Primitives.RadialMenuTriggerBehavior
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Windows.UI.Xaml.FrameworkElement>"));
-                userType.Activator = Activate_126_RadialMenuTriggerBehavior;
+                userType.Activator = Activate_127_RadialMenuTriggerBehavior;
                 userType.AddMemberName("AttachTriggers");
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 127:   //  Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Windows.UI.Xaml.FrameworkElement>
+            case 128:   //  Telerik.UI.Xaml.Controls.Primitives.AttachableObject`1<Windows.UI.Xaml.FrameworkElement>
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Telerik.UI.Xaml.Controls.Primitives.RadDependencyObject"));
                 userType.AddMemberName("Owner");
                 xamlType = userType;
                 break;
 
-            case 128:   //  Telerik.UI.Xaml.Controls.Primitives.RadialMenuAttachTriggers
+            case 129:   //  Telerik.UI.Xaml.Controls.Primitives.RadialMenuAttachTriggers
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuAttachTriggers.None);
                 userType.AddEnumValue("PointerPressed", global::Telerik.UI.Xaml.Controls.Primitives.RadialMenuAttachTriggers.PointerPressed);
@@ -1723,15 +1733,15 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 129:   //  Telerik.UI.Xaml.Controls.Primitives.BusyIndicator.BusyIndicatorAnimationAdapter
+            case 130:   //  Telerik.UI.Xaml.Controls.Primitives.BusyIndicator.BusyIndicatorAnimationAdapter
                 userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.FrameworkElement"));
-                userType.Activator = Activate_129_BusyIndicatorAnimationAdapter;
+                userType.Activator = Activate_130_BusyIndicatorAnimationAdapter;
                 userType.AddMemberName("Animation");
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 130:   //  Windows.UI.Xaml.Media.Animation.Storyboard
+            case 131:   //  Windows.UI.Xaml.Media.Animation.Storyboard
                 xamlType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

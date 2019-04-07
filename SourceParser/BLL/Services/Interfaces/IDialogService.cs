@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SourceParser.ViewModel
+namespace SourceParser.BLL.Services.Interfaces
 {
     public interface IDialogService
     {

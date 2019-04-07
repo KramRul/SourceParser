@@ -1,4 +1,7 @@
-﻿using SourceParser.ViewModel;
+﻿using SourceParser.BLL.Services;
+using SourceParser.BLL.Services.Interfaces;
+using SourceParser.DAL.UnitOfWorks;
+using SourceParser.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,15 +17,12 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace SourceParser.Pages
 {
-    /// <summary>
-    /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
-    /// </summary>
     public sealed partial class NewDocument : Page
     {
+        private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork(new DAL.ApplicationContext()));
+
         public NewDocument()
         {
             this.InitializeComponent();
@@ -32,16 +32,22 @@ namespace SourceParser.Pages
         {
             StackPanel stackPanel = new StackPanel();
 
-            TextBlock NameOfStyle = new TextBlock();
-            NameOfStyle.Text = "Название документа";
-            NameOfStyle.Margin = new Thickness(10);
+            TextBlock NameOfStyle = new TextBlock
+            {
+                Text = "Название документа",
+                Margin = new Thickness(10)
+            };
 
-            TextBox NameOfDocTextBlock = new TextBox();
-            NameOfDocTextBlock.MaxLength = 255;
+            TextBox NameOfDocTextBlock = new TextBox
+            {
+                MaxLength = 255
+            };
 
-            RelativePanel relativePanel = new RelativePanel();
-            relativePanel.FlowDirection = FlowDirection.LeftToRight;
-            relativePanel.HorizontalAlignment = HorizontalAlignment.Stretch;
+            RelativePanel relativePanel = new RelativePanel
+            {
+                FlowDirection = FlowDirection.LeftToRight,
+                HorizontalAlignment = HorizontalAlignment.Stretch
+            };
             relativePanel.Children.Add(NameOfStyle);
             relativePanel.Children.Add(NameOfDocTextBlock);
             RelativePanel.SetAlignLeftWithPanel(NameOfStyle, true);
@@ -62,12 +68,25 @@ namespace SourceParser.Pages
 
             if (result == ContentDialogResult.Primary)
             {
-                (DataContext as ApplicationViewModel).Documents.Add(new Models.DocumentMod() { Title = NameOfDocTextBlock.Text });
+                await _documentService.CreateDocument(NameOfDocTextBlock.Text);
+                (DataContext as ApplicationViewModel).Documents = await _documentService.GetAllDocuments();
             }
             else if (result == ContentDialogResult.Secondary)
             {
                 //header.Text = "Отмена действия";
             }
+        }
+
+        private async void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            await _documentService.UpdateDocument((DataContext as ApplicationViewModel).SelectedDocument);
+            (DataContext as ApplicationViewModel).Documents = await _documentService.GetAllDocuments();
+        }
+
+        private async void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            await _documentService.DeleteDocument((DataContext as ApplicationViewModel).SelectedDocument);
+            (DataContext as ApplicationViewModel).Documents = await _documentService.GetAllDocuments();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using SourceParser.DAL;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -32,6 +34,11 @@ namespace SourceParser
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            using (var db = new ApplicationContext())
+            {
+                db.Database.Migrate();
+            }
         }
 
         /// <summary>

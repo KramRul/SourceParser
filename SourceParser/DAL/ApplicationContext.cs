@@ -28,5 +28,83 @@ namespace SourceParser.DAL
         {
             optionsBuilder.UseSqlite(@"Filename=_SOURCE_PARSER");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.AuthorFirst, p =>
+            {
+                p.OwnsOne(c => c.Label);
+                p.OwnsOne(c => c.Name);
+            });
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.AuthorSecond, p =>
+            {
+                p.OwnsOne(c => c.Label);
+                p.OwnsOne(c => c.Name);
+            });
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.PagesNumber, p =>
+            {
+                p.OwnsOne(c => c.Text);
+            });
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.PagesRange, p =>
+            {
+                p.OwnsOne(c => c.Text);
+            });
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.Publisher, p =>
+            {
+                p.OwnsOne(c => c.GroupPublisher, b => b.OwnsMany(d => d.TextsPublisher, a =>
+                {
+                    a.HasForeignKey("GroupPublisherId");
+                    a.Property<int>("Id");
+                    a.HasKey("GroupPublisherId", "Id");
+                }));
+                p.OwnsOne(c => c.YearDatePublisher, b => b.OwnsOne(d => d.DatePublisher, k => k.OwnsMany(t => t.DatePartsPublisher, a=> 
+                {
+                    a.HasForeignKey("DateId");
+                    a.Property<int>("Id");
+                    a.HasKey("DateId", "Id");
+                })));
+            });
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.Publishuniver, p =>
+            {
+                p.OwnsOne(c => c.GroupUniver, b => b.OwnsMany(d => d.TextsUniver, a =>
+                {
+                    a.HasForeignKey("GroupUniverId");
+                    a.Property<int>("Id");
+                    a.HasKey("GroupUniverId", "Id");
+                }));
+                p.OwnsOne(c => c.YearDateUniver, b => b.OwnsOne(d => d.DateUniver, k => k.OwnsMany(t => t.DatePartsUniver, a =>
+                {
+                    a.HasForeignKey("DateId");
+                    a.Property<int>("Id");
+                    a.HasKey("DateId", "Id");
+                })));
+            });
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.PublishVolume, p =>
+            {
+                p.OwnsOne(c => c.Text);
+            });
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.Title, p =>
+            {
+
+            });
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.Webdoc, p =>
+            {
+                p.OwnsOne(c => c.Group, b => b.OwnsMany(d => d.Texts, a =>
+                {
+                    a.HasForeignKey("GroupId");
+                    a.Property<int>("Id");
+                    a.HasKey("GroupId", "Id");
+                }));
+            });
+            modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.YearDateStyle, p =>
+            {
+                p.OwnsOne(c => c.Date, b => b.OwnsMany(d => d.DateParts, a =>
+                {
+                    a.HasForeignKey("DateId");
+                    a.Property<int>("Id");
+                    a.HasKey("DateId", "Id");
+                }));
+            });
+        }
     }
 }

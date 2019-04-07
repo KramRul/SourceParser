@@ -24,7 +24,7 @@ namespace SourceParser.DAL.Entities.Style
 
         public PublishUniver Publishuniver { get; set; }
 
-        public YearDate YearDate { get; set; }
+        public YearDate YearDateStyle { get; set; }
 
         public PublishVolume PublishVolume { get; set; }
 
@@ -55,7 +55,7 @@ namespace SourceParser.DAL.Entities.Style
 
     public class Date
     {
-        List<DatePart> DateParts { get; set; }
+        public List<DatePart> DateParts { get; set; }
     }
 
     public class DatePart
@@ -65,16 +65,72 @@ namespace SourceParser.DAL.Entities.Style
 
     public class PublishUniver
     {
-        public Group Group { get; set; }
+        public GroupUniver GroupUniver { get; set; }
 
-        public YearDate YearDate { get; set; }
+        public YearDateUniver YearDateUniver { get; set; }
+    }
+
+    public class GroupUniver
+    {
+        public List<TextUniver> TextsUniver { get; set; }
+    }
+
+    public class TextUniver
+    {
+        public string Value { get; set; } = "[Электронный ресурс]";
+        public string Suffix { get; set; } = ". ";
+        public string Prefix { get; set; } = "– Режим доступа: ";
+        public string Variable { get; set; } = "URL";
+    }
+
+    public class YearDateUniver
+    {
+        public DateUniver DateUniver { get; set; }
+    }
+
+    public class DateUniver
+    {
+        public List<DatePartUniver> DatePartsUniver { get; set; }
+    }
+
+    public class DatePartUniver
+    {
+        public string NameUniver { get; set; } = "year";
     }
 
     public class Publisher
     {
-        public Group Group { get; set; }
+        public GroupPublisher GroupPublisher { get; set; }
 
-        public YearDate YearDate { get; set; }
+        public YearDatePublisher YearDatePublisher { get; set; }
+    }
+
+    public class GroupPublisher
+    {
+        public List<TextPublisher> TextsPublisher { get; set; }
+    }
+
+    public class TextPublisher
+    {
+        public string Value { get; set; } = "[Электронный ресурс]";
+        public string Suffix { get; set; } = ". ";
+        public string Prefix { get; set; } = "– Режим доступа: ";
+        public string Variable { get; set; } = "URL";
+    }
+
+    public class YearDatePublisher
+    {
+        public DatePublisher DatePublisher { get; set; }
+    }
+
+    public class DatePublisher
+    {
+        public List<DatePartPublisher> DatePartsPublisher { get; set; }
+    }
+
+    public class DatePartPublisher
+    {
+        public string NamePublisher { get; set; } = "year";
     }
 
     public class Webdoc
@@ -84,7 +140,7 @@ namespace SourceParser.DAL.Entities.Style
 
     public class Group
     {
-        List<Text> Texts { get; set; }
+        public List<Text> Texts { get; set; }
     }
 
     public class Text

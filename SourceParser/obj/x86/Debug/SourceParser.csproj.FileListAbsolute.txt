@@ -523,8 +523,13 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewLink.xaml
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewLink.xbf
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewLink.xbf
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\SourceParser.csprojAssemblyReference.cache
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\.winmd_cache\$Telerik.UI.Drawing.winmd_636723260600000000.json
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.Extensions.DependencyModel.dll
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\DocumentsTable.xbf
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\DocumentsTable.g.i.cs
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\DocumentsTable.g.cs
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\DocumentsTable.xaml
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\DocumentsTable.xbf
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\SourceParser.csprojAssemblyReference.cache

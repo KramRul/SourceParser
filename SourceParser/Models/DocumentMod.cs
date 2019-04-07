@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SourceParser.DAL.Entities;
+using SourceParser.DAL.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,99 +12,175 @@ namespace SourceParser.Models
 {
     public class DocumentMod : INotifyPropertyChanged
     {
-        private string title;
-        public string Title
+        private string _id;
+        private DocumentType _type;
+        private Author _author;
+        private Co_Author _co_Author;
+        private Editor _editor;
+        private Publisher _publisher;
+        private Translator _translator;
+        private string _title;
+        private DateTime _date;
+        private string _edition;
+        private string _URLAdress;
+        private string _language;
+        private string _pages;
+        private string _volume;
+        private string _additionalInf;
+
+        public string Id
         {
-            get { return title; }
+            get => _id;
             set
             {
-                title = value;
+                _id = value;
+                OnPropertyChanged("Id");
+            }
+        }
+
+        public DocumentType Type
+        {
+            get => _type;
+            set
+            {
+                _type = value;
+                OnPropertyChanged("Type");
+            }
+        }
+
+        public Author Author
+        {
+            get => _author;
+            set
+            {
+                _author = value;
+                OnPropertyChanged("Author");
+            }
+        }
+
+        public Co_Author Co_Author
+        {
+            get => _co_Author;
+            set
+            {
+                _co_Author = value;
+                OnPropertyChanged("Co_Author");
+            }
+        }
+
+        public Editor Editor
+        {
+            get => _editor;
+            set
+            {
+                _editor = value;
+                OnPropertyChanged("Editor");
+            }
+        }
+
+        public Publisher Publisher
+        {
+            get => _publisher;
+            set
+            {
+                _publisher = value;
+                OnPropertyChanged("Publisher");
+            }
+        }
+
+        public Translator Translator
+        {
+            get => _translator;
+            set
+            {
+                _translator = value;
+                OnPropertyChanged("Translator");
+            }
+        }
+
+        public string Title
+        {
+            get => _title;
+            set
+            {
+                _title = value;
                 OnPropertyChanged("Title");
             }
         }
 
-        private DateTime date;
         public DateTime Date
         {
-            get { return date; }
+            get => _date;
             set
             {
-                date = value;
+                _date = value;
                 OnPropertyChanged("Date");
             }
         }
 
-        private string edition;
         public string Edition
         {
-            get { return edition; }
+            get => _edition;
             set
             {
-                edition = value;
+                _edition = value;
                 OnPropertyChanged("Edition");
             }
         }
 
-        private string urlAdress;
         public string URLAdress
         {
-            get { return urlAdress; }
+            get => _URLAdress;
             set
             {
-                urlAdress = value;
+                _URLAdress = value;
                 OnPropertyChanged("URLAdress");
             }
         }
 
-        private string language;
         public string Language
         {
-            get { return language; }
+            get => _language;
             set
             {
-                language = value;
+                _language = value;
                 OnPropertyChanged("Language");
             }
         }
 
-        private string pages;
         public string Pages
         {
-            get { return pages; }
+            get => _pages;
             set
             {
-                pages = value;
+                _pages = value;
                 OnPropertyChanged("Pages");
             }
         }
 
-        private string volume;
         public string Volume
         {
-            get { return volume; }
+            get => _volume;
             set
             {
-                volume = value;
+                _volume = value;
                 OnPropertyChanged("Volume");
             }
         }
 
-        private string additionalInf;
         public string AdditionalInf
         {
-            get { return additionalInf; }
+            get => _additionalInf;
             set
             {
-                additionalInf = value;
+                _additionalInf = value;
                 OnPropertyChanged("AdditionalInf");
             }
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
     }
 }

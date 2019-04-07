@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SourceParser.BLL.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
 
-namespace SourceParser.ViewModel
+namespace SourceParser.BLL.Services
 {
     public class EditDialogService : IDialogService
     {
