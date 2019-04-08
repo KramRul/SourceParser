@@ -30,7 +30,7 @@ namespace SourceParser.DAL
             optionsBuilder.EnableSensitiveDataLogging(true);
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Entities.Style.Style>().OwnsOne(u => u.AuthorFirst, p =>
             {
@@ -55,13 +55,13 @@ namespace SourceParser.DAL
                 p.OwnsOne(c => c.GroupPublisher, b => b.OwnsMany(d => d.TextsPublisher, a =>
                 {
                     a.HasForeignKey("GroupPublisherId");
-                    a.Property<int>("Id");
+                    a.Property<string>("Id");
                     a.HasKey("GroupPublisherId", "Id");
                 }));
                 p.OwnsOne(c => c.YearDatePublisher, b => b.OwnsOne(d => d.DatePublisher, k => k.OwnsMany(t => t.DatePartsPublisher, a=> 
                 {
                     a.HasForeignKey("DateId");
-                    a.Property<int>("Id");
+                    a.Property<string>("Id");
                     a.HasKey("DateId", "Id");
                 })));
             });
@@ -70,13 +70,13 @@ namespace SourceParser.DAL
                 p.OwnsOne(c => c.GroupUniver, b => b.OwnsMany(d => d.TextsUniver, a =>
                 {
                     a.HasForeignKey("GroupUniverId");
-                    a.Property<int>("Id");
+                    a.Property<string>("Id");
                     a.HasKey("GroupUniverId", "Id");
                 }));
                 p.OwnsOne(c => c.YearDateUniver, b => b.OwnsOne(d => d.DateUniver, k => k.OwnsMany(t => t.DatePartsUniver, a =>
                 {
                     a.HasForeignKey("DateId");
-                    a.Property<int>("Id");
+                    a.Property<string>("Id");
                     a.HasKey("DateId", "Id");
                 })));
             });
@@ -93,7 +93,7 @@ namespace SourceParser.DAL
                 p.OwnsOne(c => c.Group, b => b.OwnsMany(d => d.Texts, a =>
                 {
                     a.HasForeignKey("GroupId");
-                    a.Property<int>("Id");
+                    a.Property<string>("Id");
                     a.HasKey("GroupId", "Id");
                 }));
             });
@@ -102,10 +102,10 @@ namespace SourceParser.DAL
                 p.OwnsOne(c => c.Date, b => b.OwnsMany(d => d.DateParts, a =>
                 {
                     a.HasForeignKey("DateId");
-                    a.Property<int>("Id");
+                    a.Property<string>("Id");
                     a.HasKey("DateId", "Id");
                 }));
             });
-        }
+        }*/
     }
 }
