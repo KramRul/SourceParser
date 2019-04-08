@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SourceParser.DAL.UnitOfWorks.Interfaces
 {
-    public interface IBaseUnitOfWork : IDisposable
+    public interface IBaseUnitOfWork
     {
         IAuthorRepository Authors { get; }
         ICo_AuthorRepository Co_Authors { get; }

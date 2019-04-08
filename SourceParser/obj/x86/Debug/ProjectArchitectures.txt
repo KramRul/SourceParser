@@ -1,1 +1,1 @@
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\SourceParser.csproj;x86
+C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\SourceParser.csproj;x86

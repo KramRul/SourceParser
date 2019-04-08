@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-DF2NIKI</Machine>
-    <WindowsUser>KramRul</WindowsUser>
+    <Machine>DESKTOP-MLANAQ3</Machine>
+    <WindowsUser>Anuitex - 62</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,516 +10,516 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>44f60e04-d65d-452a-abcf-de36f91d13e2</PackageIdentityName>
     <PackageIdentityPublisher>CN=KramRul</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\SourceParser.exe">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\SourceParser.exe">
       <PackagePath>entrypoint\SourceParser.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.data.sqlite.core\2.2.3\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.data.sqlite.core\2.2.3\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.dotnet.platformabstractions\2.1.0\lib\netstandard1.3\Microsoft.DotNet.PlatformAbstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.dotnet.platformabstractions\2.1.0\lib\netstandard1.3\Microsoft.DotNet.PlatformAbstractions.dll">
       <PackagePath>Microsoft.DotNet.PlatformAbstractions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.entityframeworkcore\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.entityframeworkcore\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll">
       <PackagePath>Microsoft.EntityFrameworkCore.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.entityframeworkcore.abstractions\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.entityframeworkcore.abstractions\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll">
       <PackagePath>Microsoft.EntityFrameworkCore.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.entityframeworkcore.design\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Design.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.entityframeworkcore.design\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Design.dll">
       <PackagePath>Microsoft.EntityFrameworkCore.Design.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.entityframeworkcore.relational\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.entityframeworkcore.relational\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll">
       <PackagePath>Microsoft.EntityFrameworkCore.Relational.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.entityframeworkcore.sqlite.core\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Sqlite.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.entityframeworkcore.sqlite.core\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Sqlite.dll">
       <PackagePath>Microsoft.EntityFrameworkCore.Sqlite.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.caching.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.caching.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Caching.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.caching.memory\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.caching.memory\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll">
       <PackagePath>Microsoft.Extensions.Caching.Memory.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.configuration\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.configuration\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.configuration.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.configuration.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Configuration.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.configuration.binder\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.configuration.binder\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll">
       <PackagePath>Microsoft.Extensions.Configuration.Binder.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.dependencyinjection\2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.dependencyinjection\2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.dependencymodel\2.1.0\lib\netstandard1.6\Microsoft.Extensions.DependencyModel.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.dependencymodel\2.1.0\lib\netstandard1.6\Microsoft.Extensions.DependencyModel.dll">
       <PackagePath>Microsoft.Extensions.DependencyModel.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.logging\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.logging\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll">
       <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.logging.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.logging.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.options\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.options\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll">
       <PackagePath>Microsoft.Extensions.Options.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.extensions.primitives\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.extensions.primitives\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll">
       <PackagePath>Microsoft.Extensions.Primitives.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\2.0.0\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\2.0.0\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\2.0.0\lib\uap10.0\Microsoft.Xaml.Interactivity.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\2.0.0\lib\uap10.0\Microsoft.Xaml.Interactivity.dll">
       <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\remotion.linq\2.2.0\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\remotion.linq\2.2.0\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll">
       <PackagePath>Remotion.Linq.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.8\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.8\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\sqlitepclraw.bundle_green\1.1.12\lib\uap10.0\SQLitePCLRaw.batteries_green.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\sqlitepclraw.bundle_green\1.1.12\lib\uap10.0\SQLitePCLRaw.batteries_green.dll">
       <PackagePath>SQLitePCLRaw.batteries_green.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\sqlitepclraw.bundle_green\1.1.12\lib\uap10.0\SQLitePCLRaw.batteries_v2.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\sqlitepclraw.bundle_green\1.1.12\lib\uap10.0\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\sqlitepclraw.core\1.1.12\lib\uap10.0\SQLitePCLRaw.core.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\sqlitepclraw.core\1.1.12\lib\uap10.0\SQLitePCLRaw.core.dll">
       <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v140\1.1.12\runtimes\win10-x86\native\e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v140\1.1.12\runtimes\win10-x86\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\sqlitepclraw.provider.e_sqlite3.uwp10\1.1.12\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\sqlitepclraw.provider.e_sqlite3.uwp10\1.1.12\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
       <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\system.interactive.async\3.2.0\lib\netstandard2.0\System.Interactive.Async.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\system.interactive.async\3.2.0\lib\netstandard2.0\System.Interactive.Async.dll">
       <PackagePath>System.Interactive.Async.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Core.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Core.dll">
       <PackagePath>Telerik.Core.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Data.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Data.dll">
       <PackagePath>Telerik.Data.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Geospatial.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Geospatial.UWP.dll">
       <PackagePath>Telerik.Geospatial.UWP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP.dll">
       <PackagePath>Telerik.UI.Xaml.Chart.UWP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP.dll">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP.dll">
       <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP.dll">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP.dll">
       <PackagePath>Telerik.UI.Xaml.Input.UWP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Primitives.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Primitives.UWP.dll">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP.dll">
       <PackagePath>Telerik.UI.Xaml.Map.UWP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Drawing.dll">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Drawing.dll">
       <PackagePath>Telerik.UI.Drawing.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Drawing.winmd">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Drawing.winmd">
       <PackagePath>Telerik.UI.Drawing.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\SourceParser.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\SourceParser.xr.xml">
       <PackagePath>SourceParser.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\DocumentsTable.xbf">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\Pages\DocumentsTable.xbf">
       <PackagePath>Pages\DocumentsTable.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\Home.xbf">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\Pages\Home.xbf">
       <PackagePath>Pages\Home.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewDocument.xbf">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\Pages\NewDocument.xbf">
       <PackagePath>Pages\NewDocument.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewLink.xbf">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\Pages\NewLink.xbf">
       <PackagePath>Pages\NewLink.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewStyle.xbf">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\Pages\NewStyle.xbf">
       <PackagePath>Pages\NewStyle.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.Core\Properties\default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.Core\Properties\default.rd.xml">
       <PackagePath>Telerik.Core\Properties\default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Telerik.UI.Xaml.Map.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Telerik.UI.Xaml.Map.UWP.xr.xml">
       <PackagePath>Telerik.UI.Xaml.Map.UWP\Telerik.UI.Xaml.Map.UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\Generic.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\Generic.xaml">
       <PackagePath>Telerik.UI.Xaml.Map.UWP\Themes\Generic.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesDark.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesDark.xaml">
       <PackagePath>Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesHighContrast.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesHighContrast.xaml">
       <PackagePath>Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesLight.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesLight.xaml">
       <PackagePath>Telerik.UI.Xaml.Map.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Telerik.UI.Xaml.Primitives.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Telerik.UI.Xaml.Primitives.UWP.xr.xml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Telerik.UI.Xaml.Primitives.UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\Generic.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\Generic.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\Generic.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\HubTilePalette.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\HubTilePalette.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\HubTilePalette.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\Resources.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\Resources.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\Resources.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\SharedResources.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\SharedResources.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\SharedResources.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsDark.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsDark.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsDark.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsHighContrast.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsHighContrast.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsHighContrast.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsLight.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsLight.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeColorsLight.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesDark.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesDark.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesHighContrast.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesHighContrast.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesLight.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\x86\Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesLight.xaml">
       <PackagePath>Telerik.UI.Xaml.Primitives.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Data\Properties\default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.Data\Properties\default.rd.xml">
       <PackagePath>Telerik.Data\Properties\default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\CustomDictionary.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\CustomDictionary.xml">
       <PackagePath>Telerik.UI.Xaml.Chart.UWP\CustomDictionary.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Telerik.UI.Xaml.Chart.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Telerik.UI.Xaml.Chart.UWP.xr.xml">
       <PackagePath>Telerik.UI.Xaml.Chart.UWP\Telerik.UI.Xaml.Chart.UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\Generic.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\Generic.xaml">
       <PackagePath>Telerik.UI.Xaml.Chart.UWP\Themes\Generic.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesDark.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesDark.xaml">
       <PackagePath>Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesHighContrast.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesHighContrast.xaml">
       <PackagePath>Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesLight.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesLight.xaml">
       <PackagePath>Telerik.UI.Xaml.Chart.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Telerik.UI.Xaml.Controls.Data.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Telerik.UI.Xaml.Controls.Data.UWP.xr.xml">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Telerik.UI.Xaml.Controls.Data.UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-dark.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-dark.png">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-dark.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-light.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-light.png">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\ListView\Resources\reorder-handle-light.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\DataForm.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\DataForm.xaml">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\DataForm.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\Generic.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\Generic.xaml">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\Generic.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\Listbox.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\Listbox.xaml">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\Listbox.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesDark.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesDark.xaml">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesHighContrast.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesHighContrast.xaml">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesLight.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesLight.xaml">
       <PackagePath>Telerik.UI.Xaml.Controls.Data.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Telerik.UI.Xaml.Input.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Telerik.UI.Xaml.Input.UWP.xr.xml">
       <PackagePath>Telerik.UI.Xaml.Input.UWP\Telerik.UI.Xaml.Input.UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\Calendar.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\Calendar.xaml">
       <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\Calendar.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\CommonResources.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\CommonResources.xaml">
       <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\CommonResources.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\Generic.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\Generic.xaml">
       <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\Generic.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\Resources.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\Resources.xaml">
       <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\Resources.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesDark.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesDark.xaml">
       <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesHighContrast.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesHighContrast.xaml">
       <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesLight.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesLight.xaml">
       <PackagePath>Telerik.UI.Xaml.Input.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Telerik.UI.Xaml.DataVisualization.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Telerik.UI.Xaml.DataVisualization.UWP.xr.xml">
       <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Telerik.UI.Xaml.DataVisualization.UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\Generic.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\Generic.xaml">
       <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\Generic.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\Resources.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\Resources.xaml">
       <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\Resources.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesDark.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesDark.xaml">
       <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesHighContrast.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesHighContrast.xaml">
       <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesLight.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesLight.xaml">
       <PackagePath>Telerik.UI.Xaml.DataVisualization.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Telerik.UI.Xaml.Grid.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Telerik.UI.Xaml.Grid.UWP.xr.xml">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Telerik.UI.Xaml.Grid.UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-240.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-240.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-180.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-180.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-180.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-140.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-140.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.scale-140.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-240.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-240.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-180.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-180.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-180.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-140.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-140.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.scale-140.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\FilterFlyout\ic_arrow_down_white.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-240.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-240.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-180.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-180.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-180.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-140.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-140.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.scale-140.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-240.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-240.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-180.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-180.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-180.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-140.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-140.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.scale-140.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\close_btn_blue.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-240.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-240.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-180.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-180.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-180.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-140.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-140.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.scale-140.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-240.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-240.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-180.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-180.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-180.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-140.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-140.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.scale-140.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\column_chooser_btn_blue.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-240.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-240.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-180.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-180.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-180.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-140.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-140.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.scale-140.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_dark.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-240.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-240.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-180.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-180.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-180.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-140.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-140.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.scale-140.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.png">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.png">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Assets\Reorder\ic_reorder_light.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\Generic.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\Generic.xaml">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\Generic.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\Resources.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\Resources.xaml">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\Resources.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesDark.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesDark.xaml">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesDark.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesHighContrast.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesHighContrast.xaml">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesHighContrast.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesLight.xaml">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\lib\uap10.0\Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesLight.xaml">
       <PackagePath>Telerik.UI.Xaml.Grid.UWP\Themes\ThemeResourcesLight.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Core\SourceParser.exe">
+    <AppxPackagedFile Include="C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\bin\x86\Debug\Core\SourceParser.exe">
       <PackagePath>SourceParser.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\KramRul\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27404.2</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27404.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\KramRul\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\KramRul\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27404.2</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27404.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\KramRul\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\KramRul\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27404.2</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27404.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\KramRul\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\KramRul\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.27505.2</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.27505.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\KramRul\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\KramRul\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.27505.2</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.27505.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\KramRul\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\KramRul\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.27505.2</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.27505.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\KramRul\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Anuitex - 62\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.8\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">

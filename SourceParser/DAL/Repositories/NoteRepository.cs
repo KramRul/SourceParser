@@ -10,7 +10,7 @@ namespace SourceParser.DAL.Repositories
 {
     public class NoteRepository : BaseRepository<Note>, INoteRepository
     {
-        public NoteRepository(ApplicationContext context) : base(context)
+        public NoteRepository() : base()
         {
         }
     }

@@ -21,7 +21,7 @@ namespace SourceParser.Pages
 {
     public sealed partial class NewDocument : Page
     {
-        private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork(new DAL.ApplicationContext()));
+        private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork());
 
         public NewDocument()
         {

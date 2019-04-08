@@ -10,7 +10,7 @@ namespace SourceParser.DAL.Repositories
 {
     public class EditorRepository : BaseRepository<Editor>, IEditorRepository
     {
-        public EditorRepository(ApplicationContext context) : base(context)
+        public EditorRepository() : base()
         {
         }
     }

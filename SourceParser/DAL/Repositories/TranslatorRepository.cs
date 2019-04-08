@@ -10,7 +10,7 @@ namespace SourceParser.DAL.Repositories
 {
     public class TranslatorRepository : BaseRepository<Translator>, ITranslatorRepository
     {
-        public TranslatorRepository(ApplicationContext context) : base(context)
+        public TranslatorRepository() : base()
         {
         }
     }

@@ -10,7 +10,7 @@ namespace SourceParser.DAL.Repositories
 {
     public class DocumentRepository : BaseRepository<Document>, IDocumentRepository
     {
-        public DocumentRepository(ApplicationContext context) : base(context)
+        public DocumentRepository() : base()
         {
         }
     }

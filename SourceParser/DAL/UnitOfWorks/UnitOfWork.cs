@@ -11,7 +11,6 @@ namespace SourceParser.DAL.UnitOfWorks
 {
     public class UnitOfWork : IBaseUnitOfWork
     {
-        private ApplicationContext _dataBase;
         private AuthorRepository _authorRepository;
         private Co_AuthorRepository _co_AuthorRepository;
         private DocumentRepository _documentRepository;
@@ -22,9 +21,8 @@ namespace SourceParser.DAL.UnitOfWorks
         private StyleRepository _styleRepository;
         private TranslatorRepository _translatorRepository;
 
-        public UnitOfWork(ApplicationContext context)
+        public UnitOfWork()
         {
-            _dataBase = context;
         }
 
         public IAuthorRepository Authors
@@ -33,7 +31,7 @@ namespace SourceParser.DAL.UnitOfWorks
             {
                 if (_authorRepository == null)
                 {
-                    _authorRepository = new AuthorRepository(_dataBase);
+                    _authorRepository = new AuthorRepository();
                 }
                 return _authorRepository;
             }
@@ -45,7 +43,7 @@ namespace SourceParser.DAL.UnitOfWorks
             {
                 if (_co_AuthorRepository == null)
                 {
-                    _co_AuthorRepository = new Co_AuthorRepository(_dataBase);
+                    _co_AuthorRepository = new Co_AuthorRepository();
                 }
                 return _co_AuthorRepository;
             }
@@ -57,7 +55,7 @@ namespace SourceParser.DAL.UnitOfWorks
             {
                 if (_documentRepository == null)
                 {
-                    _documentRepository = new DocumentRepository(_dataBase);
+                    _documentRepository = new DocumentRepository();
                 }
                 return _documentRepository;
             }
@@ -69,7 +67,7 @@ namespace SourceParser.DAL.UnitOfWorks
             {
                 if (_editorRepository == null)
                 {
-                    _editorRepository = new EditorRepository(_dataBase);
+                    _editorRepository = new EditorRepository();
                 }
                 return _editorRepository;
             }
@@ -81,7 +79,7 @@ namespace SourceParser.DAL.UnitOfWorks
             {
                 if (_noteRepository == null)
                 {
-                    _noteRepository = new NoteRepository(_dataBase);
+                    _noteRepository = new NoteRepository();
                 }
                 return _noteRepository;
             }
@@ -93,7 +91,7 @@ namespace SourceParser.DAL.UnitOfWorks
             {
                 if (_publisherRepository == null)
                 {
-                    _publisherRepository = new PublisherRepository(_dataBase);
+                    _publisherRepository = new PublisherRepository();
                 }
                 return _publisherRepository;
             }
@@ -105,7 +103,7 @@ namespace SourceParser.DAL.UnitOfWorks
             {
                 if (_referenceRepository == null)
                 {
-                    _referenceRepository = new ReferenceRepository(_dataBase);
+                    _referenceRepository = new ReferenceRepository();
                 }
                 return _referenceRepository;
             }
@@ -117,7 +115,7 @@ namespace SourceParser.DAL.UnitOfWorks
             {
                 if (_styleRepository == null)
                 {
-                    _styleRepository = new StyleRepository(_dataBase);
+                    _styleRepository = new StyleRepository();
                 }
                 return _styleRepository;
             }
@@ -129,31 +127,10 @@ namespace SourceParser.DAL.UnitOfWorks
             {
                 if (_translatorRepository == null)
                 {
-                    _translatorRepository = new TranslatorRepository(_dataBase);
+                    _translatorRepository = new TranslatorRepository();
                 }
                 return _translatorRepository;
             }
-        }
-
-        private bool _disposed = false;
-
-        public virtual void Dispose(bool disposing)
-        {
-            if (!_disposed)
-            {
-                if (disposing)
-                {
-                    _dataBase.Dispose();
-                    _dataBase = null;
-                }
-                _disposed = true;
-            }
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
         }
     }
 }

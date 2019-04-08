@@ -10,7 +10,7 @@ namespace SourceParser.DAL.Repositories
 {
     public class StyleRepository : BaseRepository<Style>, IStyleRepository
     {
-        public StyleRepository(ApplicationContext context) : base(context)
+        public StyleRepository() : base()
         {
         }
     }

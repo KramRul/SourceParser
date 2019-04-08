@@ -15,7 +15,7 @@ namespace SourceParser.ViewModel
 {
     public class ApplicationViewModel : INotifyPropertyChanged
     {
-        private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork(new DAL.ApplicationContext()));
+        private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork());
 
         private StyleMod _selectedStyle;
         private DocumentMod _selectedDocument;

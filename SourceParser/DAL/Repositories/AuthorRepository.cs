@@ -10,7 +10,7 @@ namespace SourceParser.DAL.Repositories
 {
     public class AuthorRepository : BaseRepository<Author>, IAuthorRepository
     {
-        public AuthorRepository(ApplicationContext context) : base(context)
+        public AuthorRepository() : base()
         {
         }
     }
