@@ -685,3 +685,4 @@ C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourcePars
 C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\Telerik.UI.Xaml.Primitives.UWP.pri.xml
 C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\.winmd_cache\$Telerik.UI.Drawing.winmd_636723260600000000.json
+C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\SourceParser.csprojAssemblyReference.cache

@@ -98,6 +98,8 @@
     <Compile Include="BLL\Services\BaseService.cs" />
     <Compile Include="BLL\Services\DocumentService.cs" />
     <Compile Include="BLL\Services\Interfaces\IDocumentService.cs" />
+    <Compile Include="BLL\Services\Interfaces\IStyleService.cs" />
+    <Compile Include="BLL\Services\StyleService.cs" />
     <Compile Include="DAL\ApplicationContext.cs" />
     <Compile Include="DAL\Entities\Author.cs" />
     <Compile Include="DAL\Entities\BaseEntity.cs" />

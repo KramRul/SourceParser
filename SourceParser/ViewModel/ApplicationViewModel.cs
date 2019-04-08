@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -16,6 +17,7 @@ namespace SourceParser.ViewModel
     public class ApplicationViewModel : INotifyPropertyChanged
     {
         private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork());
+        private readonly IStyleService _styleService = new StyleService(new UnitOfWork());
 
         private StyleMod _selectedStyle;
         private DocumentMod _selectedDocument;
@@ -68,15 +70,16 @@ namespace SourceParser.ViewModel
 
         public async Task Initialize()
         {
-            Styles = new ObservableCollection<StyleMod>
+            try
             {
-                new StyleMod {Title="Style 1"},
-                new StyleMod {Title="Style 2"},
-                new StyleMod {Title="Style 3"},
-                new StyleMod {Title="Style 4"}
-            };
+                Documents = await _documentService.GetAllDocuments();
 
-            Documents = await _documentService.GetAllDocuments();
+                Styles = await _styleService.GetAllStyles();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }         
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

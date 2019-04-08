@@ -11,7 +11,7 @@ namespace SourceParser.DAL.Repositories
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
         public BaseRepository()
-        {               
+        {
         }
 
         public async Task<List<T>> GetAll()
@@ -39,11 +39,11 @@ namespace SourceParser.DAL.Repositories
             {
                 await context.Set<T>().AddAsync(item);
                 await context.SaveChangesAsync();
-            }           
+            }
         }
 
         public async Task Create(List<T> items)
-        {           
+        {
             using (var context = new ApplicationContext())
             {
                 await context.Set<T>().AddRangeAsync(items);
@@ -57,7 +57,7 @@ namespace SourceParser.DAL.Repositories
             {
                 context.Entry(item).State = EntityState.Modified;
                 await context.SaveChangesAsync();
-            }           
+            }
         }
 
         public async Task Update(List<T> items)

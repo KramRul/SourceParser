@@ -1,4 +1,7 @@
-﻿using SourceParser.ViewModel;
+﻿using SourceParser.BLL.Services;
+using SourceParser.BLL.Services.Interfaces;
+using SourceParser.DAL.UnitOfWorks;
+using SourceParser.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,15 +17,12 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace SourceParser.Pages
 {
-    /// <summary>
-    /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
-    /// </summary>
     public sealed partial class NewStyle : Page
     {
+        private readonly IStyleService _styleService = new StyleService(new UnitOfWork());
+
         public NewStyle()
         {
             this.InitializeComponent();
@@ -31,16 +31,22 @@ namespace SourceParser.Pages
         {
             StackPanel stackPanel = new StackPanel();
 
-            TextBlock NameOfStyle = new TextBlock();
-            NameOfStyle.Text = "Название стиля";
-            NameOfStyle.Margin = new Thickness(10);
+            TextBlock NameOfStyle = new TextBlock
+            {
+                Text = "Название стиля",
+                Margin = new Thickness(10)
+            };
 
-            TextBox NameOfStyleTextBlock = new TextBox();
-            NameOfStyleTextBlock.MaxLength = 255;
+            TextBox NameOfStyleTextBlock = new TextBox
+            {
+                MaxLength = 255
+            };
 
-            RelativePanel relativePanel = new RelativePanel();
-            relativePanel.FlowDirection = FlowDirection.LeftToRight;
-            relativePanel.HorizontalAlignment = HorizontalAlignment.Stretch;
+            RelativePanel relativePanel = new RelativePanel
+            {
+                FlowDirection = FlowDirection.LeftToRight,
+                HorizontalAlignment = HorizontalAlignment.Stretch
+            };
             relativePanel.Children.Add(NameOfStyle);
             relativePanel.Children.Add(NameOfStyleTextBlock);
             RelativePanel.SetAlignLeftWithPanel(NameOfStyle, true);
@@ -61,34 +67,13 @@ namespace SourceParser.Pages
 
             if (result == ContentDialogResult.Primary)
             {
-                /*Button button = new Button()
-                {
-                    Content = NameOfStyleTextBlock.Text,
-                    Width = 160,
-                    Height = 160,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    Margin = new Thickness(10)
-                };
-                Navigator.Childrens.Add(button);
-                Styles.Children.Add(button);*/
-                (DataContext as ApplicationViewModel).Styles.Add(new Models.StyleMod() { Title = NameOfStyleTextBlock.Text });
+                await _styleService.CreateStyle(NameOfStyleTextBlock.Text);
+                (DataContext as ApplicationViewModel).Styles = await _styleService.GetAllStyles();
             }
             else if (result == ContentDialogResult.Secondary)
             {
                 //header.Text = "Отмена действия";
             }
         }
-
-        /*private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            foreach (var item in Navigator.Childrens)
-            {
-                if(!Styles.Children.Contains(item))
-                Styles.Children.Add(item);
-                var newStyle = Window.Current.Content as NewStyle;
-                newStyle.Styles.Children.Add(item);
-            }
-        }*/
     }
 }
