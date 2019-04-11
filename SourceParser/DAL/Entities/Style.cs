@@ -133,29 +133,37 @@ namespace SourceParser.DAL.Entities.Style
 
     public class DateUniver : BaseEntity
     {
-        public List<DatePartUniver> DatePartsUniver { get; set; } = new List<DatePartUniver>();
+
     }
 
     public class DatePartUniver : BaseEntity
     {
-        DateUniver
+        public string DateUniverId { get; set; }
+        [ForeignKey("DateUniverId")]
+        public DateUniver DateUniver { get; set; }
         public string NameUniver { get; set; } = "year";
     }
 
     public class Publisher : BaseEntity
     {
+        public string GroupPublisherId { get; set; }
+        [ForeignKey("GroupPublisherId")]
         public GroupPublisher GroupPublisher { get; set; }
-
+        public string YearDatePublisherId { get; set; }
+        [ForeignKey("YearDatePublisherId")]
         public YearDatePublisher YearDatePublisher { get; set; }
     }
 
     public class GroupPublisher : BaseEntity
     {
-        public List<TextPublisher> TextsPublisher { get; set; } = new List<TextPublisher>();
+        
     }
 
     public class TextPublisher : BaseEntity
     {
+        public string GroupPublisherId { get; set; }
+        [ForeignKey("GroupPublisherId")]
+        public GroupPublisher GroupPublisher { get; set; }
         public string Value { get; set; } = "[Электронный ресурс]";
         public string Suffix { get; set; } = ". ";
         public string Prefix { get; set; } = "– Режим доступа: ";
@@ -164,31 +172,41 @@ namespace SourceParser.DAL.Entities.Style
 
     public class YearDatePublisher : BaseEntity
     {
+        public string DatePublisherId { get; set; }
+        [ForeignKey("DatePublisherId")]
         public DatePublisher DatePublisher { get; set; }
     }
 
     public class DatePublisher : BaseEntity
     {
-        public List<DatePartPublisher> DatePartsPublisher { get; set; } = new List<DatePartPublisher>();
+
     }
 
     public class DatePartPublisher : BaseEntity
     {
+        public string DatePublisherId { get; set; }
+        [ForeignKey("DatePublisherId")]
+        public DatePublisher DatePublisher { get; set; }
         public string NamePublisher { get; set; } = "year";
     }
 
     public class Webdoc : BaseEntity
     {
+        public string GroupId { get; set; }
+        [ForeignKey("GroupId")]
         public Group Group { get; set; }
     }
 
     public class Group : BaseEntity
     {
-        public List<Text> Texts { get; set; } = new List<Text>();
+        
     }
 
     public class Text : BaseEntity
     {
+        public string GroupId { get; set; }
+        [ForeignKey("GroupId")]
+        public Group Group { get; set; }
         public string Value { get; set; } = "[Электронный ресурс]";
         public string Suffix { get; set; } = ". ";
         public string Prefix { get; set; } = "– Режим доступа: ";
@@ -197,15 +215,21 @@ namespace SourceParser.DAL.Entities.Style
 
     public class AuthorSecond : BaseEntity
     {
+        public string LabelId { get; set; }
+        [ForeignKey("LabelId")]
         public Label Label { get; set; }
-
+        public string NameId { get; set; }
+        [ForeignKey("NameId")]
         public Name Name { get; set; }
     }
 
     public class AuthorFirst : BaseEntity
     {
+        public string LabelId { get; set; }
+        [ForeignKey("LabelId")]
         public Label Label { get; set; }
-
+        public string NameId { get; set; }
+        [ForeignKey("NameId")]
         public Name Name { get; set; }
     }
 

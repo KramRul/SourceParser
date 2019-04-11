@@ -49,13 +49,13 @@ namespace SourceParser.BLL.Services
                 {
                     GroupPublisher = new DAL.Entities.Style.GroupPublisher()
                     {
-                        TextsPublisher = new List<DAL.Entities.Style.TextPublisher>()
+                        
                     },
                     YearDatePublisher = new DAL.Entities.Style.YearDatePublisher()
                     {
                         DatePublisher = new DAL.Entities.Style.DatePublisher()
                         {
-                            DatePartsPublisher = new List<DAL.Entities.Style.DatePartPublisher>()
+                            
                         }
                     }
                 },
@@ -63,13 +63,13 @@ namespace SourceParser.BLL.Services
                 {
                     GroupUniver = new DAL.Entities.Style.GroupUniver()
                     {
-                        TextsUniver = new List<DAL.Entities.Style.TextUniver>()
+                        
                     },
                     YearDateUniver = new DAL.Entities.Style.YearDateUniver()
                     {
                         DateUniver = new DAL.Entities.Style.DateUniver()
                         {
-                            DatePartsUniver = new List<DAL.Entities.Style.DatePartUniver>()
+                            
                         }
                     }
                 },
@@ -81,14 +81,14 @@ namespace SourceParser.BLL.Services
                 {
                     Group = new DAL.Entities.Style.Group()
                     {
-                        Texts = new List<DAL.Entities.Style.Text>()
+                        
                     }
                 },
                 YearDateStyle = new DAL.Entities.Style.YearDate()
                 {
                     Date = new DAL.Entities.Style.Date()
                     {
-                        DateParts = new List<DAL.Entities.Style.DatePart>()
+                        
                     }
                 }
             });
