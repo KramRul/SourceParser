@@ -55,7 +55,7 @@ namespace SourceParser.BLL.Services
                     {
                         DatePublisher = new DAL.Entities.Style.DatePublisher()
                         {
-                            
+
                         }
                     }
                 },
@@ -63,13 +63,13 @@ namespace SourceParser.BLL.Services
                 {
                     GroupUniver = new DAL.Entities.Style.GroupUniver()
                     {
-                        
+
                     },
                     YearDateUniver = new DAL.Entities.Style.YearDateUniver()
                     {
                         DateUniver = new DAL.Entities.Style.DateUniver()
                         {
-                            
+
                         }
                     }
                 },
@@ -81,14 +81,14 @@ namespace SourceParser.BLL.Services
                 {
                     Group = new DAL.Entities.Style.Group()
                     {
-                        
+
                     }
                 },
                 YearDateStyle = new DAL.Entities.Style.YearDate()
                 {
                     Date = new DAL.Entities.Style.Date()
                     {
-                        
+
                     }
                 }
             });
@@ -106,6 +106,8 @@ namespace SourceParser.BLL.Services
         {
             var styles = await _database.Styles.GetAll();
 
+            var texts = await _database.Styles.GetAllTexts();
+
             var stylesList = styles.Select(style => new StyleMod()
             {
                 Id = style.Id,
@@ -120,6 +122,7 @@ namespace SourceParser.BLL.Services
                 PublishVolume = style.PublishVolume,
                 Title = style.Title,
                 Webdoc = style.Webdoc,
+                WebdocGroupTextList = texts.Where(text => text.GroupId == style.Webdoc.GroupId).Select(text => text).ToList(),
                 YearDateStyle = style.YearDateStyle
             }).ToList();
 

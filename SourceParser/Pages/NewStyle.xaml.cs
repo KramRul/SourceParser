@@ -75,5 +75,15 @@ namespace SourceParser.Pages
                 //header.Text = "Отмена действия";
             }
         }
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

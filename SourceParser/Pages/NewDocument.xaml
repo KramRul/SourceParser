@@ -35,7 +35,7 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <StackPanel Grid.Column="2" Margin="10">
+        <StackPanel Grid.Column="2" Margin="10" Padding="0 0 5 0">
             <TextBlock Text="Выбранный элемент"  />
             <TextBlock Text="Название документа" />
             <TextBox Text="{Binding Path=SelectedDocument.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />

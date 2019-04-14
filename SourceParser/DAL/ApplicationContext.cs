@@ -18,6 +18,7 @@ namespace SourceParser.DAL
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<Reference> References { get; set; }
         public DbSet<Entities.Style.Style> Styles { get; set; }
+        public DbSet<Entities.Style.Text> Texts { get; set; }
 
         public ApplicationContext()
         {

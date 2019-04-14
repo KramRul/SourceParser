@@ -15,6 +15,27 @@
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Documents" />
     <RootPropertyPathName Name="SelectedStyle" />
+    <RootPropertyPathName Name="WebdocGroupTextList" />
+    <RootPropertyPathName Name="Variable" />
+    <RootPropertyPathName Name="Prefix" />
+    <RootPropertyPathName Name="Suffix" />
+    <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="AuthorSecond" />
+    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="EtAlUseFirst" />
+    <RootPropertyPathName Name="EtAlMin" />
+    <RootPropertyPathName Name="DelimiterPrecedesLast" />
+    <RootPropertyPathName Name="Delimiter" />
+    <RootPropertyPathName Name="InitializeWith" />
+    <RootPropertyPathName Name="SortSeparator" />
+    <RootPropertyPathName Name="NameAsSortOrder" />
+    <RootPropertyPathName Name="Label" />
+    <RootPropertyPathName Name="StripPeriods" />
+    <RootPropertyPathName Name="TextCase" />
+    <RootPropertyPathName Name="Form" />
+    <RootPropertyPathName Name="AuthorFirst" />
+    <RootPropertyPathName Name="PageRangeDelimiter" />
+    <RootPropertyPathName Name="EtAl" />
     <RootPropertyPathName Name="Styles" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -108,6 +129,7 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
@@ -169,6 +191,12 @@
     </RootType>
     <RootType FullName="SourceParser.Pages.NewDocument" />
     <RootType FullName="SourceParser.Pages.NewLink" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="SourceParser.Pages.NewStyle" />
   </Roots.RootTypes>
 </Roots>

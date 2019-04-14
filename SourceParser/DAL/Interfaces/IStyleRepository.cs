@@ -9,5 +9,6 @@ namespace SourceParser.DAL.Interfaces
 {
     public interface IStyleRepository : IBaseRepository<Style>
     {
+        Task<List<Text>> GetAllTexts();
     }
 }

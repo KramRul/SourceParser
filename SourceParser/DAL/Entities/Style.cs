@@ -84,7 +84,9 @@ namespace SourceParser.DAL.Entities.Style
 
     public class Date : BaseEntity
     {
+        public List<YearDate> YearDates { get; set; }
 
+        public List<DatePart> DateParts { get; set; }
     }
 
     public class DatePart : BaseEntity
@@ -109,7 +111,9 @@ namespace SourceParser.DAL.Entities.Style
 
     public class GroupUniver : BaseEntity
     {
-        
+        public List<PublishUniver> PublishUnivers { get; set; }
+
+        public List<TextUniver> TextUnivers { get; set; }      
     }
 
     public class TextUniver : BaseEntity
@@ -133,7 +137,9 @@ namespace SourceParser.DAL.Entities.Style
 
     public class DateUniver : BaseEntity
     {
+        public List<YearDateUniver> YearDateUnivers { get; set; }
 
+        public List<DatePartUniver> DatePartUnivers { get; set; }
     }
 
     public class DatePartUniver : BaseEntity
@@ -156,7 +162,9 @@ namespace SourceParser.DAL.Entities.Style
 
     public class GroupPublisher : BaseEntity
     {
-        
+        public List<Publisher> Publishers { get; set; }
+
+        public List<TextPublisher> TextPublishers { get; set; }
     }
 
     public class TextPublisher : BaseEntity
@@ -179,7 +187,9 @@ namespace SourceParser.DAL.Entities.Style
 
     public class DatePublisher : BaseEntity
     {
+        public List<YearDatePublisher> YearDatePublishers { get; set; }
 
+        public List<DatePartPublisher> DatePartPublishers { get; set; }
     }
 
     public class DatePartPublisher : BaseEntity
@@ -199,7 +209,9 @@ namespace SourceParser.DAL.Entities.Style
 
     public class Group : BaseEntity
     {
-        
+        public List<Webdoc> Webdocs { get; set; }
+
+        public List<Text> Texts { get; set; }
     }
 
     public class Text : BaseEntity
