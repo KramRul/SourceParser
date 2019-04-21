@@ -9,9 +9,9 @@ namespace SourceParser.DAL.Entities.Style
 {
     public class Style : BaseEntity
     {
-        public string EtAl { get; set; }//вместо "и др." сделали пустое место
+        public string EtAl { get; set; } = " ";//вместо "и др." сделали пустое место
 
-        public string PageRangeDelimiter { get; set; }//короткое тире (дефис) для диапазона страниц вместо обычного тире
+        public string PageRangeDelimiter { get; set; } = "-";//короткое тире (дефис) для диапазона страниц вместо обычного тире
 
         public string TitleId { get; set; }
         [ForeignKey("TitleId")]

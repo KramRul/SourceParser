@@ -27,7 +27,7 @@ namespace SourceParser.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Filename=_SOURCE_PARSER");
+            optionsBuilder.UseSqlite(@"Filename=_SOURCE_PARSER", x => x.SuppressForeignKeyEnforcement());
             optionsBuilder.EnableSensitiveDataLogging(true);
         }
 

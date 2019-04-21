@@ -4,6 +4,7 @@ using SourceParser.DAL.UnitOfWorks;
 using SourceParser.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -30,63 +31,84 @@ namespace SourceParser.Pages
 
         private async void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            StackPanel stackPanel = new StackPanel();
-
-            TextBlock NameOfStyle = new TextBlock
+            try
             {
-                Text = "Название документа",
-                Margin = new Thickness(10)
-            };
+                StackPanel stackPanel = new StackPanel();
 
-            TextBox NameOfDocTextBlock = new TextBox
-            {
-                MaxLength = 255
-            };
+                TextBlock NameOfStyle = new TextBlock
+                {
+                    Text = "Название документа",
+                    Margin = new Thickness(10)
+                };
 
-            RelativePanel relativePanel = new RelativePanel
-            {
-                FlowDirection = FlowDirection.LeftToRight,
-                HorizontalAlignment = HorizontalAlignment.Stretch
-            };
-            relativePanel.Children.Add(NameOfStyle);
-            relativePanel.Children.Add(NameOfDocTextBlock);
-            RelativePanel.SetAlignLeftWithPanel(NameOfStyle, true);
-            RelativePanel.SetAlignRightWithPanel(NameOfDocTextBlock, true);
-            RelativePanel.SetRightOf(NameOfDocTextBlock, NameOfStyle);
-            stackPanel.Children.Add(relativePanel);
+                TextBox NameOfDocTextBlock = new TextBox
+                {
+                    MaxLength = 255
+                };
 
-            ContentDialog deleteFileDialog = new ContentDialog()
-            {
-                Title = "Подтверждение действия",
-                Content = stackPanel,
-                PrimaryButtonText = "ОК",
-                MaxWidth = 500,
-                SecondaryButtonText = "Отмена"
-            };
+                RelativePanel relativePanel = new RelativePanel
+                {
+                    FlowDirection = FlowDirection.LeftToRight,
+                    HorizontalAlignment = HorizontalAlignment.Stretch
+                };
+                relativePanel.Children.Add(NameOfStyle);
+                relativePanel.Children.Add(NameOfDocTextBlock);
+                RelativePanel.SetAlignLeftWithPanel(NameOfStyle, true);
+                RelativePanel.SetAlignRightWithPanel(NameOfDocTextBlock, true);
+                RelativePanel.SetRightOf(NameOfDocTextBlock, NameOfStyle);
+                stackPanel.Children.Add(relativePanel);
 
-            ContentDialogResult result = await deleteFileDialog.ShowAsync();
+                ContentDialog deleteFileDialog = new ContentDialog()
+                {
+                    Title = "Подтверждение действия",
+                    Content = stackPanel,
+                    PrimaryButtonText = "ОК",
+                    MaxWidth = 500,
+                    SecondaryButtonText = "Отмена"
+                };
 
-            if (result == ContentDialogResult.Primary)
-            {
-                await _documentService.CreateDocument(NameOfDocTextBlock.Text);
-                (DataContext as ApplicationViewModel).Documents = await _documentService.GetAllDocuments();
+                ContentDialogResult result = await deleteFileDialog.ShowAsync();
+
+                if (result == ContentDialogResult.Primary)
+                {
+                    await _documentService.CreateDocument(NameOfDocTextBlock.Text);
+                    (DataContext as ApplicationViewModel).Documents = await _documentService.GetAllDocuments();
+                }
+                else if (result == ContentDialogResult.Secondary)
+                {
+                    //header.Text = "Отмена действия";
+                }
             }
-            else if (result == ContentDialogResult.Secondary)
+            catch (Exception ex)
             {
-                //header.Text = "Отмена действия";
-            }
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }           
         }
 
         private async void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
-            await _documentService.UpdateDocument((DataContext as ApplicationViewModel).SelectedDocument);
-            (DataContext as ApplicationViewModel).Documents = await _documentService.GetAllDocuments();
+            try
+            {
+                await _documentService.UpdateDocument((DataContext as ApplicationViewModel).SelectedDocument);
+                (DataContext as ApplicationViewModel).Documents = await _documentService.GetAllDocuments();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }           
         }
 
         private async void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            await _documentService.DeleteDocument((DataContext as ApplicationViewModel).SelectedDocument);
-            (DataContext as ApplicationViewModel).Documents = await _documentService.GetAllDocuments();
+            try
+            {
+                await _documentService.DeleteDocument((DataContext as ApplicationViewModel).SelectedDocument);
+                (DataContext as ApplicationViewModel).Documents = await _documentService.GetAllDocuments();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }           
         }
     }
 }

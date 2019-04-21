@@ -55,7 +55,11 @@ namespace SourceParser.DAL.Repositories
         {
             using (var context = new ApplicationContext())
             {
-                context.Entry(item).State = EntityState.Modified;
+                /*context.Entry(item).State = EntityState.Modified;
+                context.Set<T>().Update(item);*/
+                context.Set<T>().Remove(item);
+                await context.SaveChangesAsync();
+                await context.Set<T>().AddAsync(item);
                 await context.SaveChangesAsync();
             }
         }

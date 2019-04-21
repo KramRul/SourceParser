@@ -4,6 +4,7 @@ using SourceParser.DAL.UnitOfWorks;
 using SourceParser.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -29,61 +30,84 @@ namespace SourceParser.Pages
         }
         private async void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            StackPanel stackPanel = new StackPanel();
-
-            TextBlock NameOfStyle = new TextBlock
+            try
             {
-                Text = "Название стиля",
-                Margin = new Thickness(10)
-            };
+                StackPanel stackPanel = new StackPanel();
 
-            TextBox NameOfStyleTextBlock = new TextBox
+                TextBlock NameOfStyle = new TextBlock
+                {
+                    Text = "Название стиля",
+                    Margin = new Thickness(10)
+                };
+
+                TextBox NameOfStyleTextBlock = new TextBox
+                {
+                    MaxLength = 255
+                };
+
+                RelativePanel relativePanel = new RelativePanel
+                {
+                    FlowDirection = FlowDirection.LeftToRight,
+                    HorizontalAlignment = HorizontalAlignment.Stretch
+                };
+                relativePanel.Children.Add(NameOfStyle);
+                relativePanel.Children.Add(NameOfStyleTextBlock);
+                RelativePanel.SetAlignLeftWithPanel(NameOfStyle, true);
+                RelativePanel.SetAlignRightWithPanel(NameOfStyleTextBlock, true);
+                RelativePanel.SetRightOf(NameOfStyleTextBlock, NameOfStyle);
+                stackPanel.Children.Add(relativePanel);
+
+                ContentDialog deleteFileDialog = new ContentDialog()
+                {
+                    Title = "Подтверждение действия",
+                    Content = stackPanel,
+                    PrimaryButtonText = "ОК",
+                    MaxWidth = 500,
+                    SecondaryButtonText = "Отмена"
+                };
+
+                ContentDialogResult result = await deleteFileDialog.ShowAsync();
+
+                if (result == ContentDialogResult.Primary)
+                {
+                    await _styleService.CreateStyle(NameOfStyleTextBlock.Text);
+                    (DataContext as ApplicationViewModel).Styles = await _styleService.GetAllStyles();
+                }
+                else if (result == ContentDialogResult.Secondary)
+                {
+                    //header.Text = "Отмена действия";
+                }
+            }
+            catch (Exception ex)
             {
-                MaxLength = 255
-            };
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }          
+        }
 
-            RelativePanel relativePanel = new RelativePanel
+        private async void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            try
             {
-                FlowDirection = FlowDirection.LeftToRight,
-                HorizontalAlignment = HorizontalAlignment.Stretch
-            };
-            relativePanel.Children.Add(NameOfStyle);
-            relativePanel.Children.Add(NameOfStyleTextBlock);
-            RelativePanel.SetAlignLeftWithPanel(NameOfStyle, true);
-            RelativePanel.SetAlignRightWithPanel(NameOfStyleTextBlock, true);
-            RelativePanel.SetRightOf(NameOfStyleTextBlock, NameOfStyle);
-            stackPanel.Children.Add(relativePanel);
-
-            ContentDialog deleteFileDialog = new ContentDialog()
-            {
-                Title = "Подтверждение действия",
-                Content = stackPanel,
-                PrimaryButtonText = "ОК",
-                MaxWidth = 500,
-                SecondaryButtonText = "Отмена"
-            };
-
-            ContentDialogResult result = await deleteFileDialog.ShowAsync();
-
-            if (result == ContentDialogResult.Primary)
-            {
-                await _styleService.CreateStyle(NameOfStyleTextBlock.Text);
+                await _styleService.UpdateStyle((DataContext as ApplicationViewModel).SelectedStyle);
                 (DataContext as ApplicationViewModel).Styles = await _styleService.GetAllStyles();
             }
-            else if (result == ContentDialogResult.Secondary)
+            catch (Exception ex)
             {
-                //header.Text = "Отмена действия";
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
             }
         }
 
-        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        private async void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
-        {
-
+            try
+            {
+                await _styleService.DeleteStyle((DataContext as ApplicationViewModel).SelectedStyle);
+                (DataContext as ApplicationViewModel).Styles = await _styleService.GetAllStyles();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }
         }
     }
 }
