@@ -1,4 +1,7 @@
-﻿using System;
+﻿using SourceParser.BLL.Services;
+using SourceParser.BLL.Services.Interfaces;
+using SourceParser.DAL.UnitOfWorks;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,18 +16,25 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace SourceParser.Pages
 {
-    /// <summary>
-    /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
-    /// </summary>
     public sealed partial class Home : Page
     {
+        private readonly IFileDialogService _fileDialogService = new FileDialogService(new UnitOfWork());
+
         public Home()
         {
             this.InitializeComponent();
+        }
+
+        private async void ButtonOpenFile_Click(object sender, RoutedEventArgs e)
+        {
+            await _fileDialogService.OpenFileDialog();
+        }
+
+        private async void ButtonSaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            await _fileDialogService.SaveFileDialog();
         }
     }
 }

@@ -157,8 +157,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ApplicationViewModel.cs" />
-    <Compile Include="BLL\Services\EditDialogService.cs" />
-    <Compile Include="BLL\Services\Interfaces\IDialogService.cs" />
+    <Compile Include="BLL\Services\FileDialogService.cs" />
+    <Compile Include="BLL\Services\Interfaces\IFileDialogService.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -10,6 +10,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="1" x:Name="ButtonOpenFile" Click="ButtonOpenFile_Click" Width="320" Height="80" Margin="0 0 0 0" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center"  HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Открыть файл"  Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+        </Button>
+        <Button Grid.Column="3" x:Name="ButtonSaveFile" Click="ButtonSaveFile_Click" Width="320" Height="80" Margin="0 0 0 0" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Сохранить файл" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+        </Button>
     </Grid>
 </Page>
