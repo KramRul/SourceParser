@@ -18,7 +18,6 @@ namespace SourceParser.Models
         private DAL.Entities.Style.AuthorFirst _authorFirst { get; set; }
         private DAL.Entities.Style.AuthorSecond _authorSecond { get; set; }
         private DAL.Entities.Style.Webdoc _webdoc { get; set; }
-        private List<DAL.Entities.Style.Text> _webdocGroupTextList { get; set; }
         private DAL.Entities.Style.Publisher _publisher { get; set; }
         private DAL.Entities.Style.PublishUniver _publishuniver { get; set; }
         private DAL.Entities.Style.YearDate _yearDateStyle { get; set; }
@@ -93,16 +92,6 @@ namespace SourceParser.Models
             {
                 _webdoc = value;
                 OnPropertyChanged("Webdoc");
-            }
-        }
-
-        public List<DAL.Entities.Style.Text> WebdocGroupTextList
-        {
-            get { return _webdocGroupTextList; }
-            set
-            {
-                _webdocGroupTextList = value;
-                OnPropertyChanged("WebdocGroupTextList");
             }
         }
 

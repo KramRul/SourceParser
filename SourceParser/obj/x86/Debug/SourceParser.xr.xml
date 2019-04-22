@@ -15,13 +15,35 @@
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Documents" />
     <RootPropertyPathName Name="SelectedStyle" />
-    <RootPropertyPathName Name="WebdocGroupTextList" />
+    <RootPropertyPathName Name="PagesRange" />
+    <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="Variable" />
     <RootPropertyPathName Name="Prefix" />
     <RootPropertyPathName Name="Suffix" />
     <RootPropertyPathName Name="Value" />
-    <RootPropertyPathName Name="AuthorSecond" />
+    <RootPropertyPathName Name="PagesNumber" />
+    <RootPropertyPathName Name="PublishVolume" />
+    <RootPropertyPathName Name="YearDateStyle" />
+    <RootPropertyPathName Name="DateParts" />
     <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="Publishuniver" />
+    <RootPropertyPathName Name="YearDateUniver" />
+    <RootPropertyPathName Name="DateUniver" />
+    <RootPropertyPathName Name="DatePartUnivers" />
+    <RootPropertyPathName Name="NameUniver" />
+    <RootPropertyPathName Name="GroupUniver" />
+    <RootPropertyPathName Name="TextUnivers" />
+    <RootPropertyPathName Name="Publisher" />
+    <RootPropertyPathName Name="YearDatePublisher" />
+    <RootPropertyPathName Name="DatePublisher" />
+    <RootPropertyPathName Name="DatePartPublishers" />
+    <RootPropertyPathName Name="NamePublisher" />
+    <RootPropertyPathName Name="GroupPublisher" />
+    <RootPropertyPathName Name="TextPublishers" />
+    <RootPropertyPathName Name="Webdoc" />
+    <RootPropertyPathName Name="Group" />
+    <RootPropertyPathName Name="Texts" />
+    <RootPropertyPathName Name="AuthorSecond" />
     <RootPropertyPathName Name="EtAlUseFirst" />
     <RootPropertyPathName Name="EtAlMin" />
     <RootPropertyPathName Name="DelimiterPrecedesLast" />
@@ -204,6 +226,13 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
       <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="SourceParser.Pages.NewStyle" />
   </Roots.RootTypes>

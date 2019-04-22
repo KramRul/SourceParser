@@ -107,18 +107,136 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <TextBlock Text="Веб шаблон" />
                 <StackPanel Padding="10">
                     <TextBlock Text="Texts" />
-                    <GridView x:Name="GridOfWebDockTexts" ItemsSource="{Binding SelectedStyle.WebdocGroupTextList}" SelectionMode="None" Width="Auto" Height="Auto">
-                        <GridView.ItemTemplate>
+                    <ListView x:Name="ListOfWebDockTexts" ItemsSource="{Binding SelectedStyle.Webdoc.Group.Texts}" SelectionMode="None" Width="Auto" Height="Auto">
+                        <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
+                                    <TextBlock Text="Value" />
                                     <TextBox Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="Suffix" />
                                     <TextBox Text="{Binding Path=Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="Prefix" />
                                     <TextBox Text="{Binding Path=Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="Variable" />
                                     <TextBox Text="{Binding Path=Variable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                                 </StackPanel>
                             </DataTemplate>
-                        </GridView.ItemTemplate>
-                    </GridView>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+                <TextBlock Text="Издатель" />
+                <StackPanel Padding="10">
+                    <TextBlock Text="Группа" />
+                    <ListView x:Name="ListOfPublisherTexts" ItemsSource="{Binding SelectedStyle.Publisher.GroupPublisher.TextPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10" Background="LightGray">
+                                    <TextBlock Text="Value" />
+                                    <TextBox Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="Suffix" />
+                                    <TextBox Text="{Binding Path=Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="Prefix" />
+                                    <TextBox Text="{Binding Path=Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="Variable" />
+                                    <TextBox Text="{Binding Path=Variable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <TextBlock Text="Дата" />
+                    <ListView x:Name="ListOfYearDatePublisherDateParts" ItemsSource="{Binding SelectedStyle.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10" Background="LightGray">
+                                    <TextBlock Text="Name Publisher" />
+                                    <TextBox Text="{Binding Path=NamePublisher, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+                <TextBlock Text="Издатель университет" />
+                <StackPanel Padding="10">
+                    <TextBlock Text="Группа" />
+                    <ListView x:Name="ListOfPublishUniverTexts" ItemsSource="{Binding SelectedStyle.Publishuniver.GroupUniver.TextUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10" Background="LightGray">
+                                    <TextBlock Text="Value" />
+                                    <TextBox Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="Suffix" />
+                                    <TextBox Text="{Binding Path=Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="Prefix" />
+                                    <TextBox Text="{Binding Path=Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="Variable" />
+                                    <TextBox Text="{Binding Path=Variable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <TextBlock Text="Дата" />
+                    <ListView x:Name="ListOfPublishUniverDateParts" ItemsSource="{Binding SelectedStyle.Publishuniver.YearDateUniver.DateUniver.DatePartUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10" Background="LightGray">
+                                    <TextBlock Text="Name Publisher" />
+                                    <TextBox Text="{Binding Path=NameUniver, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+                <TextBlock Text="Дата" />
+                <StackPanel Padding="10">
+                    <ListView x:Name="ListOfDateDateParts" ItemsSource="{Binding SelectedStyle.YearDateStyle.Date.DateParts}" SelectionMode="None" Width="Auto" Height="Auto">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10" Background="LightGray">
+                                    <TextBlock Text="Name Publisher" />
+                                    <TextBox Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+                <TextBlock Text="Publish Volume" />
+                <StackPanel Padding="10">
+                    <StackPanel Margin="10" Background="LightGray">
+                        <TextBlock Text="Value" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PublishVolume.Text.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Suffix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PublishVolume.Text.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Prefix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PublishVolume.Text.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Variable" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PublishVolume.Text.Variable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock Text="Количество страниц" />
+                <StackPanel Padding="10">
+                    <StackPanel Margin="10" Background="LightGray">
+                        <TextBlock Text="Value" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PagesNumber.Text.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Suffix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PagesNumber.Text.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Prefix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PagesNumber.Text.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Variable" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PagesNumber.Text.Variable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock Text="Диапазон страниц" />
+                <StackPanel Padding="10">
+                    <StackPanel Margin="10" Background="LightGray">
+                        <TextBlock Text="Value" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PagesRange.Text.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Suffix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PagesRange.Text.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Prefix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PagesRange.Text.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Variable" />
+                        <TextBox Text="{Binding Path=SelectedStyle.PagesRange.Text.Variable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

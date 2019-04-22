@@ -130,7 +130,6 @@ namespace SourceParser.BLL.Services
                 PublishVolume = style.PublishVolume,
                 Title = style.Title,
                 Webdoc = style.Webdoc,
-                WebdocGroupTextList = texts.Where(text => text.GroupId == style.Webdoc.GroupId).Select(text => text).ToList(),
                 YearDateStyle = style.YearDateStyle
             }).ToList();
 
