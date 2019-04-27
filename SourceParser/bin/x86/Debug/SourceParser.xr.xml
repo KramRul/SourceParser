@@ -14,13 +14,15 @@
     <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Documents" />
+    <RootPropertyPathName Name="SelectedNote" />
+    <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="Notes" />
     <RootPropertyPathName Name="SelectedStyle" />
     <RootPropertyPathName Name="PagesRange" />
     <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="Variable" />
     <RootPropertyPathName Name="Prefix" />
     <RootPropertyPathName Name="Suffix" />
-    <RootPropertyPathName Name="Value" />
     <RootPropertyPathName Name="PagesNumber" />
     <RootPropertyPathName Name="PublishVolume" />
     <RootPropertyPathName Name="YearDateStyle" />
@@ -157,6 +159,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="FontSize" />
@@ -207,9 +210,11 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
+      <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Fill" />
@@ -221,18 +226,20 @@
     </RootType>
     <RootType FullName="SourceParser.Pages.NewDocument" />
     <RootType FullName="SourceParser.Pages.NewLink" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="SourceParser.Pages.NewNote" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollBarVisibility" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
       <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectionMode" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="SourceParser.Pages.NewStyle" />
   </Roots.RootTypes>

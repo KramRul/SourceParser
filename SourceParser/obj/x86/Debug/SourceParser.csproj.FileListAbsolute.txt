@@ -686,3 +686,8 @@ C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourcePars
 C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\.winmd_cache\$Telerik.UI.Drawing.winmd_636723260600000000.json
 C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\SourceParser.csprojAssemblyReference.cache
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewNote.g.i.cs
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewNote.g.cs
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewNote.xaml
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewNote.xbf
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewNote.xbf

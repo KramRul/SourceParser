@@ -45,6 +45,10 @@ namespace SourceParser
             {
                 myFrame.Navigate(typeof(Pages.NewLink));
             }
+            else if (addNote.IsSelected)
+            {
+                myFrame.Navigate(typeof(Pages.NewNote));
+            }
             else if (settings.IsSelected)
             {
                 //myFrame.Navigate(typeof(settings));

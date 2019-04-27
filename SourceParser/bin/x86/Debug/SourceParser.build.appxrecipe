@@ -205,6 +205,9 @@
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewLink.xbf">
       <PackagePath>Pages\NewLink.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewNote.xbf">
+      <PackagePath>Pages\NewNote.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewStyle.xbf">
       <PackagePath>Pages\NewStyle.xbf</PackagePath>
     </AppxPackagedFile>

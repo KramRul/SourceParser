@@ -98,7 +98,9 @@
     <Compile Include="BLL\Services\BaseService.cs" />
     <Compile Include="BLL\Services\DocumentService.cs" />
     <Compile Include="BLL\Services\Interfaces\IDocumentService.cs" />
+    <Compile Include="BLL\Services\Interfaces\INoteService.cs" />
     <Compile Include="BLL\Services\Interfaces\IStyleService.cs" />
+    <Compile Include="BLL\Services\NoteService.cs" />
     <Compile Include="BLL\Services\StyleService.cs" />
     <Compile Include="DAL\ApplicationContext.cs" />
     <Compile Include="DAL\Entities\Author.cs" />
@@ -139,6 +141,7 @@
     </Compile>
     <Compile Include="Models\BaseMod.cs" />
     <Compile Include="Models\DocumentMod.cs" />
+    <Compile Include="Models\NoteMod.cs" />
     <Compile Include="Models\StyleMod.cs" />
     <Compile Include="Pages\DocumentsTable.xaml.cs">
       <DependentUpon>DocumentsTable.xaml</DependentUpon>
@@ -151,6 +154,9 @@
     </Compile>
     <Compile Include="Pages\NewLink.xaml.cs">
       <DependentUpon>NewLink.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewNote.xaml.cs">
+      <DependentUpon>NewNote.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NewStyle.xaml.cs">
       <DependentUpon>NewStyle.xaml</DependentUpon>
@@ -199,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\NewLink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NewNote.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

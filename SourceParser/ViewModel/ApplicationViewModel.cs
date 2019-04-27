@@ -18,11 +18,14 @@ namespace SourceParser.ViewModel
     {
         private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork());
         private readonly IStyleService _styleService = new StyleService(new UnitOfWork());
+        private readonly INoteService _noteService = new NoteService(new UnitOfWork());
 
         private StyleMod _selectedStyle;
         private DocumentMod _selectedDocument;
+        private NoteMod _selectedNote = new NoteMod();
         private ObservableCollection<StyleMod> _styles = new ObservableCollection<StyleMod>();
         private ObservableCollection<DocumentMod> _documents = new ObservableCollection<DocumentMod>();
+        private ObservableCollection<NoteMod> _notes = new ObservableCollection<NoteMod>();
 
         public ObservableCollection<StyleMod> Styles
         {
@@ -39,6 +42,16 @@ namespace SourceParser.ViewModel
             set
             {
                 _documents = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ObservableCollection<NoteMod> Notes
+        {
+            get => _notes;
+            set
+            {
+                _notes = value;
                 OnPropertyChanged();
             }
         }
@@ -63,6 +76,16 @@ namespace SourceParser.ViewModel
             }
         }
 
+        public NoteMod SelectedNote
+        {
+            get { return _selectedNote; }
+            set
+            {
+                _selectedNote = value;
+                OnPropertyChanged("SelectedNote");
+            }
+        }
+
         public ApplicationViewModel()
         {
             Initialize();
@@ -73,13 +96,27 @@ namespace SourceParser.ViewModel
             try
             {
                 Documents = await _documentService.GetAllDocuments();
-
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }
+            try
+            {
+                Notes = await _noteService.GetAllByDocumentId(SelectedDocument.Id);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }
+            try
+            {
                 Styles = await _styleService.GetAllStyles();
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
-            }         
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

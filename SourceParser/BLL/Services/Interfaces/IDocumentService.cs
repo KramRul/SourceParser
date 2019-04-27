@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SourceParser.BLL.Services.Interfaces
 {
-    interface IDocumentService
+    public interface IDocumentService
     {
         Task<ObservableCollection<DocumentMod>> GetAllDocuments();
         Task CreateDocument(string title);
