@@ -8,8 +8,65 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat ac felis donec et. Venenatis tellus in metus vulputate eu scelerisque felis imperdiet. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Ac tortor dignissim convallis aenean. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Sed sed risus pretium quam vulputate. Eu mi bibendum neque egestas congue quisque egestas diam in. Nec sagittis aliquam malesuada bibendum. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. In nibh mauris cursus mattis molestie a. Sit amet nisl suscipit adipiscing bibendum. Cursus risus at ultrices mi tempus imperdiet nulla. Ipsum consequat nisl vel pretium lectus quam. Nullam eget felis eget nunc. Maecenas accumsan lacus vel facilisis volutpat est velit egestas. Nunc sed id semper risus in hendrerit gravida rutrum. Mattis molestie a iaculis at. Diam donec adipiscing tristique risus nec. Faucibus pulvinar elementum integer enim. Nullam eget felis eget nunc lobortis. Nulla aliquet enim tortor at auctor urna nunc. Velit aliquet sagittis id consectetur purus ut faucibus. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Sed sed risus pretium quam vulputate dignissim. Eros in cursus turpis massa tincidunt. Bibendum enim facilisis gravida neque. Leo duis ut diam quam nulla. Vel risus commodo viverra maecenas accumsan lacus vel facilisis. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Tortor consequat id porta nibh venenatis cras sed. Enim eu turpis egestas pretium aenean pharetra magna. Enim blandit volutpat maecenas volutpat. Nam libero justo laoreet sit amet cursus. Facilisi morbi tempus iaculis urna id volutpat lacus. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Luctus accumsan tortor posuere ac ut. Ornare arcu odio ut sem. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Faucibus in ornare quam viverra orci sagittis. Nunc id cursus metus aliquam eleifend mi. Diam vel quam elementum pulvinar etiam non quam lacus. Ut aliquam purus sit amet. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Id cursus metus aliquam eleifend mi in nulla posuere. Faucibus in ornare quam viverra.</TextBlock>
+    <Grid x:ConnectionId='2' x:Name="Links">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" Text="Документы" Grid.Column="0" Grid.Row="0"></TextBlock>
+        <GridView x:ConnectionId='3' x:Name="GridOfButtons" ItemsSource="{Binding Documents}" SelectedItem="{Binding SelectedDocument, Mode=TwoWay}"                                                   SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="0" Grid.Row="1">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10" Background="LightGray">
+                        <TextBlock Width="140" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
+                            Text="{Binding Path=Title}">
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" Text="Стили" Grid.Column="1" Grid.Row="0"></TextBlock>
+        <GridView x:ConnectionId='4' x:Name="GridOfStyles" ItemsSource="{Binding Styles}" SelectedItem="{Binding SelectedStyle, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="1">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10" Background="LightGray">
+                        <TextBlock Width="140" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
+                            Text="{Binding Path=Title.Value}">
+                        <!--CommandParameter="{Binding SelectedButton}"-->
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <StackPanel Padding="10" Grid.Column="2" Grid.Row="1">
+            <ListView x:ConnectionId='7' x:Name="ListOfLinks" ItemsSource="{Binding Links}"  SelectedItem="{Binding SelectedLink, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="10" Padding="10" Background="LightGray" Width="200">
+                            <TextBlock Text="Value" />
+                            <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Grid.Row="1" Margin="10" Padding="0 0 5 0">
+            <TextBlock Text="Новая ссылка"/>
+            <TextBlock Text="Название документа" />
+            <TextBox Text="{Binding Path=SelectedDocument.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Название стиля" />
+            <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedStyle.Title.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Grid>
+                <Button x:ConnectionId='5' x:Name="ButtonEditOrSave" Content="Изменить или Сохранить"                                Width="auto" Height="auto" Margin="0 10 0 0" VerticalAlignment="Top" HorizontalAlignment="Left"></Button>
+                <Button x:ConnectionId='6' x:Name="ButtonDelete" Content="Удалить"                            Width="auto" Height="auto" Margin="0 10 0 0" VerticalAlignment="Top"  HorizontalAlignment="Right"></Button>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Page>
 

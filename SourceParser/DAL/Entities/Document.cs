@@ -29,6 +29,8 @@ namespace SourceParser.DAL.Entities
 
         public string Title { get; set; }
 
+        public string TitleOfConference { get; set; }
+
         public DateTime Date { get; set; }
 
         public string Edition { get; set; }
@@ -36,8 +38,9 @@ namespace SourceParser.DAL.Entities
         public string URLAdress { get; set; }
 
         public string Language { get; set; }
-
-        public string Pages { get; set; }
+        public string PageId { get; set; }
+        [ForeignKey("PageId")]
+        public Page Pages { get; set; }
 
         public string Volume { get; set; }
 

@@ -49,7 +49,39 @@ namespace SourceParser.BLL.Services
         {
             await _database.Documents.Create(new DAL.Entities.Document()
             {
-                Title = title
+                Title = title,
+                AdditionalInf = "",
+                Edition = "",
+                Language = "",
+                TitleOfConference = "",
+                URLAdress = "",
+                Volume = "",
+                Author = new DAL.Entities.Author()
+                {
+                    Name = ""
+                },
+                Co_Author = new DAL.Entities.Co_Author()
+                {
+                    Name = ""
+                },
+                Editor = new DAL.Entities.Editor()
+                {
+                    Name = ""
+                },
+                Pages = new DAL.Entities.Page()
+                {
+                    PageFirst = "",
+                    PageLast = ""
+                },
+                Publisher = new DAL.Entities.Publisher()
+                {
+                    Name = "",
+                    Address = ""
+                },
+                Translator = new DAL.Entities.Translator()
+                {
+                    Name = ""
+                }
             });
         }
 
@@ -63,16 +95,22 @@ namespace SourceParser.BLL.Services
                 Date = document.Date,
                 Edition = document.Edition,
                 Language = document.Language,
+                PageId = document.Pages.Id,
                 Pages = document.Pages,
                 Type = document.Type,
                 URLAdress = document.URLAdress,
                 Volume = document.Volume,
+                AuthorId = document.Author.Id,
                 Author = document.Author,
+                Co_AuthorId = document.Co_Author.Id,
                 Co_Author = document.Co_Author,
+                EditorId = document.Editor.Id,
                 Editor = document.Editor,
+                PublisherId = document.Publisher.Id,
                 Publisher = document.Publisher,
+                TranslatorId = document.Translator.Id,
                 Translator = document.Translator
-            });
+            }, document.Id);
         }
 
         public async Task DeleteDocument(DocumentMod document)

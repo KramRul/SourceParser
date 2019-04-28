@@ -98,8 +98,10 @@
     <Compile Include="BLL\Services\BaseService.cs" />
     <Compile Include="BLL\Services\DocumentService.cs" />
     <Compile Include="BLL\Services\Interfaces\IDocumentService.cs" />
+    <Compile Include="BLL\Services\Interfaces\ILinkService.cs" />
     <Compile Include="BLL\Services\Interfaces\INoteService.cs" />
     <Compile Include="BLL\Services\Interfaces\IStyleService.cs" />
+    <Compile Include="BLL\Services\LinkService.cs" />
     <Compile Include="BLL\Services\NoteService.cs" />
     <Compile Include="BLL\Services\StyleService.cs" />
     <Compile Include="DAL\ApplicationContext.cs" />
@@ -109,6 +111,7 @@
     <Compile Include="DAL\Entities\Document.cs" />
     <Compile Include="DAL\Entities\Editor.cs" />
     <Compile Include="DAL\Entities\Note.cs" />
+    <Compile Include="DAL\Entities\Page.cs" />
     <Compile Include="DAL\Entities\Publisher.cs" />
     <Compile Include="DAL\Entities\Reference.cs" />
     <Compile Include="DAL\Entities\Style.cs" />
@@ -141,6 +144,7 @@
     </Compile>
     <Compile Include="Models\BaseMod.cs" />
     <Compile Include="Models\DocumentMod.cs" />
+    <Compile Include="Models\LinkMod.cs" />
     <Compile Include="Models\NoteMod.cs" />
     <Compile Include="Models\StyleMod.cs" />
     <Compile Include="Pages\DocumentsTable.xaml.cs">

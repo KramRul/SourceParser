@@ -46,6 +46,17 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <TextBlock Text="Выбранный элемент"  />
                 <TextBlock Text="Название стиля" />
                 <TextBox Text="{Binding Path=SelectedStyle.Title.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock Text="Настройки для названия документа" />
+                <StackPanel Padding="10">
+                    <TextBlock Text="Value" />
+                        <TextBox Text="{Binding Path=SelectedStyle.Title.Text.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Suffix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.Title.Text.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Prefix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.Title.Text.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Variable" />
+                    <TextBox Text="{Binding Path=SelectedStyle.Title.Text.Variable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
                 <TextBlock Text="EtAl" />
                 <TextBox Text="{Binding Path=SelectedStyle.EtAl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="Разделитель диапазона страниц" />
@@ -210,6 +221,19 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                         <TextBox Text="{Binding Path=SelectedStyle.PublishVolume.Text.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         <TextBlock Text="Variable" />
                         <TextBox Text="{Binding Path=SelectedStyle.PublishVolume.Text.Variable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock Text="Title Of Conference" />
+                <StackPanel Padding="10">
+                    <StackPanel Margin="10" Background="LightGray">
+                        <TextBlock Text="Value" />
+                        <TextBox Text="{Binding Path=SelectedStyle.TitleOfConference.Text.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Suffix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.TitleOfConference.Text.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Prefix" />
+                        <TextBox Text="{Binding Path=SelectedStyle.TitleOfConference.Text.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Variable" />
+                        <TextBox Text="{Binding Path=SelectedStyle.TitleOfConference.Text.Variable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     </StackPanel>
                 </StackPanel>
                 <TextBlock Text="Количество страниц" />

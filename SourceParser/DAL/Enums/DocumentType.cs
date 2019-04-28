@@ -8,20 +8,24 @@ namespace SourceParser.DAL.Enums
 {
     public enum DocumentType
     {
-        NewspaperArticle = 0,
-        Document = 1,
-        Book = 2,
-        Report = 3,
-        SectionBook = 4,
-        Case = 5,
-        Dissertation = 6,
-        Bill = 7,
-        VideoRecord = 8,
-        AudioRecord = 9,
-        Interview = 10,
-        LegalAct = 11,
-        Patent = 12,
-        Letter = 13,
-        MagazineArticle = 14
+        Article = 0,
+        Conference = 1,
+        Thesis = 2,
+        Webpage = 3,
+        NewspaperArticle = 4,
+        Document = 5,
+        Book = 6,
+        Report = 7,
+        SectionBook = 8,
+        Case = 9,
+        Dissertation = 10,
+        Bill = 11,
+        VideoRecord = 12,
+        AudioRecord = 13,
+        Interview = 14,
+        LegalAct = 15,
+        Patent = 16,
+        Letter = 17,
+        MagazineArticle = 18
     }
 }

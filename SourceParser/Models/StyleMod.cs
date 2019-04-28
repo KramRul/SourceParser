@@ -24,6 +24,7 @@ namespace SourceParser.Models
         private DAL.Entities.Style.PublishVolume _publishVolume { get; set; }
         private DAL.Entities.Style.PagesNumber _pagesNumber { get; set; }
         private DAL.Entities.Style.PagesRange _pagesRange { get; set; }
+        private DAL.Entities.Style.TitleOfConference _titleOfConference { get; set; }
 
         public string Id
         {
@@ -62,6 +63,16 @@ namespace SourceParser.Models
             {
                 _title = value;
                 OnPropertyChanged("Title");
+            }
+        }
+
+        public DAL.Entities.Style.TitleOfConference TitleOfConference
+        {
+            get => _titleOfConference;
+            set
+            {
+                _titleOfConference = value;
+                OnPropertyChanged("TitleOfConference");
             }
         }
 

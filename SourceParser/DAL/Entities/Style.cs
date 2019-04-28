@@ -52,6 +52,10 @@ namespace SourceParser.DAL.Entities.Style
         public string PagesRangeId { get; set; }
         [ForeignKey("PagesRangeId")]
         public PagesRange PagesRange { get; set; }
+
+        public string TitleOfConferenceId { get; set; }
+        [ForeignKey("TitleOfConferenceId")]
+        public TitleOfConference TitleOfConference { get; set; }
     }
 
     public class PagesRange : BaseEntity
@@ -69,6 +73,13 @@ namespace SourceParser.DAL.Entities.Style
     }
 
     public class PublishVolume : BaseEntity
+    {
+        public string TextId { get; set; }
+        [ForeignKey("TextId")]
+        public Text Text { get; set; }
+    }
+
+    public class TitleOfConference : BaseEntity
     {
         public string TextId { get; set; }
         [ForeignKey("TextId")]
@@ -268,5 +279,8 @@ namespace SourceParser.DAL.Entities.Style
     public class Title : BaseEntity
     {
         public string Value { get; set; }
+        public string TextId { get; set; }
+        [ForeignKey("TextId")]
+        public Text Text { get; set; }
     }
 }

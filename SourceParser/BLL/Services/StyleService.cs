@@ -23,7 +23,8 @@ namespace SourceParser.BLL.Services
             {
                 Title = new DAL.Entities.Style.Title()
                 {
-                    Value = title
+                    Value = title,
+                    Text = new DAL.Entities.Style.Text()
                 },
                 AuthorFirst = new DAL.Entities.Style.AuthorFirst()
                 {
@@ -83,6 +84,10 @@ namespace SourceParser.BLL.Services
                 {
                     Text = new DAL.Entities.Style.Text()
                 },
+                TitleOfConference = new DAL.Entities.Style.TitleOfConference()
+                {
+                    Text = new DAL.Entities.Style.Text()
+                },
                 Webdoc = new DAL.Entities.Style.Webdoc()
                 {
                     Group = new DAL.Entities.Style.Group()
@@ -128,6 +133,7 @@ namespace SourceParser.BLL.Services
                 Publisher = style.Publisher,
                 Publishuniver = style.Publishuniver,
                 PublishVolume = style.PublishVolume,
+                TitleOfConference = style.TitleOfConference,
                 Title = style.Title,
                 Webdoc = style.Webdoc,
                 YearDateStyle = style.YearDateStyle
@@ -266,9 +272,26 @@ namespace SourceParser.BLL.Services
                         Variable = style.PublishVolume.Text.Variable
                     }
                 },
+                TitleOfConference = new DAL.Entities.Style.TitleOfConference()
+                {
+                    Text = new DAL.Entities.Style.Text()
+                    {
+                        Prefix = style.TitleOfConference.Text.Prefix,
+                        Suffix = style.TitleOfConference.Text.Suffix,
+                        Value = style.TitleOfConference.Text.Value,
+                        Variable = style.TitleOfConference.Text.Variable
+                    }
+                },
                 Title = new DAL.Entities.Style.Title()
                 {
-                    Value = style.Title.Value
+                    Value = style.Title.Value,
+                    Text = new DAL.Entities.Style.Text()
+                    {
+                        Prefix = style.Title.Text.Prefix,
+                        Suffix = style.Title.Text.Suffix,
+                        Value = style.Title.Text.Value,
+                        Variable = style.Title.Text.Variable
+                    }
                 },
                 Webdoc = new DAL.Entities.Style.Webdoc()
                 {

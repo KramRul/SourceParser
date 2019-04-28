@@ -24,8 +24,9 @@ namespace SourceParser.Models
         private string _edition;
         private string _URLAdress;
         private string _language;
-        private string _pages;
+        private Page _pages;
         private string _volume;
+        private string _titleOfConference;
         private string _additionalInf;
 
         public string Id
@@ -108,6 +109,16 @@ namespace SourceParser.Models
             }
         }
 
+        public string TitleOfConference
+        {
+            get => _titleOfConference;
+            set
+            {
+                _titleOfConference = value;
+                OnPropertyChanged("TitleOfConference");
+            }
+        }
+
         public DateTime Date
         {
             get => _date;
@@ -148,7 +159,7 @@ namespace SourceParser.Models
             }
         }
 
-        public string Pages
+        public Page Pages
         {
             get => _pages;
             set

@@ -19,13 +19,16 @@ namespace SourceParser.ViewModel
         private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork());
         private readonly IStyleService _styleService = new StyleService(new UnitOfWork());
         private readonly INoteService _noteService = new NoteService(new UnitOfWork());
+        private readonly ILinkService _linkService = new LinkService(new UnitOfWork());
 
         private StyleMod _selectedStyle;
         private DocumentMod _selectedDocument;
         private NoteMod _selectedNote = new NoteMod();
+        private LinkMod _selectedLink = new LinkMod();
         private ObservableCollection<StyleMod> _styles = new ObservableCollection<StyleMod>();
         private ObservableCollection<DocumentMod> _documents = new ObservableCollection<DocumentMod>();
         private ObservableCollection<NoteMod> _notes = new ObservableCollection<NoteMod>();
+        private ObservableCollection<LinkMod> _links = new ObservableCollection<LinkMod>();
 
         public ObservableCollection<StyleMod> Styles
         {
@@ -52,6 +55,16 @@ namespace SourceParser.ViewModel
             set
             {
                 _notes = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ObservableCollection<LinkMod> Links
+        {
+            get => _links;
+            set
+            {
+                _links = value;
                 OnPropertyChanged();
             }
         }
@@ -86,6 +99,16 @@ namespace SourceParser.ViewModel
             }
         }
 
+        public LinkMod SelectedLink
+        {
+            get { return _selectedLink; }
+            set
+            {
+                _selectedLink = value;
+                OnPropertyChanged("SelectedLink");
+            }
+        }
+
         public ApplicationViewModel()
         {
             Initialize();
@@ -104,6 +127,14 @@ namespace SourceParser.ViewModel
             try
             {
                 Notes = await _noteService.GetAllByDocumentId(SelectedDocument.Id);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }
+            try
+            {
+                Links = await _linkService.GetAllByDocumentId(SelectedDocument.Id);
             }
             catch (Exception ex)
             {

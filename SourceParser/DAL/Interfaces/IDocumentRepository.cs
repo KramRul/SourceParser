@@ -9,5 +9,7 @@ namespace SourceParser.DAL.Interfaces
 {
     public interface IDocumentRepository : IBaseRepository<Document>
     {
+        Task<List<Document>> GetAll();
+        Task Update(Document item, string id);
     }
 }
