@@ -27,6 +27,9 @@ namespace SourceParser.Pages
         public NewDocument()
         {
             this.InitializeComponent();
+
+            var _enumval = Enum.GetValues(typeof(DAL.Enums.DocumentType)).Cast<DAL.Enums.DocumentType>();
+            ComboBoxDocumentType.ItemsSource = _enumval.ToList();
         }
 
         private async void ButtonAdd_Click(object sender, RoutedEventArgs e)

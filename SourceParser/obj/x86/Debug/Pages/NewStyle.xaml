@@ -29,18 +29,20 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <Rectangle Fill="AliceBlue" Width="20" Height="120" Margin="10" RadiusX="5" RadiusY="5" Canvas.ZIndex="2" Canvas.Left="50"/>
             </Canvas>
         </Button>
-        <GridView x:ConnectionId='4' x:Name="GridOfButtons" ItemsSource="{Binding Styles}" SelectedItem="{Binding SelectedStyle, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="0">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="10" Background="LightGray">
-                        <TextBlock Width="140" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="0">
+            <GridView x:ConnectionId='18' x:Name="GridOfButtons" ItemsSource="{Binding Styles}" SelectedItem="{Binding SelectedStyle, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" >
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="10" Background="LightGray">
+                            <TextBlock Width="140" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
                             Text="{Binding Path=Title.Value}">
                         <!--CommandParameter="{Binding SelectedButton}"-->
-                        </TextBlock>
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+                            </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </ScrollViewer>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="2" Grid.Row="0" Margin="10" Padding="0 0 5 0">
             <StackPanel>
                 <TextBlock Text="Выбранный элемент"  />
@@ -118,7 +120,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <TextBlock Text="Веб шаблон" />
                 <StackPanel Padding="10">
                     <TextBlock Text="Texts" />
-                    <ListView x:ConnectionId='17' x:Name="ListOfWebDockTexts" ItemsSource="{Binding SelectedStyle.Webdoc.Group.Texts}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='16' x:Name="ListOfWebDockTexts" ItemsSource="{Binding SelectedStyle.Webdoc.Group.Texts}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
@@ -138,7 +140,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <TextBlock Text="Издатель" />
                 <StackPanel Padding="10">
                     <TextBlock Text="Группа" />
-                    <ListView x:ConnectionId='13' x:Name="ListOfPublisherTexts" ItemsSource="{Binding SelectedStyle.Publisher.GroupPublisher.TextPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='12' x:Name="ListOfPublisherTexts" ItemsSource="{Binding SelectedStyle.Publisher.GroupPublisher.TextPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
@@ -155,7 +157,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                         </ListView.ItemTemplate>
                     </ListView>
                     <TextBlock Text="Дата" />
-                    <ListView x:ConnectionId='14' x:Name="ListOfYearDatePublisherDateParts" ItemsSource="{Binding SelectedStyle.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='13' x:Name="ListOfYearDatePublisherDateParts" ItemsSource="{Binding SelectedStyle.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
@@ -169,7 +171,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <TextBlock Text="Издатель университет" />
                 <StackPanel Padding="10">
                     <TextBlock Text="Группа" />
-                    <ListView x:ConnectionId='9' x:Name="ListOfPublishUniverTexts" ItemsSource="{Binding SelectedStyle.Publishuniver.GroupUniver.TextUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='8' x:Name="ListOfPublishUniverTexts" ItemsSource="{Binding SelectedStyle.Publishuniver.GroupUniver.TextUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
@@ -186,7 +188,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                         </ListView.ItemTemplate>
                     </ListView>
                     <TextBlock Text="Дата" />
-                    <ListView x:ConnectionId='10' x:Name="ListOfPublishUniverDateParts" ItemsSource="{Binding SelectedStyle.Publishuniver.YearDateUniver.DateUniver.DatePartUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='9' x:Name="ListOfPublishUniverDateParts" ItemsSource="{Binding SelectedStyle.Publishuniver.YearDateUniver.DateUniver.DatePartUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
@@ -199,7 +201,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 </StackPanel>
                 <TextBlock Text="Дата" />
                 <StackPanel Padding="10">
-                    <ListView x:ConnectionId='7' x:Name="ListOfDateDateParts" ItemsSource="{Binding SelectedStyle.YearDateStyle.Date.DateParts}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='6' x:Name="ListOfDateDateParts" ItemsSource="{Binding SelectedStyle.YearDateStyle.Date.DateParts}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
@@ -265,8 +267,8 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
             </StackPanel>
         </ScrollViewer>
         <Grid Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch">
-            <Button x:ConnectionId='5' x:Name="ButtonSave" Content="Сохранить"                          Width="auto" Height="auto" Margin="10 0 0 10" VerticalAlignment="Top" HorizontalAlignment="Left"></Button>
-            <Button x:ConnectionId='6' x:Name="ButtonDelete" Content="Удалить"                            Width="auto" Height="auto" Margin="0 0 10 10" VerticalAlignment="Top"  HorizontalAlignment="Right"></Button>
+            <Button x:ConnectionId='4' x:Name="ButtonSave" Content="Сохранить"                          Width="auto" Height="auto" Margin="10 0 0 10" VerticalAlignment="Top" HorizontalAlignment="Left"></Button>
+            <Button x:ConnectionId='5' x:Name="ButtonDelete" Content="Удалить"                            Width="auto" Height="auto" Margin="0 0 10 10" VerticalAlignment="Top"  HorizontalAlignment="Right"></Button>
         </Grid>
     </Grid>
 </Page>

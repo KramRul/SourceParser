@@ -52,13 +52,21 @@ namespace SourceParser.Pages
             {
                 if ((DataContext as ApplicationViewModel).SelectedLink?.Document == null)
                 {
-                    await _linkService.CreateLink((DataContext as ApplicationViewModel).SelectedDocument, (DataContext as ApplicationViewModel).SelectedStyle, (DataContext as ApplicationViewModel).SelectedLink.Value);
-                    (DataContext as ApplicationViewModel).Links = await _linkService.GetAllByDocumentId((DataContext as ApplicationViewModel).SelectedDocument.Id);
+                    await _linkService.CreateLink(
+                        (DataContext as ApplicationViewModel).SelectedDocument, 
+                        (DataContext as ApplicationViewModel).SelectedStyle, 
+                        (DataContext as ApplicationViewModel).SelectedLink.Value);
+                    (DataContext as ApplicationViewModel).Links = await _linkService.GetAllByDocumentId(
+                        (DataContext as ApplicationViewModel).SelectedDocument.Id);
                 }
                 else
                 {
                     var docId = (DataContext as ApplicationViewModel).SelectedDocument.Id;
-                    await _linkService.UpdateLink((DataContext as ApplicationViewModel).SelectedLink);
+                    await _linkService.UpdateLink(
+                        (DataContext as ApplicationViewModel).SelectedLink, 
+                        (DataContext as ApplicationViewModel).SelectedDocument, 
+                        (DataContext as ApplicationViewModel).SelectedStyle, 
+                        (DataContext as ApplicationViewModel).SelectedLink.Value);
                     (DataContext as ApplicationViewModel).Links = await _linkService.GetAllByDocumentId(docId);
                 }
             }
@@ -75,6 +83,18 @@ namespace SourceParser.Pages
                 var docId = (DataContext as ApplicationViewModel).SelectedNote.DocumentId;
                 await _linkService.DeleteLink((DataContext as ApplicationViewModel).SelectedLink);
                 (DataContext as ApplicationViewModel).Links = await _linkService.GetAllByDocumentId(docId);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }
+        }
+
+        private void GridOfStyles_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                (DataContext as ApplicationViewModel).SelectedLink.Value = "";
             }
             catch (Exception ex)
             {

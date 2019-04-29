@@ -17,29 +17,33 @@
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="300"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <GridView x:Name="GridOfButtons" ItemsSource="{Binding Documents}" SelectedItem="{Binding SelectedDocument, Mode=TwoWay}" SelectionChanged="GridOfButtons_SelectionChanged" SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="0" Grid.Row="0">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="10" Background="LightGray">
-                        <TextBlock Width="140" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
-                            Text="{Binding Path=Title}">
-                        </TextBlock>
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
-        <StackPanel Padding="10" Grid.Column="1" Grid.Row="0">
-            <ListView x:Name="ListOfNotes" ItemsSource="{Binding Notes}"  SelectedItem="{Binding SelectedNote, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto">
-                <ListView.ItemTemplate>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="0">
+            <GridView x:Name="GridOfButtons" ItemsSource="{Binding Documents}" SelectedItem="{Binding SelectedDocument, Mode=TwoWay}" SelectionChanged="GridOfButtons_SelectionChanged" SelectionMode="Single" Width="Auto" Height="Auto" >
+                <GridView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="10" Padding="10" Background="LightGray" Width="200">
-                            <TextBlock Text="Value" />
-                            <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <StackPanel Margin="10" Background="LightGray">
+                            <TextBlock Width="140" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
+                            Text="{Binding Path=Title}">
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackPanel>
+                </GridView.ItemTemplate>
+            </GridView>
+        </ScrollViewer>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="10" Grid.Column="1" Grid.Row="0">
+            <StackPanel>
+                <ListView x:Name="ListOfNotes" ItemsSource="{Binding Notes}"  SelectedItem="{Binding SelectedNote, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="10" Padding="10" Background="LightGray" Width="200">
+                                <TextBlock Text="Value" />
+                                <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
         <StackPanel Grid.Column="2" Margin="10" Padding="0 0 5 0">
             <TextBlock Text="Новая заметка"/>
             <TextBlock Text="Название документа" />

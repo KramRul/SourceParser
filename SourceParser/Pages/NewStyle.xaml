@@ -29,18 +29,20 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <Rectangle Fill="AliceBlue" Width="20" Height="120" Margin="10" RadiusX="5" RadiusY="5" Canvas.ZIndex="2" Canvas.Left="50"/>
             </Canvas>
         </Button>
-        <GridView x:Name="GridOfButtons" ItemsSource="{Binding Styles}" SelectedItem="{Binding SelectedStyle, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="0">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="10" Background="LightGray">
-                        <TextBlock Width="140" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="0">
+            <GridView x:Name="GridOfButtons" ItemsSource="{Binding Styles}" SelectedItem="{Binding SelectedStyle, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" >
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="10" Background="LightGray">
+                            <TextBlock Width="140" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" 
                             Text="{Binding Path=Title.Value}">
                         <!--CommandParameter="{Binding SelectedButton}"-->
-                        </TextBlock>
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+                            </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </ScrollViewer>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="2" Grid.Row="0" Margin="10" Padding="0 0 5 0">
             <StackPanel>
                 <TextBlock Text="Выбранный элемент"  />

@@ -192,7 +192,6 @@ namespace SourceParser.BLL.Services
                 },
                 EtAl = style.EtAl,
                 PageRangeDelimiter = style.PageRangeDelimiter,
-                PagesNumberId = style.PagesNumber.Id,
                 PagesNumber = new DAL.Entities.Style.PagesNumber()
                 {
                     Text = new DAL.Entities.Style.Text()

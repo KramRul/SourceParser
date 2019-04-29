@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BLL\Helpers\TimeConverter.cs" />
     <Compile Include="BLL\Services\BaseService.cs" />
     <Compile Include="BLL\Services\DocumentService.cs" />
     <Compile Include="BLL\Services\Interfaces\IDocumentService.cs" />

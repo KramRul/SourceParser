@@ -278,7 +278,7 @@ namespace SourceParser.DAL.Entities.Style
 
     public class Title : BaseEntity
     {
-        public string Value { get; set; }
+        public string Value { get; set; } = "";
         public string TextId { get; set; }
         [ForeignKey("TextId")]
         public Text Text { get; set; }

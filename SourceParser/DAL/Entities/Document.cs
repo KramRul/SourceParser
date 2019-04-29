@@ -31,7 +31,7 @@ namespace SourceParser.DAL.Entities
 
         public string TitleOfConference { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
 
         public string Edition { get; set; }
 

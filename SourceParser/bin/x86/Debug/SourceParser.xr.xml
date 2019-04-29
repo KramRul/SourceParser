@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Background" />
     <RootPropertyPathName Name="Flag" />
@@ -14,13 +17,21 @@
     <RootPropertyPathName Name="Language" />
     <RootPropertyPathName Name="URLAdress" />
     <RootPropertyPathName Name="Edition" />
+    <RootPropertyPathName Name="Translator" />
+    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="Editor" />
+    <RootPropertyPathName Name="Publisher" />
+    <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="Co_Author" />
+    <RootPropertyPathName Name="Author" />
     <RootPropertyPathName Name="Date" />
+    <RootPropertyPathName Name="Type" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Documents" />
-    <RootPropertyPathName Name="SelectedStyle" />
-    <RootPropertyPathName Name="Value" />
-    <RootPropertyPathName Name="Links" />
     <RootPropertyPathName Name="SelectedLink" />
+    <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="SelectedStyle" />
+    <RootPropertyPathName Name="Links" />
     <RootPropertyPathName Name="Styles" />
     <RootPropertyPathName Name="SelectedNote" />
     <RootPropertyPathName Name="Notes" />
@@ -33,7 +44,6 @@
     <RootPropertyPathName Name="PublishVolume" />
     <RootPropertyPathName Name="YearDateStyle" />
     <RootPropertyPathName Name="DateParts" />
-    <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="Publishuniver" />
     <RootPropertyPathName Name="YearDateUniver" />
     <RootPropertyPathName Name="DateUniver" />
@@ -41,7 +51,6 @@
     <RootPropertyPathName Name="NameUniver" />
     <RootPropertyPathName Name="GroupUniver" />
     <RootPropertyPathName Name="TextUnivers" />
-    <RootPropertyPathName Name="Publisher" />
     <RootPropertyPathName Name="YearDatePublisher" />
     <RootPropertyPathName Name="DatePublisher" />
     <RootPropertyPathName Name="DatePartPublishers" />
@@ -72,6 +81,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -162,8 +172,8 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Padding" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
@@ -186,6 +196,7 @@
       <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="SourceParser.MainPage" />
     <RootType FullName="Telerik.UI.Xaml.Controls.Grid.RadDataGrid">
@@ -208,6 +219,27 @@
     <RootType FullName="SourceParser.Pages.DocumentsTable" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="SourceParser.Pages.Home" />
+    <RootType FullName="SourceParser.BLL.Helpers.TimeConverter" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="SelectedItem" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Date" />
+      <RootProperty Name="DateFormat" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedItem" />
@@ -216,10 +248,6 @@
       <RootProperty Name="Height" />
       <RootProperty Name="ItemTemplate" />
       <RootEvent Name="SelectionChanged" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Text" />
-      <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Fill" />
@@ -240,12 +268,6 @@
     </RootType>
     <RootType FullName="SourceParser.Pages.NewLink" />
     <RootType FullName="SourceParser.Pages.NewNote" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootProperty Name="VerticalScrollBarVisibility" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="Content" />
-    </RootType>
     <RootType FullName="SourceParser.Pages.NewStyle" />
   </Roots.RootTypes>
 </Roots>
