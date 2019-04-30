@@ -16,6 +16,19 @@ namespace SourceParser.DAL.Repositories
         {
         }
 
+        public new async Task<List<Reference>> GetAll()
+        {
+            var result = new List<Reference>();
+            using (var context = new ApplicationContext())
+            {
+                result = await context.Set<Reference>()
+                    .Include(n => n.Document)
+                    .Include(n => n.Style)
+                    .ToListAsync();
+            }
+            return result;
+        }
+
         public async Task<List<Reference>> GetAllByDocumentId(string docId)
         {
             var result = new List<Reference>();

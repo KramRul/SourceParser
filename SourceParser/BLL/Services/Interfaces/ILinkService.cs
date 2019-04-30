@@ -10,6 +10,7 @@ namespace SourceParser.BLL.Services.Interfaces
 {
     public interface ILinkService
     {
+        Task<ObservableCollection<LinkMod>> GetAll();
         Task<ObservableCollection<LinkMod>> GetAllByDocumentId(string docId);
         Task DeleteLink(LinkMod note);
         Task UpdateLink(LinkMod note, DocumentMod document, StyleMod style, string value);

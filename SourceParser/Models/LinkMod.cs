@@ -78,6 +78,11 @@ namespace SourceParser.Models
             }
         }
 
+        public override string ToString()
+        {
+            return $"Value: {Value}\r\n Document Title: {Document?.Title}\r\n Style Title: {Style?.Title}\r\n";
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

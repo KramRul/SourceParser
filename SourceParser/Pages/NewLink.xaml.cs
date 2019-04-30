@@ -26,7 +26,7 @@ namespace SourceParser.Pages
         private readonly ILinkService _linkService = new LinkService(new UnitOfWork());
         public NewLink()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();      
         }
 
         private async void GridOfButtons_SelectionChanged(object sender, SelectionChangedEventArgs e)

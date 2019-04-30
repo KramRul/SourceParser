@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SourceParser.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace SourceParser.BLL.Services.Interfaces
         void ShowMessage(string message);
         string FilePath { get; set; }
         Task OpenFileDialog();
-        Task SaveFileDialog(); 
+        Task SaveFileDialog(List<LinkMod> links); 
         Task EditFileDialog();
     }
 }

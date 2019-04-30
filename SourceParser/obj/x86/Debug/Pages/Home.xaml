@@ -14,18 +14,44 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
-            <ColumnDefinition Width="30"></ColumnDefinition>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button x:ConnectionId='2' Grid.Column="1" x:Name="ButtonOpenFile"                              Width="320" Height="80" Margin="0 0 0 0" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center"  HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Открыть файл"  Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
-        </Button>
-        <Button x:ConnectionId='3' Grid.Column="3" x:Name="ButtonSaveFile"                              Width="320" Height="80" Margin="0 0 0 0" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Сохранить файл" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
-        </Button>
+        <StackPanel Grid.Column="0" VerticalAlignment="Top" BorderBrush="Gray" BorderThickness="1">
+            <Button x:ConnectionId='4' x:Name="ButtonOpenFile"                              Width="320" Height="80" Margin="10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
+                <TextBlock Text="Открыть файл"  Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+            </Button>
+            <Button x:ConnectionId='5' x:Name="ButtonSaveFile"                              Width="320" Height="80" Margin="10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
+                <TextBlock Text="Сохранить файл" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+            </Button>
+            <Button x:ConnectionId='6' x:Name="ButtonReloadLinks"                                 Width="320" Height="80" Margin="10 40 10 10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
+                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE777;" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+            </Button>
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="10" Grid.Column="1">
+            <StackPanel>
+                <ListView x:ConnectionId='2' x:Name="ListOfLinks" ItemsSource="{Binding Links}"  SelectedItem="{Binding SelectedLink, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="10" Padding="10" Background="LightGray" MaxWidth="1000">
+                                <TextBlock Text="Value" />
+                                <TextBlock Margin="10 0 0 0" TextWrapping="Wrap" Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Column="2" Margin="10" Padding="0 0 5 0">
+            <TextBlock Text="Cсылка"/>
+            <TextBlock Text="Название документа" />
+            <TextBox Text="{Binding Path=SelectedLink.Document.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+            <TextBlock Text="Название стиля" />
+            <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedLink.Style.Title.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+            <TextBlock Text="Значение ссылки" />
+            <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedLink.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+        </StackPanel>
     </Grid>
 </Page>
 

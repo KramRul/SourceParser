@@ -125,6 +125,25 @@ namespace SourceParser.BLL.Services
             return result;
         }
 
+        public async Task<ObservableCollection<LinkMod>> GetAll()
+        {
+            var links = await _database.References.GetAll();
+
+            var linksList = links.Select(link => new LinkMod()
+            {
+                Value = link.Value,
+                Id = link.Id,
+                DocumentId = link.DocumentId,
+                Document = link.Document,
+                StyleId = link.StyleId,
+                Style = link.Style
+            }).ToList();
+
+            var result = new ObservableCollection<LinkMod>(linksList);
+
+            return result;
+        }
+
         public async Task UpdateLink(LinkMod link, DocumentMod document, StyleMod style, string value)
         {
             var generatedValue = "";

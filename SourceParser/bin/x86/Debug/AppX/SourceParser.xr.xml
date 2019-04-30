@@ -7,6 +7,12 @@
     <RootPropertyPathName Name="Background" />
     <RootPropertyPathName Name="Flag" />
     <RootPropertyPathName Name="Country" />
+    <RootPropertyPathName Name="SelectedLink" />
+    <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="Style" />
+    <RootPropertyPathName Name="Title" />
+    <RootPropertyPathName Name="Document" />
+    <RootPropertyPathName Name="Links" />
     <RootPropertyPathName Name="SelectedDocument" />
     <RootPropertyPathName Name="AdditionalInf" />
     <RootPropertyPathName Name="Volume" />
@@ -26,12 +32,8 @@
     <RootPropertyPathName Name="Author" />
     <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="Type" />
-    <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Documents" />
-    <RootPropertyPathName Name="SelectedLink" />
-    <RootPropertyPathName Name="Value" />
     <RootPropertyPathName Name="SelectedStyle" />
-    <RootPropertyPathName Name="Links" />
     <RootPropertyPathName Name="Styles" />
     <RootPropertyPathName Name="SelectedNote" />
     <RootPropertyPathName Name="Notes" />
@@ -149,8 +151,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="VerticalContentAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ToolTipService">
@@ -171,9 +173,13 @@
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Background" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="MaxWidth" />
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
@@ -217,19 +223,28 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="SourceParser.Pages.DocumentsTable" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
+      <RootProperty Name="IsReadOnly" />
+      <RootProperty Name="TextWrapping" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="SourceParser.Pages.Home" />
     <RootType FullName="SourceParser.BLL.Helpers.TimeConverter" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootProperty Name="VerticalScrollBarVisibility" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Padding" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Text" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="MinWidth" />
       <RootProperty Name="SelectedItem" />
@@ -258,14 +273,6 @@
       <RootProperty Name="RadiusY" />
     </RootType>
     <RootType FullName="SourceParser.Pages.NewDocument" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
-      <RootProperty Name="SelectionMode" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="ItemTemplate" />
-    </RootType>
     <RootType FullName="SourceParser.Pages.NewLink" />
     <RootType FullName="SourceParser.Pages.NewNote" />
     <RootType FullName="SourceParser.Pages.NewStyle" />
