@@ -12,6 +12,7 @@ namespace SourceParser.BLL.Services.Interfaces
     {
         Task<ObservableCollection<LinkMod>> GetAll();
         Task<ObservableCollection<LinkMod>> GetAllByDocumentId(string docId);
+        Task<ObservableCollection<LinkMod>> GetAllFromLines(List<string> lines);
         Task DeleteLink(LinkMod note);
         Task UpdateLink(LinkMod note, DocumentMod document, StyleMod style, string value);
         Task CreateLink(DocumentMod document, StyleMod style, string value);

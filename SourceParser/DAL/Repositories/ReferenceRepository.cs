@@ -24,6 +24,7 @@ namespace SourceParser.DAL.Repositories
                 result = await context.Set<Reference>()
                     .Include(n => n.Document)
                     .Include(n => n.Style)
+                    .Include(n => n.Style.Title)
                     .ToListAsync();
             }
             return result;

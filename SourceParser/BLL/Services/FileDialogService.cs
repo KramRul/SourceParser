@@ -30,8 +30,9 @@ namespace SourceParser.BLL.Services
             throw new NotImplementedException();
         }
 
-        public async Task OpenFileDialog()
+        public async Task<List<string>> OpenFileDialog()
         {
+            var lines = new List<string>();
             FileOpenPicker openPicker = new FileOpenPicker
             {
                 ViewMode = PickerViewMode.Thumbnail,
@@ -43,8 +44,11 @@ namespace SourceParser.BLL.Services
 
             if (file != null)
             {
-                //myTextBox.Text = await FileIO.ReadTextAsync(file);
+                var readlines = await FileIO.ReadLinesAsync(file);
+                lines = new List<string>(readlines);
             }
+
+            return lines;
         }
 
         public async Task SaveFileDialog(List<LinkMod> links)

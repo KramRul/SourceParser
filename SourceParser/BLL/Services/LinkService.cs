@@ -86,7 +86,14 @@ namespace SourceParser.BLL.Services
                         $"{style.Webdoc.Group.Texts.FirstOrDefault().Value} {style.Webdoc.Group.Texts.FirstOrDefault().Prefix}{style.Webdoc.Group.Texts.FirstOrDefault().Suffix}";
                     break;
                 default:
-                    Console.WriteLine("Default case");
+                    valueResult = $"{style.AuthorFirst.Label.Prefix}{document.Author.Name}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}" +
+                        $"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}" +
+                        $"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}" +
+                        $"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix} " +
+                        $"{document.Date.ToShortDateString()} " +
+                        $"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}" +
+                        $"{style.PagesRange.Text.Prefix}{document.Pages.PageFirst}{style.PageRangeDelimiter}{document.Pages.PageLast}{style.PagesRange.Text.Suffix}";
+
                     break;
             }
 
@@ -126,6 +133,25 @@ namespace SourceParser.BLL.Services
         }
 
         public async Task<ObservableCollection<LinkMod>> GetAll()
+        {
+            var links = await _database.References.GetAll();
+
+            var linksList = links.Select(link => new LinkMod()
+            {
+                Value = link.Value,
+                Id = link.Id,
+                DocumentId = link.DocumentId,
+                Document = link.Document,
+                StyleId = link.StyleId,
+                Style = link.Style
+            }).ToList();
+
+            var result = new ObservableCollection<LinkMod>(linksList);
+
+            return result;
+        }
+
+        public async Task<ObservableCollection<LinkMod>> GetAllFromLines(List<string> lines)
         {
             var links = await _database.References.GetAll();
 

@@ -296,8 +296,8 @@ namespace SourceParser.SourceParser_XamlTypeInfo
             _typeNameTable[79] = "System.Collections.ObjectModel.Collection`1<Object>";
             _typeNameTable[80] = "Telerik.UI.Xaml.Controls.Grid.DataGridTemplateColumn";
             _typeNameTable[81] = "SourceParser.Pages.DocumentsTable";
-            _typeNameTable[82] = "SourceParser.Pages.Home";
-            _typeNameTable[83] = "SourceParser.BLL.Helpers.TimeConverter";
+            _typeNameTable[82] = "SourceParser.BLL.Helpers.TimeConverter";
+            _typeNameTable[83] = "SourceParser.Pages.Home";
             _typeNameTable[84] = "SourceParser.Pages.NewDocument";
             _typeNameTable[85] = "SourceParser.Pages.NewLink";
             _typeNameTable[86] = "SourceParser.Pages.NewNote";
@@ -432,8 +432,8 @@ namespace SourceParser.SourceParser_XamlTypeInfo
             _typeTable[79] = typeof(global::System.Collections.ObjectModel.Collection<global::System.Object>);
             _typeTable[80] = typeof(global::Telerik.UI.Xaml.Controls.Grid.DataGridTemplateColumn);
             _typeTable[81] = typeof(global::SourceParser.Pages.DocumentsTable);
-            _typeTable[82] = typeof(global::SourceParser.Pages.Home);
-            _typeTable[83] = typeof(global::SourceParser.BLL.Helpers.TimeConverter);
+            _typeTable[82] = typeof(global::SourceParser.BLL.Helpers.TimeConverter);
+            _typeTable[83] = typeof(global::SourceParser.Pages.Home);
             _typeTable[84] = typeof(global::SourceParser.Pages.NewDocument);
             _typeTable[85] = typeof(global::SourceParser.Pages.NewLink);
             _typeTable[86] = typeof(global::SourceParser.Pages.NewNote);
@@ -538,8 +538,8 @@ namespace SourceParser.SourceParser_XamlTypeInfo
         private object Activate_79_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.Object>(); }
         private object Activate_80_DataGridTemplateColumn() { return new global::Telerik.UI.Xaml.Controls.Grid.DataGridTemplateColumn(); }
         private object Activate_81_DocumentsTable() { return new global::SourceParser.Pages.DocumentsTable(); }
-        private object Activate_82_Home() { return new global::SourceParser.Pages.Home(); }
-        private object Activate_83_TimeConverter() { return new global::SourceParser.BLL.Helpers.TimeConverter(); }
+        private object Activate_82_TimeConverter() { return new global::SourceParser.BLL.Helpers.TimeConverter(); }
+        private object Activate_83_Home() { return new global::SourceParser.Pages.Home(); }
         private object Activate_84_NewDocument() { return new global::SourceParser.Pages.NewDocument(); }
         private object Activate_85_NewLink() { return new global::SourceParser.Pages.NewLink(); }
         private object Activate_86_NewNote() { return new global::SourceParser.Pages.NewNote(); }
@@ -1345,16 +1345,16 @@ namespace SourceParser.SourceParser_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 82:   //  SourceParser.Pages.Home
-                userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_82_Home;
+            case 82:   //  SourceParser.BLL.Helpers.TimeConverter
+                userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_82_TimeConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 83:   //  SourceParser.BLL.Helpers.TimeConverter
-                userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_83_TimeConverter;
+            case 83:   //  SourceParser.Pages.Home
+                userType = new global::SourceParser.SourceParser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_83_Home;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

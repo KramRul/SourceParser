@@ -85,6 +85,49 @@ namespace SourceParser.BLL.Services
             });
         }
 
+        public async Task CreateDocumentsRange(List<DocumentMod> documents)
+        {
+            foreach (var doc in documents)
+            {
+                await _database.Documents.Create(new DAL.Entities.Document()
+                {
+                    Title = (!string.IsNullOrEmpty(doc.Title)) ? doc.Title : "",
+                    AdditionalInf = (!string.IsNullOrEmpty(doc.AdditionalInf)) ? doc.AdditionalInf : "",
+                    Edition = (!string.IsNullOrEmpty(doc.Edition)) ? doc.Edition : "",
+                    Language = (!string.IsNullOrEmpty(doc.Language)) ? doc.Language : "",
+                    TitleOfConference = (!string.IsNullOrEmpty(doc.TitleOfConference)) ? doc.TitleOfConference : "",
+                    URLAdress = (!string.IsNullOrEmpty(doc.URLAdress)) ? doc.URLAdress : "",
+                    Volume = (!string.IsNullOrEmpty(doc.Volume)) ? doc.Volume : "",
+                    Author = new DAL.Entities.Author()
+                    {
+                        Name = (!string.IsNullOrEmpty(doc.Author?.Name)) ? doc.Author?.Name : ""
+                    },
+                    Co_Author = new DAL.Entities.Co_Author()
+                    {
+                        Name = (!string.IsNullOrEmpty(doc.Co_Author?.Name)) ? doc.Co_Author?.Name : ""
+                    },
+                    Editor = new DAL.Entities.Editor()
+                    {
+                        Name = (!string.IsNullOrEmpty(doc.Editor?.Name)) ? doc.Editor?.Name : ""
+                    },
+                    Pages = new DAL.Entities.Page()
+                    {
+                        PageFirst = (!string.IsNullOrEmpty(doc.Pages?.PageFirst)) ? doc.Pages?.PageFirst : "",
+                        PageLast = (!string.IsNullOrEmpty(doc.Pages?.PageLast)) ? doc.Pages?.PageLast : ""
+                    },
+                    Publisher = new DAL.Entities.Publisher()
+                    {
+                        Name = (!string.IsNullOrEmpty(doc.Publisher?.Name)) ? doc.Publisher?.Name : "",
+                        Address = (!string.IsNullOrEmpty(doc.Publisher?.Address)) ? doc.Publisher?.Address : ""
+                    },
+                    Translator = new DAL.Entities.Translator()
+                    {
+                        Name = (!string.IsNullOrEmpty(doc.Translator?.Name)) ? doc.Translator?.Name : ""
+                    }
+                });
+            }
+        }
+
         public async Task UpdateDocument(DocumentMod document)
         {
             await _database.Documents.Update(new DAL.Entities.Document()
@@ -133,6 +176,142 @@ namespace SourceParser.BLL.Services
                 Publisher = document.Publisher,
                 Translator = document.Translator
             });
+        }
+
+        public async Task<ObservableCollection<DocumentMod>> GetDocumentsInfFromLines(List<string> lines)
+        {
+            var documents = new ObservableCollection<DocumentMod>();
+            foreach (var line in lines)
+            {
+                var document = new DocumentMod();
+
+                if (line.Contains("%TITLE%"))
+                {
+                    var subString = GetSubString(line, "%TITLE%", "#TITLE#");
+                    document.Title = subString;
+                }
+                if (line.Contains("%DATE%"))
+                {
+                    var subString = GetSubString(line, "%DATE%", "#DATE#");
+                    if (DateTime.TryParse(subString, out DateTime res))
+                    {
+                        document.Date = res;
+                    }
+                }
+                if (line.Contains("%AUTHOR%"))
+                {
+                    var subString = GetSubString(line, "%AUTHOR%", "#AUTHOR#");
+                    document.Author = new DAL.Entities.Author()
+                    {
+                        Name = subString
+                    };
+                }
+                if (line.Contains("%COAUTHOR%"))
+                {
+                    var subString = GetSubString(line, "%COAUTHOR%", "#COAUTHOR#");
+                    document.Co_Author = new DAL.Entities.Co_Author()
+                    {
+                        Name = subString
+                    };
+                }
+                if (line.Contains("%PUBLISHER%"))
+                {
+                    var subString = GetSubString(line, "%PUBLISHER%", "#PUBLISHER#");
+                    document.Publisher = new DAL.Entities.Publisher()
+                    {
+                        Name = subString
+                    };
+                }
+                if (line.Contains("%ADRESSPUBL%"))
+                {
+                    var subString = GetSubString(line, "%ADRESSPUBL%", "#ADRESSPUBL#");
+                    if (document.Publisher != null)
+                    {
+                        document.Publisher.Address = subString;
+                    }
+                    else
+                    {
+                        document.Publisher = new DAL.Entities.Publisher()
+                        {
+                            Address = subString
+                        };
+                    }
+                }
+                if (line.Contains("%EDITOR%"))
+                {
+                    var subString = GetSubString(line, "%EDITOR%", "#EDITOR#");
+                    document.Editor = new DAL.Entities.Editor()
+                    {
+                        Name = subString
+                    };
+                }
+                if (line.Contains("%EDITION%"))
+                {
+                    var subString = GetSubString(line, "%EDITION%", "#EDITION#");
+                    document.Edition = subString;
+                }
+                if (line.Contains("%URLADRESS%"))
+                {
+                    var subString = GetSubString(line, "%URLADRESS%", "#URLADRESS#");
+                    document.URLAdress = subString;
+                }
+                if (line.Contains("%LANGUAGE%"))
+                {
+                    var subString = GetSubString(line, "%LANGUAGE%", "#LANGUAGE#");
+                    document.Language = subString;
+                }
+                if (line.Contains("%FIRSTPAGE%"))
+                {
+                    var subString = GetSubString(line, "%FIRSTPAGE%", "#FIRSTPAGE#");
+                    document.Pages = new DAL.Entities.Page()
+                    {
+                        PageFirst = subString
+                    };
+                }
+                if (line.Contains("%LASTPAGE%"))
+                {
+                    var subString = GetSubString(line, "%LASTPAGE%", "#LASTPAGE#");
+                    if (document.Pages != null)
+                    {
+                        document.Pages.PageLast = subString;
+                    }
+                    else
+                    {
+                        document.Pages = new DAL.Entities.Page()
+                        {
+                            PageLast = subString
+                        };
+                    }
+                }
+                if (line.Contains("%TITLECONF%"))
+                {
+                    var subString = GetSubString(line, "%TITLECONF%", "#TITLECONF#");
+                    document.TitleOfConference = subString;
+                }
+                if (line.Contains("%VOLUME%"))
+                {
+                    var subString = GetSubString(line, "%VOLUME%", "#VOLUME#");
+                    document.Volume = subString;
+                }
+                if (line.Contains("%ADDINF%"))
+                {
+                    var subString = GetSubString(line, "%ADDINF%", "#ADDINF#");
+                    document.AdditionalInf = subString;
+                }
+
+                documents.Add(document);
+            }
+
+            return documents;
+        }
+
+        private string GetSubString(string line, string startKey, string endKey)
+        {
+            int pFrom = line.IndexOf(startKey) + startKey.Length;
+            int pTo = line.LastIndexOf(endKey);
+
+            var result = line.Substring(pFrom, pTo - pFrom);
+            return result;
         }
     }
 }

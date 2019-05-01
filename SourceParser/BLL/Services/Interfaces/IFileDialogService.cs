@@ -11,7 +11,7 @@ namespace SourceParser.BLL.Services.Interfaces
     {
         void ShowMessage(string message);
         string FilePath { get; set; }
-        Task OpenFileDialog();
+        Task<List<string>> OpenFileDialog();
         Task SaveFileDialog(List<LinkMod> links); 
         Task EditFileDialog();
     }
