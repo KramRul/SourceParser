@@ -14,6 +14,7 @@
     <RootPropertyPathName Name="Pages" />
     <RootPropertyPathName Name="PageLast" />
     <RootPropertyPathName Name="PageFirst" />
+    <RootPropertyPathName Name="CountOfPages" />
     <RootPropertyPathName Name="Language" />
     <RootPropertyPathName Name="URLAdress" />
     <RootPropertyPathName Name="Edition" />
@@ -24,6 +25,8 @@
     <RootPropertyPathName Name="Address" />
     <RootPropertyPathName Name="Co_Author" />
     <RootPropertyPathName Name="Author" />
+    <RootPropertyPathName Name="Patronymic" />
+    <RootPropertyPathName Name="Surname" />
     <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="Type" />
     <RootPropertyPathName Name="Title" />
@@ -39,12 +42,11 @@
     <RootPropertyPathName Name="Notes" />
     <RootPropertyPathName Name="PagesRange" />
     <RootPropertyPathName Name="Text" />
-    <RootPropertyPathName Name="Variable" />
     <RootPropertyPathName Name="Prefix" />
     <RootPropertyPathName Name="Suffix" />
     <RootPropertyPathName Name="PagesNumber" />
     <RootPropertyPathName Name="PublishVolume" />
-    <RootPropertyPathName Name="YearDateStyle" />
+    <RootPropertyPathName Name="YearDate" />
     <RootPropertyPathName Name="DateParts" />
     <RootPropertyPathName Name="Publishuniver" />
     <RootPropertyPathName Name="YearDateUniver" />
@@ -63,19 +65,13 @@
     <RootPropertyPathName Name="Group" />
     <RootPropertyPathName Name="Texts" />
     <RootPropertyPathName Name="AuthorSecond" />
-    <RootPropertyPathName Name="EtAlUseFirst" />
-    <RootPropertyPathName Name="EtAlMin" />
-    <RootPropertyPathName Name="DelimiterPrecedesLast" />
     <RootPropertyPathName Name="Delimiter" />
     <RootPropertyPathName Name="InitializeWith" />
-    <RootPropertyPathName Name="SortSeparator" />
-    <RootPropertyPathName Name="NameAsSortOrder" />
     <RootPropertyPathName Name="Label" />
-    <RootPropertyPathName Name="StripPeriods" />
-    <RootPropertyPathName Name="TextCase" />
     <RootPropertyPathName Name="Form" />
     <RootPropertyPathName Name="AuthorFirst" />
     <RootPropertyPathName Name="PageRangeDelimiter" />
+    <RootPropertyPathName Name="EtAlMax" />
     <RootPropertyPathName Name="EtAl" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -176,8 +172,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="Width" />

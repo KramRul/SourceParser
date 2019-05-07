@@ -13,6 +13,7 @@ namespace SourceParser.Models
     {
         private string _id;
         private string _EtAl;
+        private int _EtAlMax;
         private string _pageRangeDelimiter;
         private DAL.Entities.Style.Title _title { get; set; }
         private DAL.Entities.Style.AuthorFirst _authorFirst { get; set; }
@@ -43,6 +44,16 @@ namespace SourceParser.Models
             {
                 _EtAl = value;
                 OnPropertyChanged("EtAl");
+            }
+        }
+
+        public int EtAlMax
+        {
+            get { return _EtAlMax; }
+            set
+            {
+                _EtAlMax = value;
+                OnPropertyChanged("EtAlMax");
             }
         }
 

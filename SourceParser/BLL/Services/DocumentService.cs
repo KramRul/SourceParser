@@ -58,7 +58,9 @@ namespace SourceParser.BLL.Services
                 Volume = "",
                 Author = new DAL.Entities.Author()
                 {
-                    Name = ""
+                    Name = "",
+                    Surname = "",
+                    Patronymic = ""
                 },
                 Co_Author = new DAL.Entities.Co_Author()
                 {
@@ -70,6 +72,7 @@ namespace SourceParser.BLL.Services
                 },
                 Pages = new DAL.Entities.Page()
                 {
+                    CountOfPages = "",
                     PageFirst = "",
                     PageLast = ""
                 },
@@ -100,7 +103,9 @@ namespace SourceParser.BLL.Services
                     Volume = (!string.IsNullOrEmpty(doc.Volume)) ? doc.Volume : "",
                     Author = new DAL.Entities.Author()
                     {
-                        Name = (!string.IsNullOrEmpty(doc.Author?.Name)) ? doc.Author?.Name : ""
+                        Name = (!string.IsNullOrEmpty(doc.Author?.Name)) ? doc.Author?.Name : "",
+                        Surname = (!string.IsNullOrEmpty(doc.Author?.Surname)) ? doc.Author?.Surname : "",
+                        Patronymic = (!string.IsNullOrEmpty(doc.Author?.Patronymic)) ? doc.Author?.Patronymic : "",
                     },
                     Co_Author = new DAL.Entities.Co_Author()
                     {
@@ -112,6 +117,7 @@ namespace SourceParser.BLL.Services
                     },
                     Pages = new DAL.Entities.Page()
                     {
+                        CountOfPages = (!string.IsNullOrEmpty(doc.Pages?.CountOfPages)) ? doc.Pages?.CountOfPages : "",
                         PageFirst = (!string.IsNullOrEmpty(doc.Pages?.PageFirst)) ? doc.Pages?.PageFirst : "",
                         PageLast = (!string.IsNullOrEmpty(doc.Pages?.PageLast)) ? doc.Pages?.PageLast : ""
                     },

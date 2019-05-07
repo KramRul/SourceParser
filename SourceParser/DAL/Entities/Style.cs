@@ -10,6 +10,7 @@ namespace SourceParser.DAL.Entities.Style
     public class Style : BaseEntity
     {
         public string EtAl { get; set; } = " ";//вместо "и др." сделали пустое место
+        public int EtAlMax { get; set; } = 2;//макс колво авторов которое может быть указано, если больше ставится "и др"
 
         public string PageRangeDelimiter { get; set; } = "-";//короткое тире (дефис) для диапазона страниц вместо обычного тире
 
@@ -233,7 +234,6 @@ namespace SourceParser.DAL.Entities.Style
         public string Value { get; set; } = "[Электронный ресурс]";
         public string Suffix { get; set; } = ". ";
         public string Prefix { get; set; } = "– Режим доступа: ";
-        public string Variable { get; set; } = "URL";
     }
 
     public class AuthorSecond : BaseEntity
@@ -258,13 +258,8 @@ namespace SourceParser.DAL.Entities.Style
 
     public class Name : BaseEntity
     {
-        public string NameAsSortOrder { get; set; } = "all";
-        public string SortSeparator { get; set; } = " ";
         public string InitializeWith { get; set; } = ".";
         public string Delimiter { get; set; } = ", ";
-        public string DelimiterPrecedesLast { get; set; } = "always";
-        public int EtAlMin { get; set; } = 2;
-        public int EtAlUseFirst { get; set; } = 1;
     }
 
     public class Label : BaseEntity
@@ -272,8 +267,6 @@ namespace SourceParser.DAL.Entities.Style
         public string Form { get; set; } = "short";
         public string Prefix { get; set; } = ", ";
         public string Suffix { get; set; } = ".";
-        public string TextCase { get; set; } = "lowercase";
-        public bool StripPeriods { get; set; } = true;
     }
 
     public class Title : BaseEntity

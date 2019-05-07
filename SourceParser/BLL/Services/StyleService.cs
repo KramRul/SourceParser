@@ -154,19 +154,12 @@ namespace SourceParser.BLL.Services
                     {
                         Form = style.AuthorFirst.Label.Form,
                         Prefix = style.AuthorFirst.Label.Prefix,
-                        StripPeriods = style.AuthorFirst.Label.StripPeriods,
-                        Suffix = style.AuthorFirst.Label.Suffix,
-                        TextCase = style.AuthorFirst.Label.TextCase
+                        Suffix = style.AuthorFirst.Label.Suffix
                     },
                     Name = new DAL.Entities.Style.Name()
                     {
                         Delimiter = style.AuthorFirst.Name.Delimiter,
-                        DelimiterPrecedesLast = style.AuthorFirst.Name.DelimiterPrecedesLast,
-                        EtAlMin = style.AuthorFirst.Name.EtAlMin,
-                        EtAlUseFirst = style.AuthorFirst.Name.EtAlUseFirst,
-                        InitializeWith = style.AuthorFirst.Name.InitializeWith,
-                        NameAsSortOrder = style.AuthorFirst.Name.NameAsSortOrder,
-                        SortSeparator = style.AuthorFirst.Name.SortSeparator
+                        InitializeWith = style.AuthorFirst.Name.InitializeWith
                     }
                 },
                 AuthorSecond = new DAL.Entities.Style.AuthorSecond()
@@ -175,22 +168,16 @@ namespace SourceParser.BLL.Services
                     {
                         Form = style.AuthorSecond.Label.Form,
                         Prefix = style.AuthorSecond.Label.Prefix,
-                        StripPeriods = style.AuthorSecond.Label.StripPeriods,
-                        Suffix = style.AuthorSecond.Label.Suffix,
-                        TextCase = style.AuthorSecond.Label.TextCase
+                        Suffix = style.AuthorSecond.Label.Suffix
                     },
                     Name = new DAL.Entities.Style.Name()
                     {
                         Delimiter = style.AuthorSecond.Name.Delimiter,
-                        DelimiterPrecedesLast = style.AuthorSecond.Name.DelimiterPrecedesLast,
-                        EtAlMin = style.AuthorSecond.Name.EtAlMin,
-                        EtAlUseFirst = style.AuthorSecond.Name.EtAlUseFirst,
-                        InitializeWith = style.AuthorSecond.Name.InitializeWith,
-                        NameAsSortOrder = style.AuthorSecond.Name.NameAsSortOrder,
-                        SortSeparator = style.AuthorSecond.Name.SortSeparator
+                        InitializeWith = style.AuthorSecond.Name.InitializeWith
                     }
                 },
                 EtAl = style.EtAl,
+                EtAlMax = style.EtAlMax,
                 PageRangeDelimiter = style.PageRangeDelimiter,
                 PagesNumber = new DAL.Entities.Style.PagesNumber()
                 {
@@ -198,8 +185,7 @@ namespace SourceParser.BLL.Services
                     {
                         Prefix = style.PagesNumber.Text.Prefix,
                         Suffix = style.PagesNumber.Text.Suffix,
-                        Value = style.PagesNumber.Text.Value,
-                        Variable = style.PagesNumber.Text.Variable
+                        Value = style.PagesNumber.Text.Value
                     }
                 },
                 PagesRange = new DAL.Entities.Style.PagesRange()
@@ -208,8 +194,7 @@ namespace SourceParser.BLL.Services
                     {
                         Prefix = style.PagesRange.Text.Prefix,
                         Suffix = style.PagesRange.Text.Suffix,
-                        Value = style.PagesRange.Text.Value,
-                        Variable = style.PagesRange.Text.Variable
+                        Value = style.PagesRange.Text.Value
                     }
                 },
                 Publisher = new DAL.Entities.Style.Publisher()
@@ -267,8 +252,7 @@ namespace SourceParser.BLL.Services
                     {
                         Prefix = style.PublishVolume.Text.Prefix,
                         Suffix = style.PublishVolume.Text.Suffix,
-                        Value = style.PublishVolume.Text.Value,
-                        Variable = style.PublishVolume.Text.Variable
+                        Value = style.PublishVolume.Text.Value
                     }
                 },
                 TitleOfConference = new DAL.Entities.Style.TitleOfConference()
@@ -277,8 +261,7 @@ namespace SourceParser.BLL.Services
                     {
                         Prefix = style.TitleOfConference.Text.Prefix,
                         Suffix = style.TitleOfConference.Text.Suffix,
-                        Value = style.TitleOfConference.Text.Value,
-                        Variable = style.TitleOfConference.Text.Variable
+                        Value = style.TitleOfConference.Text.Value
                     }
                 },
                 Title = new DAL.Entities.Style.Title()
@@ -288,8 +271,7 @@ namespace SourceParser.BLL.Services
                     {
                         Prefix = style.Title.Text.Prefix,
                         Suffix = style.Title.Text.Suffix,
-                        Value = style.Title.Text.Value,
-                        Variable = style.Title.Text.Variable
+                        Value = style.Title.Text.Value
                     }
                 },
                 Webdoc = new DAL.Entities.Style.Webdoc()
@@ -300,8 +282,7 @@ namespace SourceParser.BLL.Services
                         {
                             Prefix = text.Prefix,
                             Suffix = text.Suffix,
-                            Value = text.Value,
-                            Variable = text.Variable
+                            Value = text.Value
                         }).ToList()
                     }
                 },

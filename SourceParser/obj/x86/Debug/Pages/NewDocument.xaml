@@ -15,7 +15,7 @@
     <Grid x:ConnectionId='2' x:Name="Styles">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="0.05*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -54,7 +54,14 @@
                 DateFormat="{}{day.integer}/{month.integer}/{year.full}">
                 </CalendarDatePicker>
                 <TextBlock Text="Автор" />
-                <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <StackPanel Padding="10">
+                    <TextBlock Text="Фамилия" />
+                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="Имя" />
+                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="Отчество" />
+                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Patronymic, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
                 <TextBlock Text="Со-авторы" />
                 <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Co_Author.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="Издательство" />
@@ -71,6 +78,8 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.URLAdress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="Язык" />
                 <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Language, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock Text="Количество страниц" />
+                <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Pages.CountOfPages, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="Первая страница" />
                 <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Pages.PageFirst, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="Вторая страница" />
