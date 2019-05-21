@@ -23,6 +23,12 @@ namespace SourceParser.DAL.Repositories
             {
                 result = await context.Set<Reference>()
                     .Include(n => n.Document)
+                    .Include(n => n.Document.Author)
+                    .Include(n => n.Document.Co_Author)
+                    .Include(n => n.Document.Editor)
+                    .Include(n => n.Document.Pages)
+                    .Include(n => n.Document.Publisher)
+                    .Include(n => n.Document.Translator)
                     .Include(n => n.Style)
                     .Include(n => n.Style.Title)
                     .ToListAsync();

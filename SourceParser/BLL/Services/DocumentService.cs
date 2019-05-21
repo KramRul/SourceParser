@@ -204,13 +204,43 @@ namespace SourceParser.BLL.Services
                         document.Date = res;
                     }
                 }
-                if (line.Contains("%AUTHOR%"))
+                if (line.Contains("%AUTHORSURNAME%"))
                 {
-                    var subString = GetSubString(line, "%AUTHOR%", "#AUTHOR#");
+                    var subString = GetSubString(line, "%AUTHORSURNAME%", "#AUTHORSURNAME#");
                     document.Author = new DAL.Entities.Author()
                     {
-                        Name = subString
+                        Surname = subString
                     };
+                }
+                if (line.Contains("%AUTHORNAME%"))
+                {
+                    var subString = GetSubString(line, "%AUTHORNAME%", "#AUTHORNAME#");
+                    if (document.Author != null)
+                    {
+                        document.Author.Name = subString;
+                    }
+                    else
+                    {
+                        document.Author = new DAL.Entities.Author()
+                        {
+                            Name = subString
+                        };
+                    }
+                }
+                if (line.Contains("%AUTHORPATRONIMIC%"))
+                {
+                    var subString = GetSubString(line, "%AUTHORPATRONIMIC%", "#AUTHORPATRONIMIC#");
+                    if (document.Author != null)
+                    {
+                        document.Author.Patronymic = subString;
+                    }
+                    else
+                    {
+                        document.Author = new DAL.Entities.Author()
+                        {
+                            Patronymic = subString
+                        };
+                    }
                 }
                 if (line.Contains("%COAUTHOR%"))
                 {
@@ -220,17 +250,17 @@ namespace SourceParser.BLL.Services
                         Name = subString
                     };
                 }
-                if (line.Contains("%PUBLISHER%"))
+                if (line.Contains("%PUBLISHERNAME%"))
                 {
-                    var subString = GetSubString(line, "%PUBLISHER%", "#PUBLISHER#");
+                    var subString = GetSubString(line, "%PUBLISHERNAME%", "#PUBLISHERNAME#");
                     document.Publisher = new DAL.Entities.Publisher()
                     {
                         Name = subString
                     };
                 }
-                if (line.Contains("%ADRESSPUBL%"))
+                if (line.Contains("%PUBLISHERADDRESS%"))
                 {
-                    var subString = GetSubString(line, "%ADRESSPUBL%", "#ADRESSPUBL#");
+                    var subString = GetSubString(line, "%PUBLISHERADDRESS%", "#PUBLISHERADDRESS#");
                     if (document.Publisher != null)
                     {
                         document.Publisher.Address = subString;
@@ -242,6 +272,14 @@ namespace SourceParser.BLL.Services
                             Address = subString
                         };
                     }
+                }
+                if (line.Contains("%TRANSLATOR%"))
+                {
+                    var subString = GetSubString(line, "%TRANSLATOR%", "#TRANSLATOR#");
+                    document.Translator = new DAL.Entities.Translator()
+                    {
+                        Name = subString
+                    };
                 }
                 if (line.Contains("%EDITOR%"))
                 {
@@ -266,13 +304,28 @@ namespace SourceParser.BLL.Services
                     var subString = GetSubString(line, "%LANGUAGE%", "#LANGUAGE#");
                     document.Language = subString;
                 }
+                if (line.Contains("%COUNTOFPAGES%"))
+                {
+                    var subString = GetSubString(line, "%COUNTOFPAGES%", "#COUNTOFPAGES#");
+                    document.Pages = new DAL.Entities.Page()
+                    {
+                        CountOfPages = subString
+                    };
+                }
                 if (line.Contains("%FIRSTPAGE%"))
                 {
                     var subString = GetSubString(line, "%FIRSTPAGE%", "#FIRSTPAGE#");
-                    document.Pages = new DAL.Entities.Page()
+                    if (document.Pages != null)
                     {
-                        PageFirst = subString
-                    };
+                        document.Pages.PageFirst = subString;
+                    }
+                    else
+                    {
+                        document.Pages = new DAL.Entities.Page()
+                        {
+                            PageFirst = subString
+                        };
+                    }
                 }
                 if (line.Contains("%LASTPAGE%"))
                 {

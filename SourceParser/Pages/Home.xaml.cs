@@ -36,7 +36,7 @@ namespace SourceParser.Pages
             ComboBoxDocumentType.ItemsSource = _enumval.ToList();
         }
 
-        private async void ButtonOpenFile_Click(object sender, RoutedEventArgs e)
+        private async void ButtonImportFile_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -112,6 +112,19 @@ namespace SourceParser.Pages
             ContentDialogResult result = await fileDialog.ShowAsync();
 
             return result;
+        }
+
+        private async void ButtonExportFile_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var links = await _linkService.GetAll();
+                await _fileDialogService.ExportFileDialog(links.ToList());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }
         }
 
         private async void ButtonSaveFile_Click(object sender, RoutedEventArgs e)

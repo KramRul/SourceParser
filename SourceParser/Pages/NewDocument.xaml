@@ -56,11 +56,11 @@
                 <TextBlock Text="Автор" />
                 <StackPanel Padding="10">
                     <TextBlock Text="Фамилия" />
-                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="Имя" />
-                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="Отчество" />
-                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Patronymic, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Author.Patronymic, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
                 <TextBlock Text="Со-авторы" />
                 <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedDocument.Co_Author.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />

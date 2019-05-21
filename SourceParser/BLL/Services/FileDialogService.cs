@@ -51,6 +51,51 @@ namespace SourceParser.BLL.Services
             return lines;
         }
 
+        public async Task ExportFileDialog(List<LinkMod> links)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var link in links)
+            {
+                var sbLink = new StringBuilder();
+                sbLink.Append($"%TITLE%{link.Document.Title}#TITLE#");
+                sbLink.Append($"%DATE%{link.Document.Date}#DATE#");
+                sbLink.Append($"%AUTHORSURNAME%{link.Document.Author.Surname}#AUTHORSURNAME#");
+                sbLink.Append($"%AUTHORNAME%{link.Document.Author.Name}#AUTHORNAME#");
+                sbLink.Append($"%AUTHORPATRONIMIC%{link.Document.Author.Patronymic}#AUTHORPATRONIMIC#");
+                sbLink.Append($"%COAUTHOR%{link.Document.Co_Author.Name}#COAUTHOR#");
+                sbLink.Append($"%PUBLISHERNAME%{link.Document.Publisher.Name}#PUBLISHERNAME#");
+                sbLink.Append($"%PUBLISHERADDRESS%{link.Document.Publisher.Address}#PUBLISHERADDRESS#");
+                sbLink.Append($"%TRANSLATOR%{link.Document.Translator.Name}#TRANSLATOR#");
+                sbLink.Append($"%EDITOR%{link.Document.Editor.Name}#EDITOR#");
+                sbLink.Append($"%EDITION%{link.Document.Edition}#EDITION#");
+                sbLink.Append($"%URLADRESS%{link.Document.URLAdress}#URLADRESS#");
+                sbLink.Append($"%LANGUAGE%{link.Document.Language}#LANGUAGE#");
+                sbLink.Append($"%COUNTOFPAGES%{link.Document.Pages.CountOfPages}#COUNTOFPAGES#");
+                sbLink.Append($"%FIRSTPAGE%{link.Document.Pages.PageFirst}#FIRSTPAGE#");
+                sbLink.Append($"%LASTPAGE%{link.Document.Pages.PageLast}#LASTPAGE#");
+                sbLink.Append($"%TITLECONF%{link.Document.TitleOfConference}#TITLECONF#");
+                sbLink.Append($"%VOLUME%{link.Document.Volume}#VOLUME#");
+                sbLink.Append($"%ADDINF%{link.Document.AdditionalInf}#ADDINF#\r\n");
+                var linkAsString = sbLink.ToString();
+                sb.Append(linkAsString);
+            }
+            var linksText = sb.ToString();
+            var savePicker = new FileSavePicker
+            {
+                SuggestedStartLocation = PickerLocationId.DocumentsLibrary,
+                SuggestedFileName = "Saved Links",
+                CommitButtonText = "Сохранить",
+                DefaultFileExtension = ".txt"
+            };
+            savePicker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
+
+            var new_file = await savePicker.PickSaveFileAsync();
+            if (new_file != null)
+            {
+                await FileIO.WriteTextAsync(new_file, linksText);
+            }
+        }
+
         public async Task SaveFileDialog(List<LinkMod> links)
         {
             StringBuilder sb = new StringBuilder();

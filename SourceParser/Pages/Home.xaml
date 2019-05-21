@@ -23,14 +23,17 @@
             <ColumnDefinition Width="300"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" VerticalAlignment="Top" BorderBrush="Gray" BorderThickness="1">
-            <Button x:Name="ButtonOpenFile" Click="ButtonOpenFile_Click" Width="240" Height="80" Margin="10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
-                <TextBlock Text="Открыть файл"  Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+            <Button x:Name="ButtonImportFile" Click="ButtonImportFile_Click" Width="240" Height="80" Margin="10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
+                <TextBlock Text="Импортировать ссылки"  Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" TextAlignment="Center" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
             </Button>
-            <Button x:Name="ButtonSaveFile" Click="ButtonSaveFile_Click" Width="240" Height="80" Margin="10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
-                <TextBlock Text="Сохранить файл" Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+            <Button x:Name="ButtonExportFile" Click="ButtonExportFile_Click" Width="240" Height="80" Margin="10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
+                <TextBlock Text="Экспортировать ссылки" Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" TextAlignment="Center" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
             </Button>
-            <Button x:Name="ButtonReloadLinks" Click="ButtonReloadLinks_Click" Width="240" Height="80" Margin="10 40 10 10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
-                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE777;" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+            <Button x:Name="ButtonSaveFile" Click="ButtonSaveFile_Click" Width="240" Height="80" Margin="10 40 10 10" Padding="1" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
+                <TextBlock Text="Экспортировать ссылки бес служебных тегов" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="Bold" TextAlignment="Center" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+            </Button>
+            <Button x:Name="ButtonReloadLinks" Click="ButtonReloadLinks_Click" Width="240" Height="80" Margin="10 60 10 10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
+                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE777;" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextAlignment="Center" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
             </Button>
         </StackPanel>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="0">

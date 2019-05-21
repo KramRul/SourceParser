@@ -147,6 +147,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="VerticalContentAlignment" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="Click" />
@@ -191,6 +192,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Style" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="TextAlignment" />
       <RootProperty Name="TextTrimming" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
