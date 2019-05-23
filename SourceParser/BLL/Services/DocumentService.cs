@@ -191,6 +191,8 @@ namespace SourceParser.BLL.Services
             {
                 var document = new DocumentMod();
 
+                document = GetDocumentForEdit(line);
+
                 if (line.Contains("%TITLE%"))
                 {
                     var subString = GetSubString(line, "%TITLE%", "#TITLE#");
@@ -370,6 +372,123 @@ namespace SourceParser.BLL.Services
             int pTo = line.LastIndexOf(endKey);
 
             var result = line.Substring(pFrom, pTo - pFrom);
+            return result;
+        }
+
+        private DocumentMod GetDocumentForEdit(string line)
+        {
+            var document = new DocumentMod();
+            if (!string.IsNullOrEmpty(line))
+            {
+                document.AdditionalInf = line;
+            }
+            else
+            {
+                return null;
+            }
+
+            var substr = GetAllSubStrings(line);
+            foreach (var str in substr)
+            {
+                if (int.TryParse(str, out int i))
+                {
+                    if (str.Length == 4)
+                    {
+                        var date = new DateTime();
+                        document.Date = date.AddYears(i);
+                    }
+                    if (document.Pages == null)
+                    {
+                        document.Pages = new DAL.Entities.Page()
+                        {
+                            CountOfPages = str
+                        };
+                    }
+                    else
+                    {
+                        if (string.IsNullOrEmpty(document.Pages.CountOfPages))
+                        {
+                            document.Pages.CountOfPages = str;
+                        } else if (string.IsNullOrEmpty(document.Pages.PageFirst))
+                        {
+                            document.Pages.PageFirst = str;
+                        } else if (string.IsNullOrEmpty(document.Pages.PageLast))
+                        {
+                            document.Pages.PageLast = str;
+                        } else if (string.IsNullOrEmpty(document.Edition))
+                        {
+                            document.Edition = str;
+                        } else if (string.IsNullOrEmpty(document.Volume))
+                        {
+                            document.Volume = str;
+                        }
+                    }
+                }
+
+                if (string.IsNullOrEmpty(document.Author?.Name))
+                {
+                    document.Author = new DAL.Entities.Author
+                    {
+                        Name = str
+                    };
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.Title))
+                {
+                    document.Title = str;
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.Co_Author?.Name))
+                {
+                    document.Co_Author = new DAL.Entities.Co_Author
+                    {
+                        Name = str
+                    };
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.Editor?.Name))
+                {
+                    document.Editor = new DAL.Entities.Editor
+                    {
+                        Name = str
+                    };
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.Publisher?.Name))
+                {
+                    document.Publisher = new DAL.Entities.Publisher
+                    {
+                        Name = str
+                    };
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.TitleOfConference))
+                {
+                    document.TitleOfConference = str;
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.Translator?.Name))
+                {
+                    document.Translator = new DAL.Entities.Translator
+                    {
+                        Name = str
+                    };
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.URLAdress))
+                {
+                    document.URLAdress = str;
+                    continue;
+                }
+            }
+
+            return document;
+        }
+
+        private List<string> GetAllSubStrings(string line)
+        {
+            var delimetrs = new char[] { ':', ';', '—', '/', '\\' };
+            var result = line.Split(delimetrs, StringSplitOptions.RemoveEmptyEntries).ToList();
             return result;
         }
     }
