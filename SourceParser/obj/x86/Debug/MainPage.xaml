@@ -28,37 +28,37 @@
         <SplitView x:ConnectionId='3' Canvas.ZIndex="20" Name="mySplitView" DisplayMode="CompactOverlay" Grid.Row="1" Grid.Column="0" CompactPaneLength="56" IsPaneOpen="False" OpenPaneLength="270" Grid.ColumnSpan="2">
             <SplitView.Pane>
                 <ListBox x:ConnectionId='10' x:Name="menu" SelectionMode="Single"                                            >
-                    <ListBoxItem x:ConnectionId='11' Name="home">
+                    <ListBoxItem x:ConnectionId='11' Name="home" ToolTipService.ToolTip="Домой" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" />
                             <TextBlock FontSize="24" Text="Главная" Margin="10 0 0 0" />
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem x:ConnectionId='12' Name="addDocument">
+                    <ListBoxItem x:ConnectionId='12' Name="addDocument" ToolTipService.ToolTip="Новый документ" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE710;" />
                             <TextBlock FontSize="24" Text="Новый документ" Margin="10 0 0 0" />
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem x:ConnectionId='13' Name="addLink">
+                    <ListBoxItem x:ConnectionId='13' Name="addLink" ToolTipService.ToolTip="Добавить ссылку" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xECC8;" />
                             <TextBlock FontSize="24" Text="Добавить ссылку" Margin="10 0 0 0" />
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem x:ConnectionId='14' Name="addNote">
+                    <ListBoxItem x:ConnectionId='14' Name="addNote" ToolTipService.ToolTip="Добавить заметку" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE70B;" />
                             <TextBlock FontSize="24" Text="Добавить заметку" Margin="10 0 0 0" />
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem x:ConnectionId='15' Name="addStyle">
+                    <ListBoxItem x:ConnectionId='15' Name="addStyle" ToolTipService.ToolTip="Добавить стиль" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE8D2;" />
                             <TextBlock FontSize="24" Text="Добавить стиль" Margin="10 0 0 0" />
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem x:ConnectionId='16' Name="settings">
+                    <ListBoxItem x:ConnectionId='16' Name="settings" ToolTipService.ToolTip="Настройки" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE713;" />
                             <TextBlock FontSize="24" Text="Настройки" Margin="10 0 0 0" />

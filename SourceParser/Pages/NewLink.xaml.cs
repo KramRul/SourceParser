@@ -80,7 +80,7 @@ namespace SourceParser.Pages
         {
             try
             {
-                var docId = (DataContext as ApplicationViewModel).SelectedNote.DocumentId;
+                var docId = (DataContext as ApplicationViewModel).SelectedLink.DocumentId;
                 await _linkService.DeleteLink((DataContext as ApplicationViewModel).SelectedLink);
                 (DataContext as ApplicationViewModel).Links = await _linkService.GetAllByDocumentId(docId);
             }

@@ -40,60 +40,199 @@ namespace SourceParser.BLL.Services
         public string GenerateLinkValue(DocumentMod document, StyleMod style, string value)
         {
             var valueResult = "";
+            var strBuilder = new StringBuilder();
             switch (document.Type)
             {
                 case DAL.Enums.DocumentType.Article:
-                    valueResult = $"{style.AuthorFirst.Label.Prefix}{document.Author.Name}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}" +
-                        $"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}" +
-                        $"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}" +
-                        $"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix} " +
-                        $"{document.Date.ToShortDateString()} " +
-                        $"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}" +
-                        $"{document.Edition} " +
-                        $"{style.PagesRange.Text.Prefix}{document.Pages.PageFirst}{style.PageRangeDelimiter}{document.Pages.PageLast}{style.PagesRange.Text.Suffix}";
+                    if (style.AuthorFirst.Label.Form == "short")
+                    {
+                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var patronymicInitial = "";
+                        if (!string.IsNullOrEmpty(document.Author.Patronymic))
+                        {
+                            patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
+                        }
+                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
+
+                    strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
+                    strBuilder.Append($"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}");
+                    strBuilder.Append($"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix}");
+
+                    if (style.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers.FirstOrDefault().NamePublisher == "year")
+                    {
+                        strBuilder.Append($"{document.Date.ToString("yyyy")} ");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{document.Date.ToString("dd-MM-yyyy")} ");
+                    }
+
+                    strBuilder.Append($"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}");
+                    strBuilder.Append($"{document.Edition} ");
+                    strBuilder.Append($"{style.PagesRange.Text.Prefix}{document.Pages.PageFirst}{style.PageRangeDelimiter}{document.Pages.PageLast}{style.PagesRange.Text.Suffix}");
+
+                    valueResult = strBuilder.ToString();
+                    strBuilder.Clear();
                     break;
                 case DAL.Enums.DocumentType.Conference:
-                    valueResult = $"{style.AuthorFirst.Label.Prefix}{document.Author.Name}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}" +
-                        $"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}" +
-                        $"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}" +
-                        $"{style.TitleOfConference.Text.Prefix}{document.TitleOfConference}{style.TitleOfConference.Text.Suffix}" +
-                        $"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix} " +
-                        $"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Address}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix}" +
-                        $"{document.Date.ToShortDateString()} " +
-                        $"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}" +
-                        $"{style.PagesRange.Text.Prefix}{document.Pages.PageFirst}{style.PageRangeDelimiter}{document.Pages.PageLast}{style.PagesRange.Text.Suffix}";
+                    if (style.AuthorFirst.Label.Form == "short")
+                    {
+                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var patronymicInitial = "";
+                        if (!string.IsNullOrEmpty(document.Author.Patronymic))
+                        {
+                            patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
+                        }
+                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
+
+                    strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
+                    strBuilder.Append($"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}");
+                    strBuilder.Append($"{style.TitleOfConference.Text.Prefix}{document.TitleOfConference}{style.TitleOfConference.Text.Suffix}");
+                    strBuilder.Append($"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix}");
+                    strBuilder.Append($"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Address}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix}");
+
+                    if (style.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers.FirstOrDefault().NamePublisher == "year")
+                    {
+                        strBuilder.Append($"{document.Date.ToString("yyyy")} ");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{document.Date.ToString("dd-MM-yyyy")} ");
+                    }
+
+                    strBuilder.Append($"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}");
+                    strBuilder.Append($"{style.PagesRange.Text.Prefix}{document.Pages.PageFirst}{style.PageRangeDelimiter}{document.Pages.PageLast}{style.PagesRange.Text.Suffix}");
+
+                    valueResult = strBuilder.ToString();
+                    strBuilder.Clear();
                     break;
                 case DAL.Enums.DocumentType.Book:
-                    valueResult = $"{style.AuthorFirst.Label.Prefix}{document.Author.Name}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}" +
-                        $"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}" +
-                        $"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}" +
-                        $"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix} " +
-                        $"{document.Date.ToShortDateString()} " +
-                        $"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}" +
-                        $"{style.PagesRange.Text.Prefix}{document.Pages.PageLast}{style.PagesRange.Text.Suffix}";
+                    if (style.AuthorFirst.Label.Form == "short")
+                    {
+                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var patronymicInitial = "";
+                        if (!string.IsNullOrEmpty(document.Author.Patronymic))
+                        {
+                            patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
+                        }
+                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
+
+                    strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
+                    strBuilder.Append($"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}");
+                    strBuilder.Append($"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix}");
+
+                    if (style.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers.FirstOrDefault().NamePublisher == "year")
+                    {
+                        strBuilder.Append($"{document.Date.ToString("yyyy")} ");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{document.Date.ToString("dd-MM-yyyy")} ");
+                    }
+
+                    strBuilder.Append($"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}");
+
+                    strBuilder.Append($"{style.PagesNumber.Text.Prefix}{document.Pages.CountOfPages}{style.PagesNumber.Text.Suffix}");
+
+                    valueResult = strBuilder.ToString();
+                    strBuilder.Clear();
                     break;
                 case DAL.Enums.DocumentType.Thesis:
-                    valueResult = $"{style.AuthorFirst.Label.Prefix}{document.Author.Name}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}" +
-                        $"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}" +
-                        $"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}" +
-                        $"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix} " +
-                        $"{document.Date.ToShortDateString()} " +
-                        $"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}" +
-                        $"{style.PagesRange.Text.Prefix}{document.Pages.PageLast}{style.PagesRange.Text.Suffix}";
+                    if (style.AuthorFirst.Label.Form == "short")
+                    {
+                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var patronymicInitial = "";
+                        if (!string.IsNullOrEmpty(document.Author.Patronymic))
+                        {
+                            patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
+                        }
+                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
+
+                    strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
+                    strBuilder.Append($"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}");
+                    strBuilder.Append(": Thesis (Doctorate) / ");
+                    strBuilder.Append($"{style.Publishuniver.GroupUniver.TextUnivers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publishuniver.GroupUniver.TextUnivers.FirstOrDefault().Suffix}");
+
+                    if (style.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers.FirstOrDefault().NamePublisher == "year")
+                    {
+                        strBuilder.Append($"{document.Date.ToString("yyyy")} ");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{document.Date.ToString("dd-MM-yyyy")} ");
+                    }
+
+                    strBuilder.Append($"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}");
+
+                    strBuilder.Append($"{style.PagesNumber.Text.Prefix}{document.Pages.CountOfPages}{style.PagesNumber.Text.Suffix}");
+
+                    valueResult = strBuilder.ToString();
+                    strBuilder.Clear();
                     break;
                 case DAL.Enums.DocumentType.Webpage:
                     valueResult = $"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}" +
                         $"{style.Webdoc.Group.Texts.FirstOrDefault().Value} {style.Webdoc.Group.Texts.FirstOrDefault().Prefix}{style.Webdoc.Group.Texts.FirstOrDefault().Suffix}";
                     break;
                 default:
-                    valueResult = $"{style.AuthorFirst.Label.Prefix}{document.Author.Name}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}" +
-                        $"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}" +
-                        $"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}" +
-                        $"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix} " +
-                        $"{document.Date.ToShortDateString()} " +
-                        $"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}" +
-                        $"{style.PagesRange.Text.Prefix}{document.Pages.PageFirst}{style.PageRangeDelimiter}{document.Pages.PageLast}{style.PagesRange.Text.Suffix}";
+                    if (style.AuthorFirst.Label.Form == "short")
+                    {
+                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var patronymicInitial = "";
+                        if (!string.IsNullOrEmpty(document.Author.Patronymic))
+                        {
+                            patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
+                        }
+                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                    }
 
+                    strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
+                    strBuilder.Append($"{style.Title.Text.Prefix}{document.Title}{style.Title.Text.Suffix}");
+                    strBuilder.Append($"{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publisher.GroupPublisher.TextPublishers.FirstOrDefault().Suffix}");
+
+                    if (style.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers.FirstOrDefault().NamePublisher == "year")
+                    {
+                        strBuilder.Append($"{document.Date.ToString("yyyy")} ");
+                    }
+                    else
+                    {
+                        strBuilder.Append($"{document.Date.ToString("dd-MM-yyyy")} ");
+                    }
+
+                    strBuilder.Append($"{style.PublishVolume.Text.Prefix}{document.Volume}{style.PublishVolume.Text.Suffix}");
+
+                    strBuilder.Append($"{style.PagesNumber.Text.Prefix}{document.Pages.CountOfPages}{style.PagesNumber.Text.Suffix}");
+
+                    valueResult = strBuilder.ToString();
+                    strBuilder.Clear();
                     break;
             }
 
