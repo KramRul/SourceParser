@@ -30,7 +30,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
             </Canvas>
         </Button>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="0">
-            <GridView x:ConnectionId='18' x:Name="GridOfButtons" ItemsSource="{Binding Styles}" SelectedItem="{Binding SelectedStyle, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" >
+            <GridView x:ConnectionId='16' x:Name="GridOfButtons" ItemsSource="{Binding Styles}" SelectedItem="{Binding SelectedStyle, Mode=TwoWay}" SelectionMode="Single" Width="Auto" Height="Auto" >
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="10" Background="LightGray">
@@ -55,42 +55,36 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                     <TextBlock Text="Prefix" />
                     <TextBox Text="{Binding Path=SelectedStyle.Title.Text.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
-                <TextBlock Text="EtAl" />
-                <TextBox Text="{Binding Path=SelectedStyle.EtAl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBlock Text="Name EtAlMax" />
-                <TextBox Text="{Binding Path=SelectedStyle.EtAlMax, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="Разделитель диапазона страниц" />
                 <TextBox Text="{Binding Path=SelectedStyle.PageRangeDelimiter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="Первый автор" />
                 <StackPanel Padding="10">
-                    <TextBlock Text="Label Form" />
+                    <TextBlock Text="Form" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorFirst.Label.Form, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <TextBlock Text="Label Prefix" />
+                    <TextBlock Text="Prefix" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorFirst.Label.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <TextBlock Text="Label Suffix" />
+                    <TextBlock Text="Suffix" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorFirst.Label.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <TextBlock Text="Name InitializeWith" />
+                    <TextBlock Text="InitializeWith" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorFirst.Name.InitializeWith, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <TextBlock Text="Name Delimiter" />
+                    <TextBlock Text="Delimiter" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorFirst.Name.Delimiter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
                 <TextBlock Text="Второй автор" />
                 <StackPanel Padding="10">
-                    <TextBlock Text="Label Form" />
+                    <TextBlock Text="Form" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Label.Form, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <TextBlock Text="Label Prefix" />
+                    <TextBlock Text="Prefix" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Label.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <TextBlock Text="Label Suffix" />
+                    <TextBlock Text="Suffix" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Label.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <TextBlock Text="Name InitializeWith" />
-                    <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Name.InitializeWith, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="Name Delimiter" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Name.Delimiter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
                 <TextBlock Text="Веб шаблон" />
                 <StackPanel Padding="10">
                     <TextBlock Text="Texts" />
-                    <ListView x:ConnectionId='16' x:Name="ListOfWebDockTexts" ItemsSource="{Binding SelectedStyle.Webdoc.Group.Texts}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='14' x:Name="ListOfWebDockTexts" ItemsSource="{Binding SelectedStyle.Webdoc.Group.Texts}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
@@ -108,7 +102,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <TextBlock Text="Издатель" />
                 <StackPanel Padding="10">
                     <TextBlock Text="Группа" />
-                    <ListView x:ConnectionId='12' x:Name="ListOfPublisherTexts" ItemsSource="{Binding SelectedStyle.Publisher.GroupPublisher.TextPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='10' x:Name="ListOfPublisherTexts" ItemsSource="{Binding SelectedStyle.Publisher.GroupPublisher.TextPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
@@ -121,11 +115,11 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                         </ListView.ItemTemplate>
                     </ListView>
                     <TextBlock Text="Дата" />
-                    <ListView x:ConnectionId='13' x:Name="ListOfYearDatePublisherDateParts" ItemsSource="{Binding SelectedStyle.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='11' x:Name="ListOfYearDatePublisherDateParts" ItemsSource="{Binding SelectedStyle.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
-                                    <TextBlock Text="Name Publisher" />
+                                    <TextBlock Text="Формат даты" />
                                     <TextBox Text="{Binding Path=NamePublisher, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                                 </StackPanel>
                             </DataTemplate>
@@ -135,7 +129,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <TextBlock Text="Издатель университет" />
                 <StackPanel Padding="10">
                     <TextBlock Text="Группа" />
-                    <ListView x:ConnectionId='8' x:Name="ListOfPublishUniverTexts" ItemsSource="{Binding SelectedStyle.Publishuniver.GroupUniver.TextUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='6' x:Name="ListOfPublishUniverTexts" ItemsSource="{Binding SelectedStyle.Publishuniver.GroupUniver.TextUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
@@ -148,25 +142,12 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                         </ListView.ItemTemplate>
                     </ListView>
                     <TextBlock Text="Дата" />
-                    <ListView x:ConnectionId='9' x:Name="ListOfPublishUniverDateParts" ItemsSource="{Binding SelectedStyle.Publishuniver.YearDateUniver.DateUniver.DatePartUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
+                    <ListView x:ConnectionId='7' x:Name="ListOfPublishUniverDateParts" ItemsSource="{Binding SelectedStyle.Publishuniver.YearDateUniver.DateUniver.DatePartUnivers}" SelectionMode="None" Width="Auto" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="10" Background="LightGray">
-                                    <TextBlock Text="Name Publisher" />
+                                    <TextBlock Text="Формат даты" />
                                     <TextBox Text="{Binding Path=NameUniver, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackPanel>
-                <TextBlock Text="Дата" />
-                <StackPanel Padding="10">
-                    <ListView x:ConnectionId='6' x:Name="ListOfDateDateParts" ItemsSource="{Binding SelectedStyle.YearDate.Date.DateParts}" SelectionMode="None" Width="Auto" Height="Auto">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Margin="10" Background="LightGray">
-                                    <TextBlock Text="Name Publisher" />
-                                    <TextBox Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>

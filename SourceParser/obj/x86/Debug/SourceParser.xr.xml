@@ -46,8 +46,6 @@
     <RootPropertyPathName Name="Suffix" />
     <RootPropertyPathName Name="PagesNumber" />
     <RootPropertyPathName Name="PublishVolume" />
-    <RootPropertyPathName Name="YearDate" />
-    <RootPropertyPathName Name="DateParts" />
     <RootPropertyPathName Name="Publishuniver" />
     <RootPropertyPathName Name="YearDateUniver" />
     <RootPropertyPathName Name="DateUniver" />
@@ -66,13 +64,11 @@
     <RootPropertyPathName Name="Texts" />
     <RootPropertyPathName Name="AuthorSecond" />
     <RootPropertyPathName Name="Delimiter" />
-    <RootPropertyPathName Name="InitializeWith" />
     <RootPropertyPathName Name="Label" />
     <RootPropertyPathName Name="Form" />
     <RootPropertyPathName Name="AuthorFirst" />
+    <RootPropertyPathName Name="InitializeWith" />
     <RootPropertyPathName Name="PageRangeDelimiter" />
-    <RootPropertyPathName Name="EtAlMax" />
-    <RootPropertyPathName Name="EtAl" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />

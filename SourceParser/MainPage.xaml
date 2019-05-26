@@ -34,25 +34,25 @@
                             <TextBlock FontSize="24" Text="Главная" Margin="10 0 0 0" />
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="addDocument" ToolTipService.ToolTip="Новый документ" ToolTipService.Placement="Mouse">
+                    <ListBoxItem Name="addDocument" ToolTipService.ToolTip="Создание и редактирование документов" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE710;" />
                             <TextBlock FontSize="24" Text="Новый документ" Margin="10 0 0 0" />
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="addLink" ToolTipService.ToolTip="Добавить ссылку" ToolTipService.Placement="Mouse">
+                    <ListBoxItem Name="addLink" ToolTipService.ToolTip="Создание и редактирование ссылок" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xECC8;" />
                             <TextBlock FontSize="24" Text="Добавить ссылку" Margin="10 0 0 0" />
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="addNote" ToolTipService.ToolTip="Добавить заметку" ToolTipService.Placement="Mouse">
+                    <ListBoxItem Name="addNote" ToolTipService.ToolTip="Добавление и редактирование заметок" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE70B;" />
                             <TextBlock FontSize="24" Text="Добавить заметку" Margin="10 0 0 0" />
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="addStyle" ToolTipService.ToolTip="Добавить стиль" ToolTipService.Placement="Mouse">
+                    <ListBoxItem Name="addStyle" ToolTipService.ToolTip="Создание и редактирование стилей" ToolTipService.Placement="Mouse">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE8D2;" />
                             <TextBlock FontSize="24" Text="Добавить стиль" Margin="10 0 0 0" />

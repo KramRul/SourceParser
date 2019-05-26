@@ -177,7 +177,7 @@ namespace SourceParser.BLL.Services
                     strBuilder.Append(": Thesis (Doctorate) / ");
                     strBuilder.Append($"{style.Publishuniver.GroupUniver.TextUnivers.FirstOrDefault().Prefix}{document.Publisher.Name}{style.Publishuniver.GroupUniver.TextUnivers.FirstOrDefault().Suffix}");
 
-                    if (style.Publisher.YearDatePublisher.DatePublisher.DatePartPublishers.FirstOrDefault().NamePublisher == "year")
+                    if (style.Publishuniver.YearDateUniver.DateUniver.DatePartUnivers.FirstOrDefault().NameUniver == "year")
                     {
                         strBuilder.Append($"{document.Date.ToString("yyyy")} ");
                     }

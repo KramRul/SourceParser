@@ -65,9 +65,9 @@
         <StackPanel Grid.Column="3" Grid.Row="1" Margin="10" Padding="0 0 5 0">
             <TextBlock Text="Новая ссылка"/>
             <TextBlock Text="Название документа" />
-            <TextBox Text="{Binding Path=SelectedDocument.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Text="{Binding Path=SelectedDocument.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
             <TextBlock Text="Название стиля" />
-            <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedStyle.Title.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedStyle.Title.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
             <TextBlock Text="Значение ссылки" />
             <TextBox TextWrapping="Wrap" Text="{Binding Path=SelectedLink.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <Grid>
