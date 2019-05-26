@@ -50,10 +50,10 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 <TextBox Text="{Binding Path=SelectedStyle.Title.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="Настройки для названия документа" />
                 <StackPanel Padding="10">
-                    <TextBlock Text="Suffix" />
-                    <TextBox Text="{Binding Path=SelectedStyle.Title.Text.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="Prefix" />
                     <TextBox Text="{Binding Path=SelectedStyle.Title.Text.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="Suffix" />
+                    <TextBox Text="{Binding Path=SelectedStyle.Title.Text.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
                 <TextBlock Text="Разделитель диапазона страниц" />
                 <TextBox Text="{Binding Path=SelectedStyle.PageRangeDelimiter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
