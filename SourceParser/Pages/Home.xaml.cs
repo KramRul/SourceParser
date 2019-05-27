@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -74,27 +75,34 @@ namespace SourceParser.Pages
                 Style = (Style)Application.Current.Resources["SubheaderTextBlockStyle"]
             };
 
+            var sbText = new StringBuilder();
+            sbText.Append($"-Каждая строка файла должна содержать отдельную ссылку на источник\r\n");
+            sbText.Append($"-Файл содержит только ссылки и ничего более\r\n");
+            sbText.Append($"-Каждая ссылка должна содержать следующие маркеры для корректного распознавания ссылок:\r\n");
+            sbText.Append($"--%TITLE%<Название документа>#TITLE#\r\n");
+            sbText.Append($"--%DATE%<Дата публикации или издания>#DATE#\r\n");
+            sbText.Append($"--%AUTHORSURNAME%<Фамилия первого автора>#AUTHORSURNAME#\r\n");
+            sbText.Append($"--%AUTHORNAME%<Имя первого автора>#AUTHORNAME#\r\n");
+            sbText.Append($"--%AUTHORPATRONIMIC%<Отчество первого автора>#AUTHORPATRONIMIC#\r\n");
+            sbText.Append($"--%COAUTHOR%<ФИО остальных авторов>#COAUTHOR#\r\n");
+            sbText.Append($"--%PUBLISHERNAME%<Название издательства>#PUBLISHERNAME#\r\n");
+            sbText.Append($"--%PUBLISHERADDRESS%<Адресс издательства>#PUBLISHERADDRESS#\r\n");
+            sbText.Append($"--%TRANSLATOR%<ФИО переводчика>#TRANSLATOR#\r\n");
+            sbText.Append($"--%EDITOR%<ФИО редактора>#EDITOR#\r\n");
+            sbText.Append($"--%EDITION%<Издание>#EDITION#\r\n");
+            sbText.Append($"--%URLADRESS%<URL-адресс>#URLADRESS#\r\n");
+            sbText.Append($"--%LANGUAGE%<Язык>#LANGUAGE#\r\n");
+            sbText.Append($"--%COUNTOFPAGES%<Количество страниц>#COUNTOFPAGES#\r\n");
+            sbText.Append($"--%FIRSTPAGE%<Первая страница>#FIRSTPAGE#\r\n");
+            sbText.Append($"--%LASTPAGE%<Вторая страница>#LASTPAGE#\r\n");
+            sbText.Append($"--%TITLECONF%<Название конференции>#TITLECONF#\r\n");
+            sbText.Append($"--%VOLUME%<Том>#VOLUME#\r\n");
+            sbText.Append($"--%ADDINF%<Дополнительная информация>#ADDINF#\r\n");
+            var text = sbText.ToString();
+
             TextBlock Message = new TextBlock
             {
-                Text = "-Каждая строка файла должна содержать отдельную ссылку на источник\r\n" +
-                        "-Файл содержит только ссылки и ничего более\r\n" +
-                        "-Каждая ссылка должна содержать следующие маркеры для корректного распознавания ссылок:\r\n" +
-                        "--%TITLE%<Название документа>#TITLE#\r\n" +
-                        "--%DATE%<Дата публикации или издания>#DATE#\r\n" +
-                        "--%AUTHOR%<ФИО первого автора>#AUTHOR#\r\n" +
-                        "--%COAUTHOR%<ФИО остальных авторов>#COAUTHOR#\r\n" +
-                        "--%PUBLISHER%<Название издательства>#PUBLISHER#\r\n" +
-                        "--%ADRESSPUBL%<Адресс издательства>#ADRESSPUBL#\r\n" +
-                        "--%TRANSLATOR%<ФИО переводчика>#TRANSLATOR#\r\n" +
-                        "--%EDITOR%<ФИО редактора>#EDITOR#\r\n" +
-                        "--%EDITION%<Издание>#EDITION#\r\n" +
-                        "--%URLADRESS%<URL-адресс>#URLADRESS#\r\n" +
-                        "--%LANGUAGE%<Язык>#LANGUAGE#\r\n" +
-                        "--%FIRSTPAGE%<Первая страница>#FIRSTPAGE#\r\n" +
-                        "--%LASTPAGE%<Вторая страница>#LASTPAGE#\r\n" +
-                        "--%TITLECONF%<Название конференции>#TITLECONF#\r\n" +
-                        "--%VOLUME%<Том>#VOLUME#\r\n" +
-                        "--%ADDINF%<Дополнительная информация>#ADDINF#\r\n",
+                Text = sbText.ToString(),
                 TextWrapping = TextWrapping.Wrap,
                 Margin = new Thickness(10)
             };
