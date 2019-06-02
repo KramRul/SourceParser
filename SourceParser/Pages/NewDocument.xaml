@@ -20,7 +20,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="260"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button x:Name="ButtonAdd" Grid.Column="0" Grid.Row="0" Click="ButtonAdd_Click" Width="160" Height="160" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10">
             <Canvas Width="140" Height="140" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top">

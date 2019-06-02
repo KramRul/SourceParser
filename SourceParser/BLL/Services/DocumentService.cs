@@ -392,10 +392,11 @@ namespace SourceParser.BLL.Services
             {
                 if (int.TryParse(str, out int i))
                 {
-                    if (str.Length == 4)
+                    if (i.ToString().Length == 4)
                     {
                         var date = new DateTime();
                         document.Date = date.AddYears(i);
+                        continue;
                     }
                     if (document.Pages == null)
                     {
@@ -415,27 +416,46 @@ namespace SourceParser.BLL.Services
                         } else if (string.IsNullOrEmpty(document.Pages.PageLast))
                         {
                             document.Pages.PageLast = str;
-                        } else if (string.IsNullOrEmpty(document.Edition))
-                        {
-                            document.Edition = str;
-                        } else if (string.IsNullOrEmpty(document.Volume))
-                        {
-                            document.Volume = str;
                         }
                     }
                 }
 
-                if (string.IsNullOrEmpty(document.Author?.Name))
+                if (string.IsNullOrEmpty(document.Author?.Surname))
                 {
                     document.Author = new DAL.Entities.Author
                     {
-                        Name = str
+                        Surname = str
                     };
                     continue;
                 }
-                if (string.IsNullOrEmpty(document.Title))
+                if (string.IsNullOrEmpty(document.Author?.Name))
                 {
-                    document.Title = str;
+                    if (document.Author == null)
+                    {
+                        document.Author = new DAL.Entities.Author
+                        {
+                            Name = str
+                        };
+                    }
+                    else
+                    {
+                        document.Author.Name = str;
+                    }
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.Author?.Patronymic))
+                {
+                    if (document.Author == null)
+                    {
+                        document.Author = new DAL.Entities.Author
+                        {
+                            Patronymic = str
+                        };
+                    }
+                    else
+                    {
+                        document.Author.Patronymic = str;
+                    }
                     continue;
                 }
                 if (string.IsNullOrEmpty(document.Co_Author?.Name))
@@ -444,6 +464,11 @@ namespace SourceParser.BLL.Services
                     {
                         Name = str
                     };
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.Title))
+                {
+                    document.Title = str;
                     continue;
                 }
                 if (string.IsNullOrEmpty(document.Editor?.Name))
@@ -480,6 +505,16 @@ namespace SourceParser.BLL.Services
                     document.URLAdress = str;
                     continue;
                 }
+                if (string.IsNullOrEmpty(document.Edition))
+                {
+                    document.Edition = str;
+                    continue;
+                }
+                if (string.IsNullOrEmpty(document.Volume))
+                {
+                    document.Volume = str;
+                    continue;
+                }
             }
 
             return document;
@@ -487,7 +522,7 @@ namespace SourceParser.BLL.Services
 
         private List<string> GetAllSubStrings(string line)
         {
-            var delimetrs = new char[] { ':', ';', '—', '/', '\\' };
+            var delimetrs = new char[] { ':', ';', ',', '.', '—', '/', '\\' };
             var result = line.Split(delimetrs, StringSplitOptions.RemoveEmptyEntries).ToList();
             return result;
         }

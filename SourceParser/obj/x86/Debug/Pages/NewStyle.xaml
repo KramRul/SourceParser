@@ -21,7 +21,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="280"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button x:ConnectionId='3' x:Name="ButtonAdd" Grid.Column="0" Grid.Row="0"                         Width="160" Height="160" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10">
             <Canvas Width="140" Height="140" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top">

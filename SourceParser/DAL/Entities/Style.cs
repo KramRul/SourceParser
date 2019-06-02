@@ -259,7 +259,7 @@ namespace SourceParser.DAL.Entities.Style
     public class Name : BaseEntity
     {
         public string InitializeWith { get; set; } = ".";
-        public string Delimiter { get; set; } = ", ";
+        public string Delimiter { get; set; } = " ";
     }
 
     public class Label : BaseEntity

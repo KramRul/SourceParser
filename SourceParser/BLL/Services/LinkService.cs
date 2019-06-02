@@ -46,18 +46,18 @@ namespace SourceParser.BLL.Services
                 case DAL.Enums.DocumentType.Article:
                     if (style.AuthorFirst.Label.Form == "short")
                     {
-                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var nameInitial = $"{document.Author.Name.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         var patronymicInitial = "";
                         if (!string.IsNullOrEmpty(document.Author.Patronymic))
                         {
                             patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         }
-                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        var initials = $"{nameInitial}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{initials}{style.AuthorFirst.Label.Suffix}");
                     }
                     else
                     {
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{document.Author.Name}{style.AuthorFirst.Name.Delimiter}{document.Author.Patronymic}{style.AuthorFirst.Name.Delimiter}{style.AuthorFirst.Label.Suffix}");
                     }
 
                     strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
@@ -83,18 +83,18 @@ namespace SourceParser.BLL.Services
                 case DAL.Enums.DocumentType.Conference:
                     if (style.AuthorFirst.Label.Form == "short")
                     {
-                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var nameInitial = $"{document.Author.Name.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         var patronymicInitial = "";
                         if (!string.IsNullOrEmpty(document.Author.Patronymic))
                         {
                             patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         }
-                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        var initials = $"{nameInitial}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{initials}{style.AuthorFirst.Label.Suffix}");
                     }
                     else
                     {
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{document.Author.Name}{style.AuthorFirst.Name.Delimiter}{document.Author.Patronymic}{style.AuthorFirst.Name.Delimiter}{style.AuthorFirst.Label.Suffix}");
                     }
 
                     strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
@@ -121,18 +121,18 @@ namespace SourceParser.BLL.Services
                 case DAL.Enums.DocumentType.Book:
                     if (style.AuthorFirst.Label.Form == "short")
                     {
-                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var nameInitial = $"{document.Author.Name.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         var patronymicInitial = "";
                         if (!string.IsNullOrEmpty(document.Author.Patronymic))
                         {
                             patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         }
-                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        var initials = $"{nameInitial}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{initials}{style.AuthorFirst.Label.Suffix}");
                     }
                     else
                     {
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{document.Author.Name}{style.AuthorFirst.Name.Delimiter}{document.Author.Patronymic}{style.AuthorFirst.Name.Delimiter}{style.AuthorFirst.Label.Suffix}");
                     }
 
                     strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
@@ -158,18 +158,18 @@ namespace SourceParser.BLL.Services
                 case DAL.Enums.DocumentType.Thesis:
                     if (style.AuthorFirst.Label.Form == "short")
                     {
-                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var nameInitial = $"{document.Author.Name.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         var patronymicInitial = "";
                         if (!string.IsNullOrEmpty(document.Author.Patronymic))
                         {
                             patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         }
-                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        var initials = $"{nameInitial}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{initials}{style.AuthorFirst.Label.Suffix}");
                     }
                     else
                     {
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{document.Author.Name}{style.AuthorFirst.Name.Delimiter}{document.Author.Patronymic}{style.AuthorFirst.Name.Delimiter}{style.AuthorFirst.Label.Suffix}");
                     }
 
                     strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
@@ -200,18 +200,18 @@ namespace SourceParser.BLL.Services
                 default:
                     if (style.AuthorFirst.Label.Form == "short")
                     {
-                        var surnameInitial = document.Author.Surname.Substring(0, 1);
+                        var nameInitial = $"{document.Author.Name.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         var patronymicInitial = "";
                         if (!string.IsNullOrEmpty(document.Author.Patronymic))
                         {
                             patronymicInitial = $"{document.Author.Patronymic.Substring(0, 1)}{style.AuthorFirst.Name.InitializeWith}";
                         }
-                        var initials = $"{surnameInitial}{style.AuthorFirst.Name.InitializeWith}{patronymicInitial}";
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {initials}{style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        var initials = $"{nameInitial}{patronymicInitial}";
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{initials}{style.AuthorFirst.Label.Suffix}");
                     }
                     else
                     {
-                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname} {document.Author.Name} {document.Author.Patronymic} {style.AuthorFirst.Label.Suffix}{style.AuthorFirst.Name.Delimiter}");
+                        strBuilder.Append($"{style.AuthorFirst.Label.Prefix}{document.Author.Surname}{style.AuthorFirst.Name.Delimiter}{document.Author.Name}{style.AuthorFirst.Name.Delimiter}{document.Author.Patronymic}{style.AuthorFirst.Name.Delimiter}{style.AuthorFirst.Label.Suffix}");
                     }
 
                     strBuilder.Append($"{style.AuthorSecond.Label.Prefix}{document.Co_Author.Name}{style.AuthorSecond.Label.Suffix}{style.AuthorSecond.Name.Delimiter}");
