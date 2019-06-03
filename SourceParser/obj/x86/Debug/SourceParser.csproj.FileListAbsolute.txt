@@ -512,18 +512,11 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Micros
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.Xaml.Interactivity.dll
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Microsoft.Xaml.Interactions.pri.xml
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\unfiltered.layout.resfiles
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\filtered.layout.resfiles
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\filtered.layout.resfiles.intermediate
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\excluded.layout.resfiles
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\excluded.layout.resfiles.intermediate
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewLink.g.i.cs
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewLink.g.cs
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewLink.xaml
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewLink.xbf
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewLink.xbf
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\.winmd_cache\$Telerik.UI.Drawing.winmd_636723260600000000.json
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.Extensions.DependencyModel.dll
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Newtonsoft.Json.dll
@@ -691,3 +684,5 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewNote.xbf
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewNote.xbf
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\SourceParser.csprojAssemblyReference.cache
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\layout.resfiles
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\layout.resfiles.intermediate
