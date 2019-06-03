@@ -70,7 +70,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                     <TextBlock Text="Delimiter" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorFirst.Name.Delimiter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
-                <TextBlock Text="Второй автор" />
+                <TextBlock Text="Со-авторы" />
                 <StackPanel Padding="10">
                     <TextBlock Text="Prefix" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Label.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
@@ -149,7 +149,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                         </ListView.ItemTemplate>
                     </ListView>
                 </StackPanel>
-                <TextBlock Text="Publish Volume" />
+                <TextBlock Text="Том издания" />
                 <StackPanel Padding="10">
                     <StackPanel Margin="10" Background="LightGray">
                         <TextBlock Text="Suffix" />
@@ -158,7 +158,7 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                         <TextBox Text="{Binding Path=SelectedStyle.PublishVolume.Text.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     </StackPanel>
                 </StackPanel>
-                <TextBlock Text="Title Of Conference" />
+                <TextBlock Text="Название конференции" />
                 <StackPanel Padding="10">
                     <StackPanel Margin="10" Background="LightGray">
                         <TextBlock Text="Suffix" />
