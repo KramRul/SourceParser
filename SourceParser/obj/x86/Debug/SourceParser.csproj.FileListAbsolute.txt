@@ -684,5 +684,10 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Pages\NewNote.xbf
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewNote.xbf
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\SourceParser.csprojAssemblyReference.cache
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\layout.resfiles
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\layout.resfiles.intermediate
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\unfiltered.layout.resfiles
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\filtered.layout.resfiles
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\filtered.layout.resfiles.intermediate
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\excluded.layout.resfiles
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\excluded.layout.resfiles.intermediate
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\.winmd_cache\$Telerik.UI.Drawing.winmd_636723260600000000.json

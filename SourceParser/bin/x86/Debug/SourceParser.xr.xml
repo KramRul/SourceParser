@@ -63,11 +63,11 @@
     <RootPropertyPathName Name="Group" />
     <RootPropertyPathName Name="Texts" />
     <RootPropertyPathName Name="AuthorSecond" />
-    <RootPropertyPathName Name="Delimiter" />
     <RootPropertyPathName Name="Label" />
-    <RootPropertyPathName Name="Form" />
     <RootPropertyPathName Name="AuthorFirst" />
+    <RootPropertyPathName Name="Delimiter" />
     <RootPropertyPathName Name="InitializeWith" />
+    <RootPropertyPathName Name="Form" />
     <RootPropertyPathName Name="PageRangeDelimiter" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>

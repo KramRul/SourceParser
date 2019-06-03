@@ -72,14 +72,10 @@ xmlns:core="using:Microsoft.Xaml.Interactions.Core"
                 </StackPanel>
                 <TextBlock Text="Второй автор" />
                 <StackPanel Padding="10">
-                    <TextBlock Text="Form" />
-                    <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Label.Form, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="Prefix" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Label.Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="Suffix" />
                     <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Label.Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <TextBlock Text="Name Delimiter" />
-                    <TextBox Text="{Binding Path=SelectedStyle.AuthorSecond.Name.Delimiter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
                 <TextBlock Text="Веб шаблон" />
                 <StackPanel Padding="10">
