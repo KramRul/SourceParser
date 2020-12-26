@@ -1,8 +1,4 @@
-﻿using SourceParser.BLL.Services;
-using SourceParser.BLL.Services.Interfaces;
-using SourceParser.DAL.UnitOfWorks;
-using SourceParser.Models;
-using SourceParser.ViewModel;
+﻿using SourceParser.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,12 +16,16 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using SourceParser.BusinessLogicLevel.Services.Interfaces;
+using SourceParser.BusinessLogicLevel.Services;
+using SourceParser.DataAccessLevel.UnitOfWorks;
+using SourceParser.Models.Models;
 
 namespace SourceParser.Pages
 {
     public sealed partial class Home : Page
     {
-        private readonly IFileDialogService _fileDialogService = new FileDialogService(new UnitOfWork());
+        private readonly Services.FileDialogService _fileDialogService = new Services.FileDialogService();
         private readonly ILinkService _linkService = new LinkService(new UnitOfWork());
         private readonly IDocumentService _documentService = new DocumentService(new UnitOfWork());
 
@@ -33,7 +33,7 @@ namespace SourceParser.Pages
         {
             this.InitializeComponent();
 
-            var _enumval = Enum.GetValues(typeof(DAL.Enums.DocumentType)).Cast<DAL.Enums.DocumentType>();
+            var _enumval = Enum.GetValues(typeof(DataAccessLevel.Enums.DocumentType)).Cast<DataAccessLevel.Enums.DocumentType>();
             ComboBoxDocumentType.ItemsSource = _enumval.ToList();
         }
 

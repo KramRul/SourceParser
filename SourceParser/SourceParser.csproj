@@ -101,59 +101,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BLL\Helpers\TimeConverter.cs" />
-    <Compile Include="BLL\Services\BaseService.cs" />
-    <Compile Include="BLL\Services\DocumentService.cs" />
-    <Compile Include="BLL\Services\Interfaces\IDocumentService.cs" />
-    <Compile Include="BLL\Services\Interfaces\ILinkService.cs" />
-    <Compile Include="BLL\Services\Interfaces\INoteService.cs" />
-    <Compile Include="BLL\Services\Interfaces\IStyleService.cs" />
-    <Compile Include="BLL\Services\LinkService.cs" />
-    <Compile Include="BLL\Services\NoteService.cs" />
-    <Compile Include="BLL\Services\StyleService.cs" />
-    <Compile Include="DAL\ApplicationContext.cs" />
-    <Compile Include="DAL\Entities\Author.cs" />
-    <Compile Include="DAL\Entities\BaseEntity.cs" />
-    <Compile Include="DAL\Entities\Co-Author.cs" />
-    <Compile Include="DAL\Entities\Document.cs" />
-    <Compile Include="DAL\Entities\Editor.cs" />
-    <Compile Include="DAL\Entities\Note.cs" />
-    <Compile Include="DAL\Entities\Page.cs" />
-    <Compile Include="DAL\Entities\Publisher.cs" />
-    <Compile Include="DAL\Entities\Reference.cs" />
-    <Compile Include="DAL\Entities\Style.cs" />
-    <Compile Include="DAL\Entities\Translator.cs" />
-    <Compile Include="DAL\Enums\DocumentType.cs" />
-    <Compile Include="DAL\Interfaces\IAuthorRepository.cs" />
-    <Compile Include="DAL\Interfaces\IBaseRepository.cs" />
-    <Compile Include="DAL\Interfaces\ICo_AuthorRepository.cs" />
-    <Compile Include="DAL\Interfaces\IDocumentRepository.cs" />
-    <Compile Include="DAL\Interfaces\IEditorRepository.cs" />
-    <Compile Include="DAL\Interfaces\INoteRepository.cs" />
-    <Compile Include="DAL\Interfaces\IPublisherRepository.cs" />
-    <Compile Include="DAL\Interfaces\IReferenceRepository.cs" />
-    <Compile Include="DAL\Interfaces\IStyleRepository.cs" />
-    <Compile Include="DAL\Interfaces\ITranslatorRepository.cs" />
-    <Compile Include="DAL\Repositories\AuthorRepository.cs" />
-    <Compile Include="DAL\Repositories\BaseRepository.cs" />
-    <Compile Include="DAL\Repositories\Co_AuthorRepository.cs" />
-    <Compile Include="DAL\Repositories\DocumentRepository.cs" />
-    <Compile Include="DAL\Repositories\EditorRepository.cs" />
-    <Compile Include="DAL\Repositories\NoteRepository.cs" />
-    <Compile Include="DAL\Repositories\PublisherRepository.cs" />
-    <Compile Include="DAL\Repositories\ReferenceRepository.cs" />
-    <Compile Include="DAL\Repositories\StyleRepository.cs" />
-    <Compile Include="DAL\Repositories\TranslatorRepository.cs" />
-    <Compile Include="DAL\UnitOfWorks\Interfaces\IBaseUnitOfWork.cs" />
-    <Compile Include="DAL\UnitOfWorks\UnitOfWork.cs" />
+    <Compile Include="Helpers\TimeConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\BaseMod.cs" />
-    <Compile Include="Models\DocumentMod.cs" />
-    <Compile Include="Models\LinkMod.cs" />
-    <Compile Include="Models\NoteMod.cs" />
-    <Compile Include="Models\StyleMod.cs" />
     <Compile Include="Pages\DocumentsTable.xaml.cs">
       <DependentUpon>DocumentsTable.xaml</DependentUpon>
     </Compile>
@@ -173,9 +124,8 @@
       <DependentUpon>NewStyle.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FileDialogService.cs" />
     <Compile Include="ViewModel\ApplicationViewModel.cs" />
-    <Compile Include="BLL\Services\FileDialogService.cs" />
-    <Compile Include="BLL\Services\Interfaces\IFileDialogService.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -273,14 +223,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
-      <Version>2.2.3</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
-      <Version>2.2.3</Version>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.8</Version>
     </PackageReference>
@@ -291,7 +233,20 @@
       <Version>1.0.1.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SourceParser.BusinessLogicLevel\SourceParser.BusinessLogicLevel.csproj">
+      <Project>{dda2ac69-ab14-4251-a059-1ec035a3dbb3}</Project>
+      <Name>SourceParser.BusinessLogicLevel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SourceParser.DataAccessLevel\SourceParser.DataAccessLevel.csproj">
+      <Project>{e072a95f-f1c6-4b25-8f6f-50b6d3ba31d9}</Project>
+      <Name>SourceParser.DataAccessLevel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SourceParser.Models\SourceParser.Models.csproj">
+      <Project>{1dc75403-5fb3-473d-965f-b2f195884753}</Project>
+      <Name>SourceParser.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

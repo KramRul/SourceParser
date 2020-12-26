@@ -1,7 +1,8 @@
-﻿using SourceParser.BLL.Services;
-using SourceParser.BLL.Services.Interfaces;
-using SourceParser.DAL.UnitOfWorks;
+﻿using SourceParser.BusinessLogicLevel.Services;
+using SourceParser.BusinessLogicLevel.Services.Interfaces;
+using SourceParser.DataAccessLevel.UnitOfWorks;
 using SourceParser.ViewModel;
+using SourceParser.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -37,7 +38,7 @@ namespace SourceParser.Pages
                 (DataContext as ApplicationViewModel).Links = await _linkService.GetAllByDocumentId(docId);
                 if ((DataContext as ApplicationViewModel).SelectedLink?.Document?.Id != docId)
                 {
-                    (DataContext as ApplicationViewModel).SelectedLink = new Models.LinkMod();
+                    (DataContext as ApplicationViewModel).SelectedLink = new LinkMod();
                 }
             }
             catch (Exception ex)

@@ -218,7 +218,7 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="SourceParser.Pages.DocumentsTable" />
-    <RootType FullName="SourceParser.BLL.Helpers.TimeConverter" />
+    <RootType FullName="SourceParser.Helpers.TimeConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollBarVisibility" />
       <RootProperty Name="Content" />

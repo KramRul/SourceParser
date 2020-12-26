@@ -1,6 +1,6 @@
-﻿using SourceParser.BLL.Services;
-using SourceParser.BLL.Services.Interfaces;
-using SourceParser.DAL.UnitOfWorks;
+﻿using SourceParser.BusinessLogicLevel.Services;
+using SourceParser.BusinessLogicLevel.Services.Interfaces;
+using SourceParser.DataAccessLevel.UnitOfWorks;
 using SourceParser.ViewModel;
 using System;
 using System.Collections.Generic;

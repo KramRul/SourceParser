@@ -1,7 +1,8 @@
-﻿using SourceParser.BLL.Services;
-using SourceParser.BLL.Services.Interfaces;
-using SourceParser.DAL.UnitOfWorks;
+﻿using SourceParser.BusinessLogicLevel.Services;
+using SourceParser.BusinessLogicLevel.Services.Interfaces;
+using SourceParser.DataAccessLevel.UnitOfWorks;
 using SourceParser.ViewModel;
+using SourceParser.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -78,7 +79,7 @@ namespace SourceParser.Pages
                 (DataContext as ApplicationViewModel).Notes = await _noteService.GetAllByDocumentId(docId);
                 if ((DataContext as ApplicationViewModel).SelectedNote?.Document?.Id != docId)
                 {
-                    (DataContext as ApplicationViewModel).SelectedNote = new Models.NoteMod();
+                    (DataContext as ApplicationViewModel).SelectedNote = new NoteMod();
                 }                            
             }
             catch (Exception ex)

@@ -1,6 +1,6 @@
-﻿using SourceParser.BLL.Services;
-using SourceParser.BLL.Services.Interfaces;
-using SourceParser.DAL.UnitOfWorks;
+﻿using SourceParser.BusinessLogicLevel.Services;
+using SourceParser.BusinessLogicLevel.Services.Interfaces;
+using SourceParser.DataAccessLevel.UnitOfWorks;
 using SourceParser.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -28,7 +28,7 @@ namespace SourceParser.Pages
         {
             this.InitializeComponent();
 
-            var _enumval = Enum.GetValues(typeof(DAL.Enums.DocumentType)).Cast<DAL.Enums.DocumentType>();
+            var _enumval = Enum.GetValues(typeof(DataAccessLevel.Enums.DocumentType)).Cast<DataAccessLevel.Enums.DocumentType>();
             ComboBoxDocumentType.ItemsSource = _enumval.ToList();
         }
 
