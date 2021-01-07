@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SourceParser.TestAlgoritms.Tests;
+using System;
 
 namespace SourceParser.TestAlgoritms
 {
@@ -6,7 +7,8 @@ namespace SourceParser.TestAlgoritms
     {
         static void Main(string[] args)
         {
-            Tests.DTTestListBased.Test();
+            var dTTest = new DTTest();
+            dTTest.Test();
         }
     }
 }
