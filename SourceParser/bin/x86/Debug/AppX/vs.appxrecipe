@@ -30,13 +30,33 @@
     <AppXManifest Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-12-26T17:09:31.279</Modified>
+      <Modified>2021-01-09T14:24:48.288</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\SourceParser.exe">
       <PackagePath>entrypoint\SourceParser.exe</PackagePath>
-      <Modified>2020-12-26T17:09:22.710</Modified>
+      <Modified>2021-01-09T14:24:38.652</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\accord\3.8.0\lib\netstandard2.0\Accord.dll">
+      <PackagePath>Accord.dll</PackagePath>
+      <Modified>2017-10-18T21:59:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\accord.machinelearning\3.8.0\lib\netstandard2.0\Accord.MachineLearning.dll">
+      <PackagePath>Accord.MachineLearning.dll</PackagePath>
+      <Modified>2017-10-18T21:58:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\accord.math\3.8.0\lib\netstandard2.0\Accord.Math.Core.dll">
+      <PackagePath>Accord.Math.Core.dll</PackagePath>
+      <Modified>2017-10-18T21:59:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\accord.math\3.8.0\lib\netstandard2.0\Accord.Math.dll">
+      <PackagePath>Accord.Math.dll</PackagePath>
+      <Modified>2017-10-18T21:59:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\accord.statistics\3.8.0\lib\netstandard2.0\Accord.Statistics.dll">
+      <PackagePath>Accord.Statistics.dll</PackagePath>
+      <Modified>2017-10-18T21:59:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\microsoft.bcl.asyncinterfaces\1.1.1\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
@@ -204,15 +224,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser.BusinessLogicLevel\bin\Debug\netstandard2.0\SourceParser.BusinessLogicLevel.dll">
       <PackagePath>SourceParser.BusinessLogicLevel.dll</PackagePath>
-      <Modified>2020-12-26T17:09:16.122</Modified>
+      <Modified>2021-01-09T14:24:30.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser.DataAccessLevel\bin\Debug\netstandard2.0\SourceParser.DataAccessLevel.dll">
       <PackagePath>SourceParser.DataAccessLevel.dll</PackagePath>
-      <Modified>2020-12-26T17:09:14.611</Modified>
+      <Modified>2021-01-09T14:24:29.206</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser.Models\bin\Debug\netstandard2.0\SourceParser.Models.dll">
       <PackagePath>SourceParser.Models.dll</PackagePath>
-      <Modified>2020-12-26T17:09:15.379</Modified>
+      <Modified>2021-01-09T14:24:29.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1\build\uap10.0\..\..\lib\uap10.0\x86\Telerik.UI.Xaml.Map.UWP.dll">
       <PackagePath>Telerik.UI.Xaml.Map.UWP.dll</PackagePath>
@@ -490,35 +510,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-12-26T17:09:22.018</Modified>
+      <Modified>2021-01-09T14:24:37.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-12-26T17:09:22.018</Modified>
+      <Modified>2021-01-09T14:24:37.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\DocumentsTable.xbf">
       <PackagePath>Pages\DocumentsTable.xbf</PackagePath>
-      <Modified>2020-12-26T17:09:21.997</Modified>
+      <Modified>2021-01-09T14:24:37.842</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\Home.xbf">
       <PackagePath>Pages\Home.xbf</PackagePath>
-      <Modified>2020-12-26T17:09:22.003</Modified>
+      <Modified>2021-01-09T14:24:37.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewDocument.xbf">
       <PackagePath>Pages\NewDocument.xbf</PackagePath>
-      <Modified>2020-12-26T17:09:22.007</Modified>
+      <Modified>2021-01-09T14:24:37.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewLink.xbf">
       <PackagePath>Pages\NewLink.xbf</PackagePath>
-      <Modified>2020-12-26T17:09:22.019</Modified>
+      <Modified>2021-01-09T14:24:37.863</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewNote.xbf">
       <PackagePath>Pages\NewNote.xbf</PackagePath>
-      <Modified>2020-12-26T17:09:22.019</Modified>
+      <Modified>2021-01-09T14:24:37.863</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\NewStyle.xbf">
       <PackagePath>Pages\NewStyle.xbf</PackagePath>
-      <Modified>2020-12-26T17:09:22.018</Modified>
+      <Modified>2021-01-09T14:24:37.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -866,11 +886,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-12-26T17:09:24.578</Modified>
+      <Modified>2021-01-09T14:24:41.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Core\SourceParser.exe">
       <PackagePath>SourceParser.exe</PackagePath>
-      <Modified>2020-12-26T17:09:31.276</Modified>
+      <Modified>2021-01-09T14:24:48.284</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

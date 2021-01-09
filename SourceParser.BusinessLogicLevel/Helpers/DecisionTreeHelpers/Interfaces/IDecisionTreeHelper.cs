@@ -10,10 +10,10 @@ namespace SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers.Interfaces
 {
     public interface IDecisionTreeHelper<T>
     {
-        void Init(string dataTableName, int classCount, List<DataColumn> columns, List<object[]> rows, List<BaseAttribute<T>> attributes);
+        void Init(string dataTableName, int classCount, List<DataColumn> columns, List<string[]> rows, List<BaseAttribute<T>> attributes);
 
         void Learn(List<BaseAttribute<T>> attributeColumns, BaseAttribute<T> outputAttributeColumn);
 
-        T Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn);
+        string Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn);
     }
 }

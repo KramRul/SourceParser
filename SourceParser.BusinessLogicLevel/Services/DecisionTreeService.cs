@@ -24,7 +24,7 @@ namespace SourceParser.BusinessLogicLevel.Services
             _helper = helper;
         }
 
-        public void Init(string dataTableName, int classCount, List<DataColumn> columns, List<object[]> rows, List<BaseAttribute<T>> attributes)
+        public void Init(string dataTableName, int classCount, List<DataColumn> columns, List<string[]> rows, List<BaseAttribute<T>> attributes)
         {
             _helper.Init(dataTableName, classCount, columns, rows, attributes);
         }
@@ -34,7 +34,7 @@ namespace SourceParser.BusinessLogicLevel.Services
             _helper.Learn(attributeColumns, outputAttributeColumn);
         }
 
-        public T Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn)
+        public string Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn)
         {
             return _helper.Decide(attributes, attributeColumn);
         }

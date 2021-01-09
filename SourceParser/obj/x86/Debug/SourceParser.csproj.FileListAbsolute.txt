@@ -533,6 +533,7 @@ C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourcePars
 C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\.winmd_cache\$Telerik.UI.Drawing.winmd_636723260600000000.json
 C:\Users\Anuitex - 62\source\repos\ProjectsNew\BlackJack\SourceParser\SourceParser\obj\x86\Debug\SourceParser.csprojAssemblyReference.cache
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.dll.config
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\App.xbf
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\MainPage.xbf
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Pages\DocumentsTable.xbf
@@ -549,6 +550,11 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\AppxMa
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Core\AppxManifest.xml
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Core\SourceParser.exe
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\SourceParser.build.appxrecipe
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.dll
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.MachineLearning.dll
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.Math.Core.dll
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.Math.dll
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.Statistics.dll
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.Bcl.HashCode.dll
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Microsoft.Data.Sqlite.dll
@@ -654,6 +660,7 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Source
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\SourceParser.exe
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\SourceParser.pdb
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\ResourceHandlingTask.state
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Accord\en\Accord.Properties.Resources.resw
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\FxResources.Microsoft.Bcl.HashCode.SR.resw
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Microsoft.Data.Sqlite\en-US\Microsoft.Data.Sqlite.Properties.Resources.resw
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Microsoft.EntityFrameworkCore\en-US\Microsoft.EntityFrameworkCore.Properties.CoreStrings.resw
@@ -685,7 +692,9 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\pri.re
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\qualifiers.txt
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\resources.en.resfiles
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\resources.en-us.resfiles
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\resources.en.resfiles.intermediate
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Telerik.UI.Xaml.Map.UWP.pri.xml
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Telerik.UI.Drawing.pri.xml
@@ -702,12 +711,3 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Teleri
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Telerik.UI.Xaml.Primitives.UWP.pri.xml
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\.winmd_cache\$Telerik.UI.Drawing.winmd_636723260600000000.json
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.dll.config
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.dll
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.MachineLearning.dll
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.Math.Core.dll
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.Math.dll
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Accord.Statistics.dll
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Accord\en\Accord.Properties.Resources.resw
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\resources.en.resfiles
-C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\resources.en.resfiles.intermediate

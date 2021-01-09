@@ -9,12 +9,12 @@ namespace SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers
 {
     public class ClassicBasedDecisionTreeHelper<T> : IDecisionTreeHelper<T>
     {
-        public T Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn)
+        public string Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn)
         {
             throw new NotImplementedException();
         }
 
-        public void Init(string dataTableName, int classCount, List<DataColumn> columns, List<object[]> rows, List<BaseAttribute<T>> attributes)
+        public void Init(string dataTableName, int classCount, List<DataColumn> columns, List<string[]> rows, List<BaseAttribute<T>> attributes)
         {
             throw new NotImplementedException();
         }

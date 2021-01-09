@@ -18,7 +18,7 @@ namespace SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers
         private Codification<T> Codebook { get; set; }
         private DataTable Data { get; set; }
 
-        public void Init(string dataTableName, int classCount, List<DataColumn> columns, List<object[]> rows, List<BaseAttribute<T>> attributes)
+        public void Init(string dataTableName, int classCount, List<DataColumn> columns, List<string[]> rows, List<BaseAttribute<T>> attributes)
         {
             var data = new DataTable(dataTableName);
 
@@ -61,7 +61,7 @@ namespace SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers
             DecisionTree = id3learning.Learn(inputs, outputs);
         }
 
-        public T Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn)
+        public string Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn)
         {
             var data = attributes.Select(attribute => attribute.Value).ToArray();
             int[] query = Codebook.Transform();
@@ -70,7 +70,7 @@ namespace SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers
 
             var answer = Codebook.Revert(attributeColumn.Name, output);
 
-            return answer;
+            return answer.ToString();
         }
 
         public void Compile(DecisionTree tree)
