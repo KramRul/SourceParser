@@ -63,8 +63,9 @@ namespace SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers
 
         public string Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn)
         {
-            var data = attributes.Select(attribute => attribute.Value).ToArray();
-            int[] query = Codebook.Transform();
+            var columnNames = attributes.Select(attribute => attribute.Name).ToArray();
+            var values = attributes.Select(attribute => attribute.Value).ToArray();
+            int[] query = Codebook.Transform(columnNames, values);
 
             int output = DecisionTree.Decide(query);
 

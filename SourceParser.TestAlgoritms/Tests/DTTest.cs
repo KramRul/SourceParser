@@ -143,7 +143,7 @@ namespace SourceParser.TestAlgoritms.Tests
 
             var outputAttributeColumn = new BaseAttribute<string>() { Name = "Species" };
 
-            _accordBasedDecisionTreeService.Learn(attributes, outputAttributeColumn);
+            _listBasedDecisionTreeService.Learn(attributes, outputAttributeColumn);
 
             //double acc = dt.Accuracy(dataX, dataY);
             var attributeNames = new List<BaseAttribute<string>>
@@ -154,12 +154,63 @@ namespace SourceParser.TestAlgoritms.Tests
                 new BaseAttribute<string>() { Name = "PetalWidth" , Value = "4.0" },
             };
 
-            var answer = _accordBasedDecisionTreeService.Decide(attributeNames, outputAttributeColumn); // answer will be "No".
+            var answer = _listBasedDecisionTreeService.Decide(attributeNames, outputAttributeColumn); // answer will be "No".
         }
 
         public void TestClassicBasedDecisionTree()
         {
+            var columns = new List<DataColumn>()
+            {
+                new DataColumn("Outlook"),
+                new DataColumn("Temperature"),
+                new DataColumn("Humidity"),
+                new DataColumn("Wind"),
+                new DataColumn("PlayTennis")
+            };
 
+            var rows = new List<string[]>
+            {
+                new string[] { "Sunny", "Hot", "High", "Weak", "No" },
+                new string[] { "Sunny", "Hot", "High", "Strong", "No" },
+                new string[] { "Overcast", "Hot", "High", "Weak", "Yes" },
+                new string[] { "Rain", "Mild", "High", "Weak", "Yes" },
+                new string[] { "Rain", "Cool", "Normal", "Weak", "Yes" },
+                new string[] { "Rain", "Cool", "Normal", "Strong", "No" },
+                new string[] { "Overcast", "Cool", "Normal", "Strong", "Yes" },
+                new string[] { "Sunny", "Mild", "High", "Weak", "No" },
+                new string[] { "Sunny", "Cool", "Normal", "Weak", "Yes" },
+                new string[] { "Rain", "Mild", "Normal", "Weak", "Yes" },
+                new string[] { "Sunny", "Mild", "Normal", "Strong", "Yes" },
+                new string[] { "Overcast", "Mild", "High", "Strong", "Yes" },
+                new string[] { "Overcast", "Hot", "Normal", "Weak", "Yes" },
+                new string[] { "Rain", "Mild", "High", "Strong", "No" }
+            };
+
+            var attributes = new List<BaseAttribute<string>>
+            {
+                new BaseAttribute<string>() { Name = "Outlook" , Symbols = 3 },// 3 possible values (Sunny, overcast, rain)
+                new BaseAttribute<string>() { Name = "Temperature" , Symbols = 3 },// 3 possible values (Hot, mild, cool)  
+                new BaseAttribute<string>() { Name = "Humidity" , Symbols = 2 }, // 2 possible values (High, normal)  
+                new BaseAttribute<string>() { Name = "Wind" , Symbols = 2 },// 2 possible values (Weak, strong)
+            };
+
+            int classCount = 2; // 2 possible output values for playing tennis: yes or no
+
+            _classicBasedDecisionTreeService.Init("Mitchell's Tennis Example", classCount, columns, rows, attributes);
+
+            var outputAttributeColumn = new BaseAttribute<string>() { Name = "PlayTennis", Symbols = 2 };
+
+            _classicBasedDecisionTreeService.Learn(attributes, outputAttributeColumn);
+
+            var attributeNames = new List<BaseAttribute<string>>
+            {
+                new BaseAttribute<string>() { Name = "Outlook" , Value = "Sunny", Symbols = 3 },
+                new BaseAttribute<string>() { Name = "Temperature" , Value = "Hot", Symbols = 3 },
+                new BaseAttribute<string>() { Name = "Humidity" , Value = "High", Symbols = 2 },
+                new BaseAttribute<string>() { Name = "Wind" , Value = "Strong", Symbols = 2 },
+            };
+
+            var answer = _classicBasedDecisionTreeService.Decide(attributeNames, outputAttributeColumn); // answer will be "No".
         }
     }
 }

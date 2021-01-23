@@ -4,6 +4,7 @@ using SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers.Models.ListBas
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,9 @@ namespace SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers
             DataX = rows.Select(row =>
             {
                 var rowWithoutLastColumn = row.Take(row.Count() - 1).ToArray();
-                return Array.ConvertAll(rowWithoutLastColumn, double.Parse);
+                double[] lines = rowWithoutLastColumn.Select(s => double.Parse(s, CultureInfo.InvariantCulture))
+                            .ToArray();
+                return lines;
             }).ToArray();
 
             DataY = rows.Select(row =>
@@ -44,7 +47,7 @@ namespace SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers
 
         public string Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn)
         {
-            double[] x = attributes.Select(attr=>double.Parse(attr.Value.ToString())).ToArray();
+            double[] x = attributes.Select(attr=>double.Parse(attr.Value.ToString(), CultureInfo.InvariantCulture)).ToArray();
             int predClass = DecisionTree.Predict(x, verbose: true);
             return predClass.ToString();
         }
