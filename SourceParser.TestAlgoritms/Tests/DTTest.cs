@@ -24,7 +24,7 @@ namespace SourceParser.TestAlgoritms.Tests
             TestListBasedDecisionTree();
             TestClassicBasedDecisionTree();
         }
-
+        
         public void TestAccordBasedDecisionTree()
         {
             var columns = new List<DataColumn>()

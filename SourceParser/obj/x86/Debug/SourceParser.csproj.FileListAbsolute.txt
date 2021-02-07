@@ -711,3 +711,5 @@ C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Teleri
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\Telerik.UI.Xaml.Primitives.UWP.pri.xml
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\obj\x86\Debug\.winmd_cache\$Telerik.UI.Drawing.winmd_636723260600000000.json
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\KramRul\Documents\GitHub\SourceParser\SourceParser\bin\x86\Debug\LINQtoCSV.dll

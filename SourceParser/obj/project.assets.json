@@ -55,6 +55,15 @@
           "lib/netstandard2.0/Accord.Statistics.dll": {}
         }
       },
+      "LINQtoCSV/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LINQtoCSV.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LINQtoCSV.dll": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "dependencies": {
@@ -551,6 +560,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -880,7 +898,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Accord.MachineLearning": "3.8.0",
+          "LinqToCsv": "1.5.0",
           "Microsoft.EntityFrameworkCore": "3.1.10",
+          "Newtonsoft.Json": "12.0.3",
           "SourceParser.DataAccessLevel": "1.0.0",
           "SourceParser.Models": "1.0.0"
         },
@@ -971,6 +991,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Accord.Statistics.dll": {}
+        }
+      },
+      "LINQtoCSV/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LINQtoCSV.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LINQtoCSV.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1470,6 +1499,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -1914,7 +1952,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Accord.MachineLearning": "3.8.0",
+          "LinqToCsv": "1.5.0",
           "Microsoft.EntityFrameworkCore": "3.1.10",
+          "Newtonsoft.Json": "12.0.3",
           "SourceParser.DataAccessLevel": "1.0.0",
           "SourceParser.Models": "1.0.0"
         },
@@ -2005,6 +2045,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Accord.Statistics.dll": {}
+        }
+      },
+      "LINQtoCSV/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LINQtoCSV.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LINQtoCSV.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -2504,6 +2553,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "compile": {
@@ -2949,7 +3007,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Accord.MachineLearning": "3.8.0",
+          "LinqToCsv": "1.5.0",
           "Microsoft.EntityFrameworkCore": "3.1.10",
+          "Newtonsoft.Json": "12.0.3",
           "SourceParser.DataAccessLevel": "1.0.0",
           "SourceParser.Models": "1.0.0"
         },
@@ -3040,6 +3100,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Accord.Statistics.dll": {}
+        }
+      },
+      "LINQtoCSV/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LINQtoCSV.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LINQtoCSV.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -3539,6 +3608,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -3984,7 +4062,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Accord.MachineLearning": "3.8.0",
+          "LinqToCsv": "1.5.0",
           "Microsoft.EntityFrameworkCore": "3.1.10",
+          "Newtonsoft.Json": "12.0.3",
           "SourceParser.DataAccessLevel": "1.0.0",
           "SourceParser.Models": "1.0.0"
         },
@@ -4075,6 +4155,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Accord.Statistics.dll": {}
+        }
+      },
+      "LINQtoCSV/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LINQtoCSV.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LINQtoCSV.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -4574,6 +4663,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -5018,7 +5116,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Accord.MachineLearning": "3.8.0",
+          "LinqToCsv": "1.5.0",
           "Microsoft.EntityFrameworkCore": "3.1.10",
+          "Newtonsoft.Json": "12.0.3",
           "SourceParser.DataAccessLevel": "1.0.0",
           "SourceParser.Models": "1.0.0"
         },
@@ -5109,6 +5209,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Accord.Statistics.dll": {}
+        }
+      },
+      "LINQtoCSV/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LINQtoCSV.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LINQtoCSV.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -5608,6 +5717,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -6053,7 +6171,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Accord.MachineLearning": "3.8.0",
+          "LinqToCsv": "1.5.0",
           "Microsoft.EntityFrameworkCore": "3.1.10",
+          "Newtonsoft.Json": "12.0.3",
           "SourceParser.DataAccessLevel": "1.0.0",
           "SourceParser.Models": "1.0.0"
         },
@@ -6144,6 +6264,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Accord.Statistics.dll": {}
+        }
+      },
+      "LINQtoCSV/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LINQtoCSV.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LINQtoCSV.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -6643,6 +6772,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -7087,7 +7225,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Accord.MachineLearning": "3.8.0",
+          "LinqToCsv": "1.5.0",
           "Microsoft.EntityFrameworkCore": "3.1.10",
+          "Newtonsoft.Json": "12.0.3",
           "SourceParser.DataAccessLevel": "1.0.0",
           "SourceParser.Models": "1.0.0"
         },
@@ -7178,6 +7318,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Accord.Statistics.dll": {}
+        }
+      },
+      "LINQtoCSV/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LINQtoCSV.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LINQtoCSV.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -7677,6 +7826,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -8122,7 +8280,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Accord.MachineLearning": "3.8.0",
+          "LinqToCsv": "1.5.0",
           "Microsoft.EntityFrameworkCore": "3.1.10",
+          "Newtonsoft.Json": "12.0.3",
           "SourceParser.DataAccessLevel": "1.0.0",
           "SourceParser.Models": "1.0.0"
         },
@@ -8317,6 +8477,18 @@
         "lib/netstandard1.4/Accord.Statistics.xml",
         "lib/netstandard2.0/Accord.Statistics.dll",
         "lib/netstandard2.0/Accord.Statistics.xml"
+      ]
+    },
+    "LINQtoCSV/1.5.0": {
+      "sha512": "R3FWKGV326oWhEIJFgBQvJyeEs7ylViAMjTYs1YetwVdGfbDGf465xfLaxUxePwF/8Tcajt/1Llj3exhYL2xhQ==",
+      "type": "package",
+      "path": "linqtocsv/1.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/LINQtoCSV.dll",
+        "linqtocsv.1.5.0.nupkg.sha512",
+        "linqtocsv.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -9211,6 +9383,37 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
@@ -13865,5 +14068,17 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'LINQtoCSV 1.5.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.16299'. This package may not be fully compatible with your project.",
+      "libraryId": "LINQtoCSV",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299"
+      ]
+    }
+  ]
 }

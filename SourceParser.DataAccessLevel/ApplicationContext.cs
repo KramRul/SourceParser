@@ -20,6 +20,8 @@ namespace SourceParser.DataAccessLevel
         public DbSet<Entities.Style.Style> Styles { get; set; }
         public DbSet<Entities.Style.Text> Texts { get; set; }
 
+        public DbSet<ImportLinkData> ImportLinksData { get; set; }
+
         public ApplicationContext()
         {
             Database.EnsureCreated();

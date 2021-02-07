@@ -10,6 +10,12 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
 using SourceParser.Models.Models;
+/*using LinqToExcel;
+using LinqToExcel.Query;*/
+using SourceParser.DataAccessLevel;
+using SourceParser.DataAccessLevel.Entities;
+using System.Diagnostics;
+using SourceParser.BusinessLogicLevel.Helpers.Excel;
 
 namespace SourceParser.Services
 {
@@ -17,8 +23,14 @@ namespace SourceParser.Services
     {
         private const string _fileName = "Links.txt";
         private readonly string _writePath = $"{Directory.GetCurrentDirectory()}\\{_fileName}";
+        protected List<object> excelModel;
+        protected string excelWorksheetName;
+        //protected ExcelQueryable<BaseExcelModel> worksheet;
+
         public FileDialogService()
         {
+            this.excelWorksheetName = "Import";
+            excelModel = new List<object>();
         }
         public string FilePath { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
@@ -43,6 +55,33 @@ namespace SourceParser.Services
             {
                 var readlines = await FileIO.ReadLinesAsync(file);
                 lines = new List<string>(readlines);
+            }
+
+            return lines;
+        }
+
+        public async Task<List<string>> OpenFileDialogXlsx()
+        {
+            var lines = new List<string>();
+            FileOpenPicker openPicker = new FileOpenPicker
+            {
+                ViewMode = PickerViewMode.Thumbnail,
+                SuggestedStartLocation = PickerLocationId.Desktop,
+                CommitButtonText = "Открыть"
+            };
+            openPicker.FileTypeFilter.Add(".csv");
+            var file = await openPicker.PickSingleFileAsync();
+
+            if (file != null)
+            {
+                var stream = await file.OpenStreamForReadAsync();
+
+                var excelHelper = new CsvHelper();
+
+                excelHelper.Parse(stream);
+
+                //var readlines = await FileIO.ReadLinesAsync(file);
+                //lines = new List<string>(readlines);
             }
 
             return lines;

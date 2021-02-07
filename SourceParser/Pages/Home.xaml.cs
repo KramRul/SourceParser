@@ -44,7 +44,7 @@ namespace SourceParser.Pages
                 var infoMessageResult = await ShowInfoMessage();
                 if (infoMessageResult == ContentDialogResult.Primary)
                 {
-                    var lines = await _fileDialogService.OpenFileDialog();
+                    var lines = await _fileDialogService.OpenFileDialogXlsx();
                     var documents = await _documentService.GetDocumentsInfFromLines(lines);
                     await _documentService.CreateDocumentsRange(new List<DocumentMod>(documents));
                     foreach (var doc in documents)

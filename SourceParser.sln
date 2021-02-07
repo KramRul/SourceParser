@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceParser", "SourceParse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceParser.BusinessLogicLevel", "SourceParser.BusinessLogicLevel\SourceParser.BusinessLogicLevel.csproj", "{DDA2AC69-AB14-4251-A059-1EC035A3DBB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceParser.DataAccessLevel", "SourceParser.DataAccessLevel\SourceParser.DataAccessLevel.csproj", "{E072A95F-F1C6-4B25-8F6F-50B6D3BA31D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceParser.DataAccessLevel", "SourceParser.DataAccessLevel\SourceParser.DataAccessLevel.csproj", "{E072A95F-F1C6-4B25-8F6F-50B6D3BA31D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceParser.Models", "SourceParser.Models\SourceParser.Models.csproj", "{1DC75403-5FB3-473D-965F-B2F195884753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceParser.Models", "SourceParser.Models\SourceParser.Models.csproj", "{1DC75403-5FB3-473D-965F-B2F195884753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceParser.TestAlgoritms", "SourceParser.TestAlgoritms\SourceParser.TestAlgoritms.csproj", "{E9A02CEF-C7F8-49E3-B26D-C8DB98D4FF68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceParser.TestAlgoritms", "SourceParser.TestAlgoritms\SourceParser.TestAlgoritms.csproj", "{E9A02CEF-C7F8-49E3-B26D-C8DB98D4FF68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
