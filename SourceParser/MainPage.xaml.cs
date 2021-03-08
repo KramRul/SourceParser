@@ -46,7 +46,7 @@ namespace SourceParser
             }
             else if (settings.IsSelected)
             {
-                //myFrame.Navigate(typeof(settings));
+                myFrame.Navigate(typeof(Pages.SettingsPage));
             }
             else if (addStyle.IsSelected)
             {

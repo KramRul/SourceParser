@@ -44,7 +44,7 @@ namespace SourceParser.Pages
                 var infoMessageResult = await ShowInfoMessage();
                 if (infoMessageResult == ContentDialogResult.Primary)
                 {
-                    var lines = await _fileDialogService.OpenFileDialogXlsx();
+                    var lines = await _fileDialogService.OpenFileDialog();
                     var documents = await _documentService.GetDocumentsInfFromLines(lines);
                     await _documentService.CreateDocumentsRange(new List<DocumentMod>(documents));
                     foreach (var doc in documents)
@@ -63,6 +63,46 @@ namespace SourceParser.Pages
         }
 
         private async Task<ContentDialogResult> ShowInfoMessage()
+        {
+            StackPanel stackPanel = new StackPanel()
+            {
+            };
+
+            TextBlock Attention = new TextBlock
+            {
+                Text = "Вы уверены что хотите импортировать список источников в приложение?",
+                Margin = new Thickness(10),
+                Style = (Style)Application.Current.Resources["SubheaderTextBlockStyle"]
+            };
+
+            var sbText = new StringBuilder();
+            sbText.Append($"-Каждая строка файла должна содержать отдельную ссылку на источник\r\n");
+            sbText.Append($"-Файл должен содержать только ссылки и ничего более\r\n");
+            var text = sbText.ToString();
+
+            TextBlock Message = new TextBlock
+            {
+                Text = sbText.ToString(),
+                TextWrapping = TextWrapping.Wrap,
+                Margin = new Thickness(10)
+            };
+            stackPanel.Children.Add(Attention);
+            stackPanel.Children.Add(Message);
+
+            ContentDialog fileDialog = new ContentDialog()
+            {
+                Title = "Подтверждение действия",
+                Content = stackPanel,
+                PrimaryButtonText = "ОК",
+                SecondaryButtonText = "Отмена"
+            };
+
+            ContentDialogResult result = await fileDialog.ShowAsync();
+
+            return result;
+        }
+
+        private async Task<ContentDialogResult> ShowOldInfoMessage()
         {
             StackPanel stackPanel = new StackPanel()
             {

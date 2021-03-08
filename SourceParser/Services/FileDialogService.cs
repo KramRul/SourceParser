@@ -60,7 +60,7 @@ namespace SourceParser.Services
             return lines;
         }
 
-        public async Task<List<string>> OpenFileDialogXlsx()
+        public async Task<List<string>> OpenFileDialogСsv()
         {
             var lines = new List<string>();
             FileOpenPicker openPicker = new FileOpenPicker
@@ -80,6 +80,7 @@ namespace SourceParser.Services
 
                 excelHelper.Parse(stream);
 
+                excelHelper.SyncDataWithDatabase();
                 //var readlines = await FileIO.ReadLinesAsync(file);
                 //lines = new List<string>(readlines);
             }

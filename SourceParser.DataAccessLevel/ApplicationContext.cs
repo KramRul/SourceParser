@@ -24,12 +24,12 @@ namespace SourceParser.DataAccessLevel
 
         public ApplicationContext()
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Filename=_SOURCE_PARSER");
+            optionsBuilder.UseSqlite(@"Filename=_SOURCE_PARSER_");
             optionsBuilder.EnableSensitiveDataLogging(true);
         }
 

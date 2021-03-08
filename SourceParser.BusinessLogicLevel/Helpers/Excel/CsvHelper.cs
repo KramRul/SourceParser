@@ -17,12 +17,13 @@ namespace SourceParser.BusinessLogicLevel.Helpers.Excel
     {
         protected List<BaseCsvModel> csvModel;
 
-        public void Parse(Stream stream)
+        public List<BaseCsvModel> Parse(Stream stream)
         {
             using (StreamReader sr = new StreamReader(stream))
             {
                 CsvContext csvContext = new CsvContext();
                 csvModel = csvContext.Read<BaseCsvModel>(sr).ToList();
+                return csvModel;
             }
         }
 
@@ -116,7 +117,6 @@ namespace SourceParser.BusinessLogicLevel.Helpers.Excel
                             existedImportLinkData.SearchParameter66 = importLinkData.SearchParameter66;
                             existedImportLinkData.SearchParameter67 = importLinkData.SearchParameter67;
                             existedImportLinkData.SearchParameter68 = importLinkData.SearchParameter68;
-                            existedImportLinkData.SearchParameter69 = importLinkData.SearchParameter69;
                             dbManager.SaveChanges();
                         }
                         if (existedImportLinkData == null)
@@ -194,8 +194,7 @@ namespace SourceParser.BusinessLogicLevel.Helpers.Excel
                                 SearchParameter65 = importLinkData.SearchParameter65,
                                 SearchParameter66 = importLinkData.SearchParameter66,
                                 SearchParameter67 = importLinkData.SearchParameter67,
-                                SearchParameter68 = importLinkData.SearchParameter68,
-                                SearchParameter69 = importLinkData.SearchParameter69
+                                SearchParameter68 = importLinkData.SearchParameter68
                             });
                         }
                     }

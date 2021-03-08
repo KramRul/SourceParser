@@ -21,7 +21,7 @@ namespace SourceParser.DataAccessLevel.Enums
         Dissertation,
         DissertationAbstract,
         Patent,
-        SectionOfTheBook,
+        SectionOfTheBookOrArticle,
         Article,
         ArticleAbstract,
         LegalAct,

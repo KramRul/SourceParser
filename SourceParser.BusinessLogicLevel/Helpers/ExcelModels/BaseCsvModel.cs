@@ -209,22 +209,19 @@ namespace SourceParser.Excel
         [CsvColumn(Name = "Dissertation Abstracts", FieldIndex = 67, CanBeNull = true)]
         public string SearchParameter63 { get; set; }
 
-        [CsvColumn(Name = "автореф.", FieldIndex = 68, CanBeNull = true)]
+        [CsvColumn(Name = "патентообладатель", FieldIndex = 68, CanBeNull = true)]
         public string SearchParameter64 { get; set; }
 
-        [CsvColumn(Name = "патентообладатель", FieldIndex = 69, CanBeNull = true)]
+        [CsvColumn(Name = "{d,7}", FieldIndex = 69, CanBeNull = true)]
         public string SearchParameter65 { get; set; }
 
-        [CsvColumn(Name = "{d,7}", FieldIndex = 70, CanBeNull = true)]
+        [CsvColumn(Name = "В кн.", FieldIndex = 70, CanBeNull = true)]
         public string SearchParameter66 { get; set; }
 
-        [CsvColumn(Name = "В кн.", FieldIndex = 71, CanBeNull = true)]
+        [CsvColumn(Name = "In:", FieldIndex = 71, CanBeNull = true)]
         public string SearchParameter67 { get; set; }
 
-        [CsvColumn(Name = "In:", FieldIndex = 72, CanBeNull = true)]
+        [CsvColumn(Name = "[Abstract]", FieldIndex = 72, CanBeNull = true)]
         public string SearchParameter68 { get; set; }
-
-        [CsvColumn(Name = "[Abstract]", FieldIndex = 73, CanBeNull = true)]
-        public string SearchParameter69 { get; set; }
     }
 }

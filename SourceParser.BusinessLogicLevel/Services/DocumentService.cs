@@ -1,5 +1,9 @@
-﻿using SourceParser.BusinessLogicLevel.Services.Interfaces;
+﻿using SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers;
+using SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers.Models;
+using SourceParser.BusinessLogicLevel.Services.Interfaces;
+using SourceParser.DataAccessLevel.Enums;
 using SourceParser.DataAccessLevel.UnitOfWorks.Interfaces;
+using SourceParser.Excel;
 using SourceParser.Models;
 using SourceParser.Models.Models;
 using System;
@@ -13,9 +17,11 @@ namespace SourceParser.BusinessLogicLevel.Services
 {
     public class DocumentService : BaseService, IDocumentService
     {
+        private readonly IDecisionTreeService<string> _accordBasedDecisionTreeService;
         public DocumentService(IBaseUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
+            _accordBasedDecisionTreeService = new DecisionTreeService<string>(unitOfWork, new AccordBasedDecisionTreeHelper<string>());
         }
 
         public async Task<ObservableCollection<DocumentMod>> GetAllDocuments()
@@ -367,6 +373,15 @@ namespace SourceParser.BusinessLogicLevel.Services
             return documents;
         }
 
+        public async Task<ObservableCollection<DocumentMod>> GetDocumentsInfFromLinesUsingDecisionTree(List<string> lines)
+        {
+            var documents = await GetDocumentsInfFromLines(lines);
+
+            documents = await PredictDocumentsTypesUsingDecisionTree(documents);
+
+            return documents;
+        }
+
         private string GetSubString(string line, string startKey, string endKey)
         {
             int pFrom = line.IndexOf(startKey) + startKey.Length;
@@ -411,10 +426,12 @@ namespace SourceParser.BusinessLogicLevel.Services
                         if (string.IsNullOrEmpty(document.Pages.CountOfPages))
                         {
                             document.Pages.CountOfPages = str;
-                        } else if (string.IsNullOrEmpty(document.Pages.PageFirst))
+                        }
+                        else if (string.IsNullOrEmpty(document.Pages.PageFirst))
                         {
                             document.Pages.PageFirst = str;
-                        } else if (string.IsNullOrEmpty(document.Pages.PageLast))
+                        }
+                        else if (string.IsNullOrEmpty(document.Pages.PageLast))
                         {
                             document.Pages.PageLast = str;
                         }
@@ -519,6 +536,171 @@ namespace SourceParser.BusinessLogicLevel.Services
             }
 
             return document;
+        }
+
+        private async Task<ObservableCollection<DocumentMod>> PredictDocumentsTypesUsingDecisionTree(ObservableCollection<DocumentMod> documents)
+        {
+            foreach (var document in documents)
+            {
+                document.Type = await PredictDocumentTypesUsingDecisionTree(document.AdditionalInf);
+            }
+
+            return documents;
+        }
+        private async Task<DocumentType> PredictDocumentTypesUsingDecisionTree(string documentLink)
+        {
+            var model = DocumentLinkToBaseCsvModel(documentLink);
+
+            var outputAttributeColumn = new BaseAttribute<string>() { Name = "Bibl Link Class", Symbols = 2 };
+
+            var attributeNames = new List<BaseAttribute<string>>
+            {
+                new BaseAttribute<string>() { Name = "Outlook" , Value = "Sunny", Symbols = 3 },
+                new BaseAttribute<string>() { Name = "Temperature" , Value = "Hot", Symbols = 3 },
+                new BaseAttribute<string>() { Name = "Humidity" , Value = "High", Symbols = 2 },
+                new BaseAttribute<string>() { Name = "Wind" , Value = "Strong", Symbols = 2 },
+            };
+
+            var answer = _accordBasedDecisionTreeService.Decide(attributeNames, outputAttributeColumn);
+
+            return StringAnswerToDocumentType(answer);
+        }
+
+        private BaseCsvModel DocumentLinkToBaseCsvModel(string documentLink)
+        {
+            var baseCsvModel = new BaseCsvModel();
+
+            baseCsvModel.SourceLink = documentLink;
+            baseCsvModel.SearchParameter0 = documentLink.Contains("учеб.").ToString();
+            baseCsvModel.SearchParameter1 = documentLink.Contains("Университет").ToString();
+            baseCsvModel.SearchParameter2 = documentLink.Contains("учеб. пособие").ToString();
+            baseCsvModel.SearchParameter3 = documentLink.Contains("довідник").ToString();
+            baseCsvModel.SearchParameter4 = documentLink.Contains("tutorials").ToString();
+            baseCsvModel.SearchParameter5 = documentLink.Contains("tutorial").ToString();
+            baseCsvModel.SearchParameter6 = documentLink.Contains("guide").ToString();
+            baseCsvModel.SearchParameter7 = documentLink.Contains("книга").ToString();
+            baseCsvModel.SearchParameter8 = documentLink.Contains("Book").ToString();
+            baseCsvModel.SearchParameter9 = documentLink.Contains("Volume").ToString();
+            //baseCsvModel.SearchParameter10 = documentLink.Contains("Т. {d}").ToString();
+            baseCsvModel.SearchParameter11 = documentLink.Contains("Litres").ToString();
+            baseCsvModel.SearchParameter12 = documentLink.Contains("Избранные произведения").ToString();
+            baseCsvModel.SearchParameter13 = documentLink.Contains("dictionary").ToString();
+            baseCsvModel.SearchParameter14 = documentLink.Contains("словарь").ToString();
+            //baseCsvModel.SearchParameter15 = documentLink.Contains("Т. {d}–{d}").ToString();
+            //baseCsvModel.SearchParameter16 = documentLink.Contains("Vols. {d}–{d}").ToString();
+            baseCsvModel.SearchParameter17 = documentLink.Contains("Vol. {d}").ToString();
+            baseCsvModel.SearchParameter18 = documentLink.Contains("Ред.").ToString();
+            baseCsvModel.SearchParameter19 = documentLink.Contains("Ed.").ToString();
+            baseCsvModel.SearchParameter20 = documentLink.Contains("Eds.").ToString();
+            baseCsvModel.SearchParameter21 = documentLink.Contains("doi").ToString();
+            baseCsvModel.SearchParameter22 = documentLink.Contains("[CD]").ToString();
+            baseCsvModel.SearchParameter23 = documentLink.Contains("http://www.{l}").ToString();
+            baseCsvModel.SearchParameter24 = documentLink.Contains("http://{l}").ToString();
+            baseCsvModel.SearchParameter25 = documentLink.Contains("№{d}").ToString();
+            baseCsvModel.SearchParameter26 = documentLink.Contains("№ {d}").ToString();
+            baseCsvModel.SearchParameter27 = documentLink.Contains("{d}(d)").ToString();
+            baseCsvModel.SearchParameter28 = documentLink.Contains("{d}(Suppl. {d})").ToString();
+            baseCsvModel.SearchParameter29 = documentLink.Contains("No. {d}").ToString();
+            baseCsvModel.SearchParameter30 = documentLink.Contains("[Спец. выпуск]").ToString();
+            baseCsvModel.SearchParameter31 = documentLink.Contains("[Special issue]").ToString();
+            baseCsvModel.SearchParameter32 = documentLink.Contains("[Cпец. раздел]").ToString();
+            baseCsvModel.SearchParameter33 = documentLink.Contains("[Special section]").ToString();
+            baseCsvModel.SearchParameter34 = documentLink.Contains("тез.").ToString();
+            baseCsvModel.SearchParameter35 = documentLink.Contains("материалы").ToString();
+            baseCsvModel.SearchParameter36 = documentLink.Contains("конф.").ToString();
+            baseCsvModel.SearchParameter37 = documentLink.Contains("Conference").ToString();
+            baseCsvModel.SearchParameter38 = documentLink.Contains("[Электронный ресурс]").ToString();
+            baseCsvModel.SearchParameter39 = documentLink.Contains("Режим доступа").ToString();
+            baseCsvModel.SearchParameter40 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter41 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter42 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter43 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter44 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter45 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter46 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter47 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter48 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter49 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter50 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter51 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter52 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter53 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter54 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter55 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter56 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter57 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter58 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter59 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter60 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter61 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter62 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter63 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter64 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter65 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter66 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter67 = documentLink.Contains("").ToString();
+            baseCsvModel.SearchParameter68 = documentLink.Contains("").ToString();
+
+            return baseCsvModel;
+        }
+
+        private DocumentType StringAnswerToDocumentType(string answer)
+        {
+            var type = DocumentType.Other;
+            switch (answer)
+            {
+                case "Tutorial":
+                    type = DocumentType.Tutorial;
+                    break;
+                case "Book":
+                    type = DocumentType.Book;
+                    break;
+                case "ElectronicBook":
+                    type = DocumentType.ElectronicBook;
+                    break;
+                case "MagazineArticle":
+                    type = DocumentType.MagazineArticle;
+                    break;
+                case "Thesis":
+                    type = DocumentType.Thesis;
+                    break;
+                case "Webpage":
+                    type = DocumentType.Webpage;
+                    break;
+                case "СollectionOfScientificPapers":
+                    type = DocumentType.СollectionOfScientificPapers;
+                    break;
+                case "Conference":
+                    type = DocumentType.Conference;
+                    break;
+                case "Document":
+                    type = DocumentType.Document;
+                    break;
+                case "Report":
+                    type = DocumentType.Report;
+                    break;
+                case "Dissertation":
+                    type = DocumentType.Dissertation;
+                    break;
+                case "DissertationAbstract":
+                    type = DocumentType.DissertationAbstract;
+                    break;
+                case "Patent":
+                    type = DocumentType.Patent;
+                    break;
+                case "SectionOfTheBookOrArticle":
+                    type = DocumentType.SectionOfTheBookOrArticle;
+                    break;
+                case "Article":
+                    type = DocumentType.Article;
+                    break;
+                case "ArticleAbstract":
+                    type = DocumentType.ArticleAbstract;
+                    break;
+                default:
+                    break;
+            }
+            return type;
         }
 
         private List<string> GetAllSubStrings(string line)
