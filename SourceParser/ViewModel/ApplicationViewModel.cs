@@ -20,6 +20,7 @@ namespace SourceParser.ViewModel
         private readonly IStyleService _styleService = new StyleService(new UnitOfWork());
         private readonly INoteService _noteService = new NoteService(new UnitOfWork());
         private readonly ILinkService _linkService = new LinkService(new UnitOfWork());
+        private readonly IImportLinkDataService _importLinkDataService = new ImportLinkDataService(new UnitOfWork());
 
         private StyleMod _selectedStyle;
         private DocumentMod _selectedDocument;
@@ -29,6 +30,7 @@ namespace SourceParser.ViewModel
         private ObservableCollection<DocumentMod> _documents = new ObservableCollection<DocumentMod>();
         private ObservableCollection<NoteMod> _notes = new ObservableCollection<NoteMod>();
         private ObservableCollection<LinkMod> _links = new ObservableCollection<LinkMod>();
+        private ObservableCollection<ImportLinkDataModel> _importedLinks = new ObservableCollection<ImportLinkDataModel>();
 
         public ObservableCollection<StyleMod> Styles
         {
@@ -65,6 +67,16 @@ namespace SourceParser.ViewModel
             set
             {
                 _links = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ObservableCollection<ImportLinkDataModel> ImportedLinks
+        {
+            get => _importedLinks;
+            set
+            {
+                _importedLinks = value;
                 OnPropertyChanged();
             }
         }
@@ -143,6 +155,14 @@ namespace SourceParser.ViewModel
             try
             {
                 Styles = await _styleService.GetAllStyles();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }
+            try
+            {
+                ImportedLinks = await _importLinkDataService.GetAllImportedLinks();
             }
             catch (Exception ex)
             {

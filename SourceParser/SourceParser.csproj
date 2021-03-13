@@ -105,8 +105,8 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\DocumentsTable.xaml.cs">
-      <DependentUpon>DocumentsTable.xaml</DependentUpon>
+    <Compile Include="Pages\ImportedLearnLinksTable.xaml.cs">
+      <DependentUpon>ImportedLearnLinksTable.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -200,7 +200,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\DocumentsTable.xaml">
+    <Page Include="Pages\ImportedLearnLinksTable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

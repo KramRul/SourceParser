@@ -20,6 +20,7 @@ namespace SourceParser.DataAccessLevel.UnitOfWorks
         private ReferenceRepository _referenceRepository;
         private StyleRepository _styleRepository;
         private TranslatorRepository _translatorRepository;
+        private ImportLinkDataRepository _importLinkDataRepository;
 
         public UnitOfWork()
         {
@@ -130,6 +131,18 @@ namespace SourceParser.DataAccessLevel.UnitOfWorks
                     _translatorRepository = new TranslatorRepository();
                 }
                 return _translatorRepository;
+            }
+        }
+
+        public IImportLinkDataRepository ImportLinks
+        {
+            get
+            {
+                if (_importLinkDataRepository == null)
+                {
+                    _importLinkDataRepository = new ImportLinkDataRepository();
+                }
+                return _importLinkDataRepository;
             }
         }
     }

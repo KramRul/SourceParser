@@ -12,6 +12,7 @@ namespace SourceParser.BusinessLogicLevel.Services.Interfaces
     {
         Task<ObservableCollection<DocumentMod>> GetAllDocuments();
         Task<ObservableCollection<DocumentMod>> GetDocumentsInfFromLines(List<string> lines);
+        Task<ObservableCollection<DocumentMod>> GetDocumentsInfFromLinesUsingDecisionTree(List<string> lines);
         Task CreateDocument(string title);
         Task CreateDocumentsRange(List<DocumentMod> documents);
         Task UpdateDocument(DocumentMod document);

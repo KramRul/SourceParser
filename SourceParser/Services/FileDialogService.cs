@@ -60,9 +60,8 @@ namespace SourceParser.Services
             return lines;
         }
 
-        public async Task<List<string>> OpenFileDialogСsv()
+        public async Task OpenFileDialogСsv()
         {
-            var lines = new List<string>();
             FileOpenPicker openPicker = new FileOpenPicker
             {
                 ViewMode = PickerViewMode.Thumbnail,
@@ -81,11 +80,7 @@ namespace SourceParser.Services
                 excelHelper.Parse(stream);
 
                 excelHelper.SyncDataWithDatabase();
-                //var readlines = await FileIO.ReadLinesAsync(file);
-                //lines = new List<string>(readlines);
             }
-
-            return lines;
         }
 
         public async Task ExportFileDialog(List<LinkMod> links)

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SourceParser.Models.Models
 {
-    public class LinkMod
+    public class LinkMod : INotifyPropertyChanged
     {
         private string _id;
         private string _value;

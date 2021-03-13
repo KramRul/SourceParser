@@ -42,7 +42,6 @@ namespace SourceParser.BusinessLogicLevel.Helpers.Excel
                         }
                         var parsedGuid = Guid.Parse(importLinkData.SKU);
                         var existedImportLinkData = dbManager.ImportLinksData.Where(item => item.SKU.Equals(parsedGuid)).FirstOrDefault();
-                        var imageURL = String.Empty;
                         if (existedImportLinkData != null)
                         {
                             existedImportLinkData.SKU = Guid.Parse(importLinkData.SKU);

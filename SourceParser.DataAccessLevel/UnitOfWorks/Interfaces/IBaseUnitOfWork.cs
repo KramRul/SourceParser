@@ -18,5 +18,6 @@ namespace SourceParser.DataAccessLevel.UnitOfWorks.Interfaces
         IReferenceRepository References { get; }
         IStyleRepository Styles { get; }
         ITranslatorRepository Translators { get; }
+        IImportLinkDataRepository ImportLinks { get; }
     }
 }

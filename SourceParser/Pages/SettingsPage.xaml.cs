@@ -1,4 +1,8 @@
-﻿using System;
+﻿using SourceParser.BusinessLogicLevel.Services;
+using SourceParser.BusinessLogicLevel.Services.Interfaces;
+using SourceParser.DataAccessLevel.UnitOfWorks;
+using SourceParser.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -26,6 +30,7 @@ namespace SourceParser.Pages
     public sealed partial class SettingsPage : Page
     {
         private readonly Services.FileDialogService _fileDialogService = new Services.FileDialogService();
+        private readonly IImportLinkDataService _importLinkDataService = new ImportLinkDataService(new UnitOfWork());
 
         public SettingsPage()
         {
@@ -39,17 +44,24 @@ namespace SourceParser.Pages
                 var infoMessageResult = await ShowInfoMessage();
                 if (infoMessageResult == ContentDialogResult.Primary)
                 {
-                    var lines = await _fileDialogService.OpenFileDialogСsv();
-                    /*var documents = await _documentService.GetDocumentsInfFromLines(lines);
-                    await _documentService.CreateDocumentsRange(new List<DocumentMod>(documents));
-                    foreach (var doc in documents)
-                    {
-                        (DataContext as ApplicationViewModel).Documents.Add(doc);
-                    }*/
+                    await _fileDialogService.OpenFileDialogСsv();
+                    (DataContext as ApplicationViewModel).ImportedLinks = await _importLinkDataService.GetAllImportedLinks();
                 }
                 else if (infoMessageResult == ContentDialogResult.Secondary)
                 {
                 }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }
+        }
+
+        private async void ShowImportedLearnLinks_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Frame.Navigate(typeof(Pages.ImportedLearnLinksTable));
             }
             catch (Exception ex)
             {

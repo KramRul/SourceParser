@@ -24,7 +24,10 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" VerticalAlignment="Top" BorderBrush="Gray" BorderThickness="1">
             <Button x:Name="ButtonImportFile" Click="ButtonImportFile_Click" Width="240" Height="80" Margin="10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
-                <TextBlock Text="Импортировать ссылки"  Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" TextAlignment="Center" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+                <TextBlock Text="Импортировать ссылки с тегами"  Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" TextAlignment="Center" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+            </Button>
+            <Button x:Name="ButtonImportLinksWithLearn" Click="ButtonImportLinksWithLearn_Click" Width="240" Height="100" Margin="10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
+                <TextBlock Text="Импортировать ссылки используя деревья решений"  Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="Bold" TextAlignment="Center" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
             </Button>
             <Button x:Name="ButtonExportFile" Click="ButtonExportFile_Click" Width="240" Height="80" Margin="10" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center">
                 <TextBlock Text="Экспортировать ссылки" Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" TextAlignment="Center" TextWrapping="WrapWholeWords" TextTrimming="Clip"/>

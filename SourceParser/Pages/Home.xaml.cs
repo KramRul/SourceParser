@@ -62,6 +62,31 @@ namespace SourceParser.Pages
             }
         }
 
+        private async void ButtonImportLinksWithLearn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var infoMessageResult = await ShowInfoMessage();
+                if (infoMessageResult == ContentDialogResult.Primary)
+                {
+                    var lines = await _fileDialogService.OpenFileDialog();
+                    var documents = await _documentService.GetDocumentsInfFromLinesUsingDecisionTree(lines);
+                    /*await _documentService.CreateDocumentsRange(new List<DocumentMod>(documents));
+                    foreach (var doc in documents)
+                    {
+                        (DataContext as ApplicationViewModel).Documents.Add(doc);
+                    }*/
+                }
+                else if (infoMessageResult == ContentDialogResult.Secondary)
+                {
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Message: {ex.Message}\r\nSource: { ex.Source}\r\nTarget Site Name: { ex.TargetSite.Name}\r\n{ ex.StackTrace}");
+            }
+        }
+
         private async Task<ContentDialogResult> ShowInfoMessage()
         {
             StackPanel stackPanel = new StackPanel()

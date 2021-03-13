@@ -18,8 +18,12 @@
         <StackPanel Grid.Column="0" Margin="10" Padding="0 0 5 0">
             <TextBlock Text="Настройки"/>
             <StackPanel Padding="10">
-                <TextBlock Text="Импортировать обучающий список источников"/>
+                <TextBlock Text="Импортировать обучающий список источников (без обучения)"/>
                 <Button x:Name="ButtonImportTestSample" Content="Импортировать" Click="ButtonImportTestSample_Click" Width="auto" Height="auto" Margin="0 0 10 10"></Button>
+            </StackPanel>
+            <StackPanel Padding="10">
+                <TextBlock Text="Показать импортированный обучающий список источников"/>
+                <Button x:Name="ShowImportedLearnLinks" Content="Показать" Click="ShowImportedLearnLinks_Click" Width="auto" Height="auto" Margin="0 0 10 10"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>
