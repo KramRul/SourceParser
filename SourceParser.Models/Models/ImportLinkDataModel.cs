@@ -738,16 +738,6 @@ namespace SourceParser.Models.Models
                 OnPropertyChanged("SearchParameter68");
             }
         }
-        private string _SearchParameter69;
-        public string SearchParameter69
-        {
-            get => _SearchParameter69;
-            set
-            {
-                _SearchParameter69 = value;
-                OnPropertyChanged("SearchParameter69");
-            }
-        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")

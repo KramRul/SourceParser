@@ -208,22 +208,19 @@ namespace SourceParser.DataAccessLevel.Entities
         //Dissertation Abstracts
         public string SearchParameter63 { get; set; }
 
-        //автореф.
+        //патентообладатель
         public string SearchParameter64 { get; set; }
 
-        //патентообладатель
+        //{d,7}
         public string SearchParameter65 { get; set; }
 
-        //{d,7}
+        //В кн.
         public string SearchParameter66 { get; set; }
 
-        //В кн.
+        //In:
         public string SearchParameter67 { get; set; }
 
-        //In:
-        public string SearchParameter68 { get; set; }
-
         //[Abstract]
-        public string SearchParameter69 { get; set; }
+        public string SearchParameter68 { get; set; }
     }
 }

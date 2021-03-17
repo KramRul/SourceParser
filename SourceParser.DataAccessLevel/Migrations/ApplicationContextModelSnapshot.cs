@@ -337,9 +337,6 @@ namespace SourceParser.DataAccessLevel.Migrations
                     b.Property<string>("SearchParameter68")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("SearchParameter69")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("SearchParameter7")
                         .HasColumnType("TEXT");
 

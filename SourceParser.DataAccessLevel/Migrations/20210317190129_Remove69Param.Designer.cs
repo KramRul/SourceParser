@@ -9,8 +9,8 @@ using SourceParser.DataAccessLevel;
 namespace SourceParser.DataAccessLevel.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210308161417_InitialDbCreate1")]
-    partial class InitialDbCreate1
+    [Migration("20210317190129_Remove69Param")]
+    partial class Remove69Param
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -337,9 +337,6 @@ namespace SourceParser.DataAccessLevel.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("SearchParameter68")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("SearchParameter69")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("SearchParameter7")

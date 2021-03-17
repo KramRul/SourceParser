@@ -1,12 +1,15 @@
 ﻿using Accord.MachineLearning.DecisionTrees;
 using Accord.MachineLearning.DecisionTrees.Learning;
+using Accord.MachineLearning.DecisionTrees.Rules;
 using Accord.Math;
+using Accord.Math.Optimization.Losses;
 using Accord.Statistics.Filters;
 using SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers.Interfaces;
 using SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -59,6 +62,18 @@ namespace SourceParser.BusinessLogicLevel.Helpers.DecisionTreeHelpers
 
             // Learn the training instances!
             DecisionTree = id3learning.Learn(inputs, outputs);
+
+            double error = new ZeroOneLoss(outputs).Loss(DecisionTree.Decide(inputs));
+
+            Debug.WriteLine(error);
+
+            // Moreover, we may decide to convert our tree to a set of rules:
+            DecisionSet rules = DecisionTree.ToRules();
+            // And using the codebook, we can inspect the tree reasoning:
+            string ruleText = rules.ToString(Codebook as Codification<string>, outputAttributeColumn.Name,
+                System.Globalization.CultureInfo.InvariantCulture);
+
+            Debug.WriteLine(ruleText);
         }
 
         public string Decide(List<BaseAttribute<T>> attributes, BaseAttribute<T> attributeColumn)

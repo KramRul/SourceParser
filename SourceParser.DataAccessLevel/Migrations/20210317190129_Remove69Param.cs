@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SourceParser.DataAccessLevel.Migrations
 {
-    public partial class InitialDbCreate1 : Migration
+    public partial class Remove69Param : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -187,8 +187,7 @@ namespace SourceParser.DataAccessLevel.Migrations
                     SearchParameter65 = table.Column<string>(nullable: true),
                     SearchParameter66 = table.Column<string>(nullable: true),
                     SearchParameter67 = table.Column<string>(nullable: true),
-                    SearchParameter68 = table.Column<string>(nullable: true),
-                    SearchParameter69 = table.Column<string>(nullable: true)
+                    SearchParameter68 = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

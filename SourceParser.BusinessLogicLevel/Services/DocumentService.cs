@@ -639,7 +639,8 @@ namespace SourceParser.BusinessLogicLevel.Services
                 new DataColumn("{d,7}"),
                 new DataColumn("В кн."),
                 new DataColumn("In:"),
-                new DataColumn("[Abstract]")
+                new DataColumn("[Abstract]"),
+                new DataColumn("Bibl Link Class")
             };
             return columns;
         }
@@ -738,7 +739,6 @@ namespace SourceParser.BusinessLogicLevel.Services
                     importLinkData.SearchParameter8,
                     importLinkData.SearchParameter9,
                     importLinkData.SearchParameter10,
-                    importLinkData.SearchParameter10,
                     importLinkData.SearchParameter11,
                     importLinkData.SearchParameter12,
                     importLinkData.SearchParameter13,
@@ -797,10 +797,21 @@ namespace SourceParser.BusinessLogicLevel.Services
                     importLinkData.SearchParameter66,
                     importLinkData.SearchParameter67,
                     importLinkData.SearchParameter68,
-                    importLinkData.SearchParameter69
+                    importLinkData.BiblLinkClass
                 };
-            });
-            return rows.ToList();
+            }).ToList();
+
+            for (int i = 0; i < rows.Count; i++)
+            {
+                for (int j = 0; j < rows[i].Length; j++)
+                {
+                    if (string.IsNullOrEmpty(rows[i][j]))
+                    {
+                        rows[i][j] = "False";
+                    }
+                }
+            }
+            return rows;
         }
 
         private async Task<DocumentType> PredictDocumentTypesUsingDecisionTree(string documentLink)
@@ -808,14 +819,6 @@ namespace SourceParser.BusinessLogicLevel.Services
             var model = DocumentLinkToBaseCsvModel(documentLink);
 
             var outputAttributeColumn = new BaseAttribute<string>() { Name = "Bibl Link Class", Symbols = 16 };
-
-            /*var attributeNames = new List<BaseAttribute<string>>
-            {
-                new BaseAttribute<string>() { Name = "Outlook" , Value = "Sunny", Symbols = 3 },
-                new BaseAttribute<string>() { Name = "Temperature" , Value = "Hot", Symbols = 3 },
-                new BaseAttribute<string>() { Name = "Humidity" , Value = "High", Symbols = 2 },
-                new BaseAttribute<string>() { Name = "Wind" , Value = "Strong", Symbols = 2 },
-            };*/
 
             var attributeNames = BaseCsvModelToBaseAttributes(model);
 
@@ -835,9 +838,10 @@ namespace SourceParser.BusinessLogicLevel.Services
             {
                 object propValue = property.GetValue(model, null);
 
-                if (property.Name.Contains("SearchParameter"))
+                if (!property.Name.Contains("SKU") && !property.Name.Contains("SourceLink") && !property.Name.Contains("BiblLinkClass"))
                 {
-                    attributeNames.Add(new BaseAttribute<string>() { Name = "Outlook", Value = "Sunny", Symbols = 3 });
+                    var attributeName = property.CustomAttributes.ToList().FirstOrDefault().NamedArguments.Where(arg=>arg.MemberName == "Name").FirstOrDefault().TypedValue.Value;
+                    attributeNames.Add(new BaseAttribute<string>() { Name = attributeName.ToString(), Value = propValue.ToString(), Symbols = 2 });
                 }
             }
 

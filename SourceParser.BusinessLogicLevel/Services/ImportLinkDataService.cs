@@ -95,8 +95,7 @@ namespace SourceParser.BusinessLogicLevel.Services
                 SearchParameter65 = importLinkData.SearchParameter65,
                 SearchParameter66 = importLinkData.SearchParameter66,
                 SearchParameter67 = importLinkData.SearchParameter67,
-                SearchParameter68 = importLinkData.SearchParameter68,
-                SearchParameter69 = importLinkData.SearchParameter69
+                SearchParameter68 = importLinkData.SearchParameter68
             }).ToList();
 
             var result = new ObservableCollection<ImportLinkDataModel>(documentsList);
