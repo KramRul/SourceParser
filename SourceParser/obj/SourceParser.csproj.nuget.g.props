@@ -30,6 +30,7 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgTelerik_UI_for_UniversalWindowsPlatform Condition=" '$(PkgTelerik_UI_for_UniversalWindowsPlatform)' == '' ">C:\Users\KramRul\.nuget\packages\telerik.ui.for.universalwindowsplatform\1.0.1.1</PkgTelerik_UI_for_UniversalWindowsPlatform>
+    <Pkgpython Condition=" '$(Pkgpython)' == '' ">C:\Users\KramRul\.nuget\packages\python\3.8.9</Pkgpython>
     <Pkgruntime_win10-x86_Microsoft_Net_UWPCoreRuntimeSdk Condition=" '$(Pkgruntime_win10-x86_Microsoft_Net_UWPCoreRuntimeSdk)' == '' ">C:\Users\KramRul\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.8</Pkgruntime_win10-x86_Microsoft_Net_UWPCoreRuntimeSdk>
     <Pkgruntime_win10-x86_Microsoft_Net_Native_SharedLibrary Condition=" '$(Pkgruntime_win10-x86_Microsoft_Net_Native_SharedLibrary)' == '' ">C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.sharedlibrary\2.2.3</Pkgruntime_win10-x86_Microsoft_Net_Native_SharedLibrary>
     <Pkgruntime_win10-x86_Microsoft_Net_Native_Compiler Condition=" '$(Pkgruntime_win10-x86_Microsoft_Net_Native_Compiler)' == '' ">C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.compiler\2.2.3</Pkgruntime_win10-x86_Microsoft_Net_Native_Compiler>

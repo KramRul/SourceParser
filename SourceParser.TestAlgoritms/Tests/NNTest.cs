@@ -8,6 +8,19 @@ using System.Threading.Tasks;
 using Version = Mosaik.Core.Version;
 using P = Catalyst.PatternUnitPrototype;
 using System.Linq;
+using Numpy;
+using Keras.Models;
+using Keras.Layers;
+using System.IO;
+using Keras;
+using Keras.Callbacks;
+using MatplotlibCS;
+using MatplotlibCS.PlotItems;
+using Keras.Utils;
+using Deedle;
+using Keras.PreProcessing.Text;
+using Keras.PreProcessing.sequence;
+using Accord.MachineLearning;
 
 namespace SourceParser.TestAlgoritms.Tests
 {
@@ -15,13 +28,166 @@ namespace SourceParser.TestAlgoritms.Tests
     {
         public async void Test()
         {
-            var doc = new Document(Data.Link, Language.Russian);
+
+            // Максимальное количество слов 
+            var num_words = 10000;
+            // Максимальная длина новости
+            var max_news_len = 100;
+            // Количество классов новостей
+            var nb_classes = 3;//16
+
+            NDarray x_train = null;
+            NDarray y_train = null;
+
+            var trainCSV = Frame.ReadCsv("D:\\УНИВЕР\\6 КУРС\\МАГ РАБОТА\\Базы со ссылками\\train.csv", false, separators: ";");
+
+            var trainYFloat = trainCSV.Rows.Select(kvp => { return kvp.Value.GetAs<float>("Column1"); }).ValuesAll.ToList();
+            var trainXString = trainCSV.Rows.Select(kvp => { return kvp.Value.GetAs<string>("Column2"); }).ValuesAll.ToList();
+            var trainXStringArray = trainXString.ToArray();
+
+            //x_train = np.array(new float[,] { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 1 } });
+            y_train = np.array(trainYFloat.ToArray());
+
+            y_train = Util.ToCategorical(y_train, nb_classes);
+
+            string[][] tokens = trainXStringArray.Tokenize();
+
+            // Create a new TF-IDF with options:
+            var codebook = new Accord.MachineLearning.TFIDF()
+            {
+                Tf = TermFrequency.Log,
+                Idf = InverseDocumentFrequency.Default
+            };
+
+            codebook.Learn(tokens);
+
+            double[][] bow = codebook.Transform(tokens);
+
+            var list = new List<NDarray>();
+            foreach (var item in bow)
+            {
+                var newItem = item.Where(value => value != 0).ToArray();
+                var ndarray = np.array(newItem);
+                list.Add(ndarray);
+            }
+
+            var sequences = np.array(list);
+
+            x_train = SequenceUtil.PadSequences(sequences, maxlen: max_news_len, dtype: "double");
+
+            var model = new Sequential();
+            model.Add(new Embedding(num_words, 32, null, null, null, null, false, max_news_len));
+            model.Add(new GRU(16));
+            model.Add(new Dense(3, activation: "softmax"));
+
+            model.Compile(optimizer: "adam", loss: "categorical_crossentropy", metrics: new string[] { "accuracy" });
+
+            model.Summary();
+
+            var model_gru_save_path = "best_model_gru.h5";
+            var checkpoint_callback_gru = new ModelCheckpoint(
+                model_gru_save_path,
+                "val_accuracy",
+                1,
+                true
+                );
+
+            var callbacks = new List<Callback>() { checkpoint_callback_gru };
+
+            float validation_split = (float)0.1;
+
+            var history_gru = model.Fit(x_train,
+                              y_train,
+                              batch_size: 128,
+                              epochs: 10,
+                              validation_split: validation_split,
+                              callbacks: callbacks.ToArray());
+
+            var pythonExePath = "";
+            var dasPlotPyPath = "";
+
+            var matplotlibCs = new MatplotlibCS.MatplotlibCS(pythonExePath, dasPlotPyPath);
+
+            //Доля верных ответов на обучающем наборе
+            var accuracy_y = history_gru.HistoryLogs["accuracy"];
+            var accuracy_x = accuracy_y.Select((val, index) => { return index; });
+
+            //Доля верных ответов на проверочном наборе
+            var val_accuracy_y = history_gru.HistoryLogs["val_accuracy"];
+            var val_accuracy_x = val_accuracy_y.Select((val, index) => { return index; });
+
+            var figure = new Figure(1, 1)
+            {
+                FileName = "ExampleSin.png",
+                OnlySaveImage = true,
+                DPI = 150,
+                Subplots =
+                {
+                    new Axes(1, "Эпоха обучения", "Доля верных ответов")
+                    {
+                        Title = "",
+                        Grid = new Grid()
+                        {
+                            MinorAlpha = 0.2,
+                            MajorAlpha = 1.0,
+                            XMajorTicks = new[] {0.0, 7.6, 0.5},
+                            YMajorTicks = new[] {-1, 2.5, 0.25},
+                            XMinorTicks = new[] {0.0, 7.25, 0.25},
+                            YMinorTicks = new[] {-1, 2.5, 0.125}
+                        },
+                        PlotItems =
+                        {
+                            new Line2D("Доля верных ответов на обучающем наборе")
+                            {
+                                X = val_accuracy_x.Cast<object>().ToList(),
+                                Y = val_accuracy_y.ToList(),
+                                LineStyle = LineStyle.Solid
+                            },
+                            new Line2D("Доля верных ответов на проверочном наборе")
+                            {
+                                X = accuracy_x.Cast<object>().ToList(),
+                                Y = accuracy_y.ToList(),
+                                LineStyle = LineStyle.Dashed
+                            }
+                        }
+                    }
+                }
+            };
+
+            var t = matplotlibCs.BuildFigure(figure);
+            t.Wait();
+
+            //NDarray x = np.array(new float[,] { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 1 } });
+            //NDarray y = np.array(new float[] { 0, 1, 1, 0 });
+
+            ////Build sequential model
+            //var model = new Sequential();
+            //model.Add(new Dense(32, activation: "relu", input_shape: new Shape(2)));
+            //model.Add(new Dense(64, activation: "relu"));
+            //model.Add(new Dense(1, activation: "sigmoid"));
+
+            ////Compile and train
+            //model.Compile(optimizer: "sgd", loss: "binary_crossentropy", metrics: new string[] { "accuracy" });
+            //model.Fit(x, y, batch_size: 2, epochs: 1000, verbose: 1);
+
+            ////Save model and weights
+            //string json = model.ToJson();
+            //File.WriteAllText("model.json", json);
+            //model.SaveWeight("model.h5");
+
+            ////Load model and weight
+            //var loaded_model = Sequential.ModelFromJson(File.ReadAllText("model.json"));
+            //loaded_model.LoadWeight("model.h5");
+
+
+
+            /*var doc = new Document(Data.Link, Language.Russian);
 
             Storage.Current = new OnlineRepositoryStorage(new DiskStorage("catalyst-models"));
             var nlp = Pipeline.For(Language.Russian);
             nlp.ProcessSingle(doc);
             Console.WriteLine(doc.ToJson());
-            PrintDocumentEntities(doc);
+            PrintDocumentEntities(doc);*/
             /*var nlp1 = Pipeline.For(Language.English);
             var ft = new FastText(Language.English, 0, "wiki-word2vec");
             ft.Data.Type = FastText.ModelType.CBow;
@@ -32,8 +198,8 @@ namespace SourceParser.TestAlgoritms.Tests
             };
             ft.Train(nlp1.Process(docs));
             await ft.StoreAsync();*/
-            await DemonstrateAveragePerceptronEntityRecognizerAndPatternSpotter();
-            DemonstrateSpotter();
+            /*await DemonstrateAveragePerceptronEntityRecognizerAndPatternSpotter();
+            DemonstrateSpotter();*/
         }
 
         private static async Task DemonstrateAveragePerceptronEntityRecognizerAndPatternSpotter()
@@ -48,7 +214,7 @@ namespace SourceParser.TestAlgoritms.Tests
             //Create a new pipeline for the english language, and add the WikiNER model to it
             Console.WriteLine("Loading models... This might take a bit longer the first time you run this sample, as the models have to be downloaded from the online repository");
             var nlp = Pipeline.For(Language.Russian);
-           // nlp.Add(await AveragePerceptronEntityRecognizer.FromStoreAsync(language: Language.English, version: Mosaik.Core.Version.Latest, tag: "WikiNER"));
+            // nlp.Add(await AveragePerceptronEntityRecognizer.FromStoreAsync(language: Language.English, version: Mosaik.Core.Version.Latest, tag: "WikiNER"));
 
             //Another available model for NER is the PatternSpotter, which is the conceptual equivalent of a RegEx on raw text, but operating on the tokenized form off the text.
             //Adds a custom pattern spotter for the pattern: single("is" / VERB) + multiple(NOUN/AUX/PROPN/AUX/DET/ADJ)
