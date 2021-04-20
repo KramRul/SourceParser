@@ -21,26 +21,86 @@ using Deedle;
 using Keras.PreProcessing.Text;
 using Keras.PreProcessing.sequence;
 using Accord.MachineLearning;
+using OxyPlot;
+using OxyPlot.Axes;
 
 namespace SourceParser.TestAlgoritms.Tests
 {
+    public static class FrequencyDictionary
+    {
+        public static Dictionary<string, int> Learn(string[][] tokens)
+        {
+            var allTokens = tokens.SelectMany(item => item);
+
+            var groupedTokens = allTokens.GroupBy(token => token);
+
+            var dictionary = groupedTokens.Select(groupItem => new KeyValuePair<string, int>(groupItem.Key, groupItem.Count())).OrderByDescending(pair => pair.Value).ToList();
+
+            var dictionaryLikeIMDB = new Dictionary<string, int>();
+            for (int index = 0; index < dictionary.Count; index++)
+            {
+                dictionaryLikeIMDB.Add(dictionary[index].Key, index + 1);
+            }
+
+            return dictionaryLikeIMDB;
+        }
+
+        public static int[][] Transform(string[][] tokens, Dictionary<string, int> dictionaryLikeIMDB)
+        {
+            var bow = tokens.Select(tokenString => tokenString.Select(token =>
+            {
+                var exist = dictionaryLikeIMDB.TryGetValue(token, out int value);
+                if (exist)
+                {
+                    return value;
+                }
+                else
+                {
+                    return dictionaryLikeIMDB.Count;
+                }
+            }).ToArray()).ToArray();
+            return bow;
+        }
+    }
+
     public class NNTest
     {
         public async void Test()
         {
-
             // Максимальное количество слов 
             var num_words = 10000;
             // Максимальная длина новости
-            var max_news_len = 100;
+            var max_news_len = 100;//100
             // Количество классов новостей
-            var nb_classes = 3;//16
+            var nb_classes = 12;//3
 
+            var trainCsvPath = "D:\\УНИВЕР\\6 КУРС\\МАГ РАБОТА\\Базы со ссылками\\train.csv";
+
+            var testCsvPath = "D:\\УНИВЕР\\6 КУРС\\МАГ РАБОТА\\Базы со ссылками\\test.csv";
+
+            var (history_gru, model, dictionary) = this.LearnNeuralNetwork(trainCsvPath, num_words, max_news_len, nb_classes);
+
+            this.BuildPlot(history_gru);
+
+            this.TestNeuralNetwork(testCsvPath, nb_classes, dictionary, max_news_len);
+
+            var testCSV = Frame.ReadCsv(testCsvPath, false, separators: ";");
+            var testXString = testCSV.Rows.Select(kvp => { return kvp.Value.GetAs<string>("Column2"); }).ValuesAll.ToList();
+            var testXStringArray = testXString.ToArray();
+
+            /*foreach (var text in testXStringArray)
+            {
+                this.Predict(text, codebook, max_news_len);
+            }*/
+            Console.ReadLine();
+        }
+
+        private (History, Sequential, Dictionary<string, int>) LearnNeuralNetwork(string trainCsvPath, int num_words, int max_news_len, int nb_classes)
+        {
             NDarray x_train = null;
             NDarray y_train = null;
 
-            var trainCSV = Frame.ReadCsv("D:\\УНИВЕР\\6 КУРС\\МАГ РАБОТА\\Базы со ссылками\\train.csv", false, separators: ";");
-
+            var trainCSV = Frame.ReadCsv(trainCsvPath, false, separators: ";");
             var trainYFloat = trainCSV.Rows.Select(kvp => { return kvp.Value.GetAs<float>("Column1"); }).ValuesAll.ToList();
             var trainXString = trainCSV.Rows.Select(kvp => { return kvp.Value.GetAs<string>("Column2"); }).ValuesAll.ToList();
             var trainXStringArray = trainXString.ToArray();
@@ -52,8 +112,12 @@ namespace SourceParser.TestAlgoritms.Tests
 
             string[][] tokens = trainXStringArray.Tokenize();
 
+            var dictionaryLikeIMDB = FrequencyDictionary.Learn(tokens);
+
+            var bow = FrequencyDictionary.Transform(tokens, dictionaryLikeIMDB);
+
             // Create a new TF-IDF with options:
-            var codebook = new Accord.MachineLearning.TFIDF()
+            /*var codebook = new Accord.MachineLearning.TFIDF()
             {
                 Tf = TermFrequency.Log,
                 Idf = InverseDocumentFrequency.Default
@@ -61,24 +125,26 @@ namespace SourceParser.TestAlgoritms.Tests
 
             codebook.Learn(tokens);
 
-            double[][] bow = codebook.Transform(tokens);
+            double[][] bow = codebook.Transform(tokens);*/
 
             var list = new List<NDarray>();
             foreach (var item in bow)
             {
-                var newItem = item.Where(value => value != 0).ToArray();
-                var ndarray = np.array(newItem);
+                //var newItem = item.Take(max_news_len).ToArray();
+                //var ndarray = np.array(newItem);
+                var ndarray = np.array(item);
                 list.Add(ndarray);
             }
 
             var sequences = np.array(list);
 
-            x_train = SequenceUtil.PadSequences(sequences, maxlen: max_news_len, dtype: "double");
+            //x_train = SequenceUtil.PadSequences(sequences, maxlen: max_news_len, dtype: "double");
+            x_train = SequenceUtil.PadSequences(sequences, maxlen: max_news_len);
 
             var model = new Sequential();
             model.Add(new Embedding(num_words, 32, null, null, null, null, false, max_news_len));
-            model.Add(new GRU(16));
-            model.Add(new Dense(3, activation: "softmax"));
+            model.Add(new GRU(138));//16
+            model.Add(new Dense(12, activation: "softmax"));
 
             model.Compile(optimizer: "adam", loss: "categorical_crossentropy", metrics: new string[] { "accuracy" });
 
@@ -103,11 +169,15 @@ namespace SourceParser.TestAlgoritms.Tests
                               validation_split: validation_split,
                               callbacks: callbacks.ToArray());
 
-            var pythonExePath = "";
-            var dasPlotPyPath = "";
+            //Save model and weights
+            string json = model.ToJson();
+            File.WriteAllText("model.json", json);
 
-            var matplotlibCs = new MatplotlibCS.MatplotlibCS(pythonExePath, dasPlotPyPath);
+            return (history_gru, model, dictionaryLikeIMDB);
+        }
 
+        private void BuildPlot(History history_gru)
+        {
             //Доля верных ответов на обучающем наборе
             var accuracy_y = history_gru.HistoryLogs["accuracy"];
             var accuracy_x = accuracy_y.Select((val, index) => { return index; });
@@ -116,47 +186,120 @@ namespace SourceParser.TestAlgoritms.Tests
             var val_accuracy_y = history_gru.HistoryLogs["val_accuracy"];
             var val_accuracy_x = val_accuracy_y.Select((val, index) => { return index; });
 
-            var figure = new Figure(1, 1)
+            int pointCount = 10;
+            double[] xs1 = accuracy_x.Select<int, double>(i => i).ToArray();
+            double[] ys1 = accuracy_y;
+            double[] xs2 = val_accuracy_x.Select<int, double>(i => i).ToArray();
+            double[] ys2 = val_accuracy_y;
+
+            // create lines and fill them with data points
+            var line1 = new OxyPlot.Series.LineSeries()
             {
-                FileName = "ExampleSin.png",
-                OnlySaveImage = true,
-                DPI = 150,
-                Subplots =
-                {
-                    new Axes(1, "Эпоха обучения", "Доля верных ответов")
-                    {
-                        Title = "",
-                        Grid = new Grid()
-                        {
-                            MinorAlpha = 0.2,
-                            MajorAlpha = 1.0,
-                            XMajorTicks = new[] {0.0, 7.6, 0.5},
-                            YMajorTicks = new[] {-1, 2.5, 0.25},
-                            XMinorTicks = new[] {0.0, 7.25, 0.25},
-                            YMinorTicks = new[] {-1, 2.5, 0.125}
-                        },
-                        PlotItems =
-                        {
-                            new Line2D("Доля верных ответов на обучающем наборе")
-                            {
-                                X = val_accuracy_x.Cast<object>().ToList(),
-                                Y = val_accuracy_y.ToList(),
-                                LineStyle = LineStyle.Solid
-                            },
-                            new Line2D("Доля верных ответов на проверочном наборе")
-                            {
-                                X = accuracy_x.Cast<object>().ToList(),
-                                Y = accuracy_y.ToList(),
-                                LineStyle = LineStyle.Dashed
-                            }
-                        }
-                    }
-                }
+                Title = $"Доля верных ответов на обучающем наборе",
+                Color = OxyPlot.OxyColors.Blue,
+                StrokeThickness = 1,
+                MarkerSize = 2,
+                MarkerType = OxyPlot.MarkerType.Circle
             };
 
-            var t = matplotlibCs.BuildFigure(figure);
-            t.Wait();
+            var line2 = new OxyPlot.Series.LineSeries()
+            {
+                Title = $"Доля верных ответов на проверочном наборе",
+                Color = OxyPlot.OxyColors.Red,
+                StrokeThickness = 1,
+                MarkerSize = 2,
+                MarkerType = OxyPlot.MarkerType.Circle
+            };
 
+            for (int i = 0; i < pointCount; i++)
+            {
+                line1.Points.Add(new OxyPlot.DataPoint(xs1[i], ys1[i]));
+                line2.Points.Add(new OxyPlot.DataPoint(xs2[i], ys2[i]));
+            }
+
+            // create the model and add the lines to it
+            var plotModel = new OxyPlot.PlotModel
+            {
+                Title = $"Scatter Plot ({pointCount:N0} points each)"
+            };
+
+            plotModel.LegendPosition = LegendPosition.LeftBottom;
+
+            plotModel.Series.Add(line1);
+            plotModel.Series.Add(line2);
+
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Эпоха обучения" });
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Доля верных ответов" });
+
+            using (var stream = File.Create("C:\\Users\\KramRul\\Documents\\GitHub\\SourceParser\\SourceParser.TestAlgoritms\\plot.svg"))
+            {
+                var exporter = new SvgExporter { Width = 600, Height = 400 };
+                exporter.Export(plotModel, stream);
+            }
+        }
+
+        private void TestNeuralNetwork(string testCsvPath, int nb_classes, Dictionary<string, int> dictionaryLikeIMDB, int max_news_len)
+        {
+            NDarray x_test = null;
+            NDarray y_test = null;
+
+            var testCSV = Frame.ReadCsv(testCsvPath, false, separators: ";");
+            var testYFloat = testCSV.Rows.Select(kvp => { return kvp.Value.GetAs<float>("Column1"); }).ValuesAll.ToList();
+            var testXString = testCSV.Rows.Select(kvp => { return kvp.Value.GetAs<string>("Column2"); }).ValuesAll.ToList();
+            var testXStringArray = testXString.ToArray();
+
+            y_test = np.array(testYFloat.ToArray());
+
+            y_test = Util.ToCategorical(y_test, nb_classes);
+
+            string[][] tokens_test = testXStringArray.Tokenize();
+
+            int[][] bow_test = FrequencyDictionary.Transform(tokens_test, dictionaryLikeIMDB);
+            //double[][] bow_test = codebook.Transform(tokens_test);
+
+            var list_test = new List<NDarray>();
+            foreach (var item in bow_test)
+            {
+                //var newItem = item.Take(100).ToArray();
+                //var ndarray = np.array(newItem);
+                var ndarray = np.array(item);
+                list_test.Add(ndarray);
+            }
+
+            var sequences_test = np.array(list_test);
+
+            x_test = SequenceUtil.PadSequences(sequences_test, maxlen: max_news_len);
+
+            //Load model and weight
+            var loaded_model = Sequential.ModelFromJson(File.ReadAllText("model.json"));
+            loaded_model.LoadWeight("best_model_gru.h5");
+
+            loaded_model.Compile(optimizer: "adam", loss: "categorical_crossentropy", metrics: new string[] { "accuracy" });
+            loaded_model.Summary();
+
+            var scores = loaded_model.Evaluate(x_test, y_test, verbose: 0);
+            Console.WriteLine("Test loss:" + scores[0] * 100);
+            Console.WriteLine("Test accuracy:" + scores[1] * 100);
+        }
+
+        public void Predict(string text, Accord.MachineLearning.TFIDF codebook, int max_news_len)
+        {
+            var model = Sequential.LoadModel("best_model_gru.h5");
+            string result = "";
+
+            string[] words = TextUtil.TextToWordSequence(text);
+            double[] tokens = codebook.Transform(words);
+            var newItem = tokens.Where(value => value != 0).ToArray();
+            NDarray x = np.array(newItem);
+            x = x.reshape(1, x.shape[0]);
+            x = SequenceUtil.PadSequences(x, maxlen: max_news_len, dtype: "double");
+
+            var y = model.Predict(x);
+            Console.WriteLine(y.str);
+        }
+
+        private void Old()
+        {
             //NDarray x = np.array(new float[,] { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 1 } });
             //NDarray y = np.array(new float[] { 0, 1, 1, 0 });
 
